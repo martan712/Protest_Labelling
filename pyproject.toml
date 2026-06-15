@@ -1,0 +1,39 @@
+[project]
+name = "protest-labelling"
+version = "0.1.0"
+description = "Protest event labelling with supervised, zero-shot and unsupervised NLP models"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # Data handling / numerics
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "openpyxl>=3.1",
+    # Classical ML
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    # Deep learning / transformers
+    "torch>=2.2",
+    "transformers>=4.40",
+    "datasets>=2.19",
+    "accelerate>=0.30",
+    "sentence-transformers>=2.7",
+    # Topic modelling
+    "bertopic>=0.16",
+    # NLP utilities
+    "nltk>=3.8",
+    "tqdm>=4.66",
+    # Plotting / reporting
+    "matplotlib>=3.8",
+    "plotly>=5.20",
+    "reportlab>=4.1",
+    # HTTP
+    "requests>=2.31",
+    # Notebook runtime
+    "jupyterlab>=4.1",
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+# Notebook-driven research project; no installable package to build.
+package = false

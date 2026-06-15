@@ -4,6 +4,11 @@ import time
 import json
 import random
 
+# The integrated AMD Radeon 840M is gfx1150 (RDNA 3.5), which the ROCm build of
+# PyTorch has no precompiled kernels for. Presenting it as gfx1100 lets it run on
+# the gfx1100 kernels. Must be set before torch is imported. No-op on non-ROCm.
+os.environ.setdefault("HSA_OVERRIDE_GFX_VERSION", "11.0.0")
+
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torch.optim import AdamW
@@ -87,7 +92,7 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42):
         class_names = sorted(df['class'].map(lambda x: df[df['class'] == x]['class'].iloc[0]).unique())
         
         print("Test2")
-        if 'class' in df.columns and df['class'].dtype == object:
+        if 'class' in df.columns:
             class_names = sorted(df['class'].unique())
             GLOBAL_INDEX_TO_CLASS.clear()
             GLOBAL_INDEX_TO_CLASS.update({i + 1: name for i, name in enumerate(class_names)})
@@ -187,13 +192,16 @@ def train_model(tokenizer_name, num_labels, train_loader, val_loader, learning_r
         model_hf.train()
         total_train_loss = 0
         for batch in tqdm(train_loader, desc=f"Training Epoch {epoch+1}"):
-            optimizer_hf.zero_grad()
+            optimizer_hf.zero_grad(set_to_none=True)
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['labels'].to(device)
 
-            outputs = model_hf(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-            loss = outputs.loss
+            # bf16 autocast roughly halves GPU compute/memory with no change to the
+            # training procedure; bf16 needs no GradScaler. No-op on CPU.
+            with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=(device.type == 'cuda')):
+                outputs = model_hf(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+                loss = outputs.loss
             total_train_loss += loss.item()
             loss.backward()
             optimizer_hf.step()
@@ -224,8 +232,9 @@ def evaluate_model(model, data_loader, device, return_metrics=False):
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['labels'].to(device)
 
-            outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-            loss = outputs.loss
+            with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=(device.type == 'cuda')):
+                outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+                loss = outputs.loss
             total_loss += loss.item()
 
             logits = outputs.logits
