@@ -162,7 +162,7 @@ def create_data_loaders(train_encodings, y_train_hf, val_encodings, y_val_hf, te
     return train_loader_hf, val_loader_hf, test_loader_hf
 
 # --- Model Training and Evaluation ---
-def train_model(tokenizer_name, num_labels, train_loader, val_loader, learning_rate, epochs):
+def train_model(tokenizer_name, num_labels, train_loader, val_loader, learning_rate, epochs, output_dir=None, tokenizer=None):
     model_name = tokenizer_name
     try:
         model_hf = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
@@ -213,6 +213,12 @@ def train_model(tokenizer_name, num_labels, train_loader, val_loader, learning_r
         avg_val_loss, _, _, _, _ = evaluate_model(model_hf, val_loader, device, return_metrics=True)
         val_losses.append(avg_val_loss)
         print(f"Epoch {epoch+1}: Average Validation Loss: {avg_val_loss:.4f}")
+
+        # Checkpoint after every epoch so an interrupt/crash doesn't lose progress.
+        # Overwrites the same location each time, so it doubles as the final model.
+        if output_dir is not None and tokenizer is not None:
+            save_model(model_hf, "hf_transformer_model", tokenizer, output_dir)
+            print(f"Epoch {epoch+1}: checkpoint saved to {os.path.join(output_dir, 'hf_transformer_model')}")
 
     end_time = time.time()
     training_time = end_time - start_time
@@ -593,20 +599,18 @@ def main():
     val_split_perc = 0.2
     test_split_perc = 0.1
 
-    output_dir = 'models/hf_transformer_enhanced'
-    report_pdf_name = 'model_training_report_enhanced.pdf'
+    default_name = 'hf_transformer_enhanced'
     loss_plot_name = 'training_validation_test_loss.png'
-
-    os.makedirs(output_dir, exist_ok=True)
 
     # --- User Input ---
     tokenizer_name = input("Enter the Hugging Face model name (e.g., 'bert-base-uncased', 'roberta-base'): ").strip()
     while not tokenizer_name:
         tokenizer_name = input("Model name cannot be empty. Please enter a valid Hugging Face model name: ").strip()
     
-    name = input(f"Enter the moder name for saving the model and report (default: {output_dir}): ").strip() or output_dir
+    name = input(f"Enter the model name for saving the model and report (default: {default_name}): ").strip() or default_name
     output_dir = f"models/{name}"
     report_pdf_name = f"{name}_report.pdf"
+    os.makedirs(output_dir, exist_ok=True)
 
 
     epochs_input = input("Enter the number of training epochs (e.g., 3): ").strip()
@@ -642,7 +646,8 @@ def main():
     
     # 4. Train Model with Validation Tracking
     model_hf, train_losses, val_losses, device_name, training_time = train_model(
-        tokenizer_name, num_labels, train_loader_hf, val_loader_hf, learning_rate, epochs
+        tokenizer_name, num_labels, train_loader_hf, val_loader_hf, learning_rate, epochs,
+        output_dir=output_dir, tokenizer=tokenizer
     )
     
     # 5. Save Model
