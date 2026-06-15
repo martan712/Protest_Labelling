@@ -76,8 +76,9 @@ class AGNewsDatasetHF(Dataset):
         return len(self.labels)
 
     def __getitem__(self, idx):
+        # encodings hold unpadded token lists; the collate_fn pads per batch.
         item = {key: val[idx] for key, val in self.encodings.items()}
-        item['labels'] = self.labels[idx]
+        item['labels'] = int(self.labels[idx])
         return item
 
 # --- Data Loading and Preprocessing ---
@@ -135,11 +136,13 @@ def create_tokenizer(model_name):
 
 
 def tokenize_function(texts, tokenizer, max_len):
+    # No padding and no tensors here: sequences are padded dynamically per batch
+    # by make_collate_fn (pad to the longest in each batch, not a fixed max_len),
+    # which avoids wasting compute on pad tokens. Results are identical because
+    # the attention mask already zeroes out padding.
     return tokenizer(texts,
-                     padding='max_length',
                      truncation=True,
-                     max_length=max_len,
-                     return_tensors='pt')
+                     max_length=max_len)
 
 def tokenize_dataset(train_df, val_df, test_df, tokenizer, max_len):
     train_encodings = tokenize_function(train_df['clean_notes'].tolist(), tokenizer, max_len)
@@ -150,14 +153,24 @@ def tokenize_dataset(train_df, val_df, test_df, tokenizer, max_len):
     y_test_hf = torch.tensor((test_df['class'] - 1).values, dtype=torch.long)
     return train_encodings, y_train_hf, val_encodings, y_val_hf, test_encodings, y_test_hf
 
-def create_data_loaders(train_encodings, y_train_hf, val_encodings, y_val_hf, test_encodings, y_test_hf, batch_size=16):
+def make_collate_fn(tokenizer):
+    """Pad each batch to its own longest sequence (dynamic padding)."""
+    def collate(features):
+        labels = torch.tensor([int(f.pop('labels')) for f in features], dtype=torch.long)
+        batch = tokenizer.pad(features, padding='longest', return_tensors='pt')
+        batch['labels'] = labels
+        return batch
+    return collate
+
+def create_data_loaders(train_encodings, y_train_hf, val_encodings, y_val_hf, test_encodings, y_test_hf, tokenizer, batch_size=16):
     train_dataset_hf = AGNewsDatasetHF(train_encodings, y_train_hf)
     val_dataset_hf = AGNewsDatasetHF(val_encodings, y_val_hf)
     test_dataset_hf = AGNewsDatasetHF(test_encodings, y_test_hf)
 
-    train_loader_hf = DataLoader(train_dataset_hf, batch_size=batch_size, shuffle=True)
-    val_loader_hf = DataLoader(val_dataset_hf, batch_size=batch_size, shuffle=False)
-    test_loader_hf = DataLoader(test_dataset_hf, batch_size=batch_size, shuffle=False)
+    collate_fn = make_collate_fn(tokenizer)
+    train_loader_hf = DataLoader(train_dataset_hf, batch_size=batch_size, shuffle=True, collate_fn=collate_fn)
+    val_loader_hf = DataLoader(val_dataset_hf, batch_size=batch_size, shuffle=False, collate_fn=collate_fn)
+    test_loader_hf = DataLoader(test_dataset_hf, batch_size=batch_size, shuffle=False, collate_fn=collate_fn)
 
     return train_loader_hf, val_loader_hf, test_loader_hf
 
@@ -312,8 +325,8 @@ def get_sample_predictions(test_df, model, tokenizer, device, num_samples=5):
     texts = sampled_df['clean_notes'].tolist()
     true_labels_indices = (sampled_df['class'] - 1).tolist()
 
-    encodings = tokenize_function(texts, tokenizer, max_len=tokenizer.model_max_length)
-    
+    encodings = tokenizer(texts, truncation=True, max_length=512, padding='longest', return_tensors='pt')
+
     model.eval()
     with torch.no_grad():
         input_ids = encodings['input_ids'].to(device)
@@ -640,7 +653,7 @@ def main():
     
     # 3. Create Data Loaders
     train_loader_hf, val_loader_hf, test_loader_hf = \
-        create_data_loaders(train_encodings, y_train_hf, val_encodings, y_val_hf, test_encodings, y_test_hf, batch_size)
+        create_data_loaders(train_encodings, y_train_hf, val_encodings, y_val_hf, test_encodings, y_test_hf, tokenizer, batch_size)
 
     num_labels = len(GLOBAL_INDEX_TO_CLASS)
     
