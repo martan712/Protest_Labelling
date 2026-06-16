@@ -182,8 +182,14 @@ def create_data_loaders(train_encodings, y_train_hf, val_encodings, y_val_hf, te
 # --- Model Training and Evaluation ---
 def train_model(tokenizer_name, num_labels, train_loader, val_loader, learning_rate, epochs, output_dir=None, tokenizer=None):
     model_name = tokenizer_name
+    # Bake the real class names into the model config so the saved model is
+    # self-describing. Output index is 0-based (labels are trained as class-1),
+    # so id2label is 0-based too: model output i -> GLOBAL_INDEX_TO_CLASS[i+1].
+    id2label = {i: GLOBAL_INDEX_TO_CLASS[i + 1] for i in range(num_labels)}
+    label2id = {name: i for i, name in id2label.items()}
     try:
-        model_hf = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
+        model_hf = AutoModelForSequenceClassification.from_pretrained(
+            model_name, num_labels=num_labels, id2label=id2label, label2id=label2id)
     except Exception as e:
         raise ValueError(f"Could not load model for '{model_name}'. Please check the model name or ensure it's suitable for sequence classification. Error: {e}")
 
