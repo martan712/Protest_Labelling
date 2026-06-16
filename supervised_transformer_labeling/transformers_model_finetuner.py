@@ -87,7 +87,12 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42):
         df = pd.read_csv(file_path)
 
         df = df[['class', 'clean_notes']]
-        df = df[df['class'] != 'NoN']
+        # Exclude both the 'NoN' placeholder and 'unknown'. 'unknown' is not a real
+        # category we want the model to emit (we use the model precisely to assign
+        # the unknowns to real classes), so training on it would teach the model to
+        # predict 'unknown' and pollute the output. Dropping it also makes the class
+        # set match the ground-truth taxonomy in labeled.csv.
+        df = df[~df['class'].isin(['NoN', 'unknown'])]
         print("Test")
         unique_classes = sorted(df['class'].unique())
         class_names = sorted(df['class'].map(lambda x: df[df['class'] == x]['class'].iloc[0]).unique())
@@ -603,7 +608,7 @@ def generate_report_pdf(pdf_path, plot_path, model_info, hyperparameters,
 
 # --- Main Execution ---
 def main():
-    file_path = '../data/labeled_balanced.csv'
+    file_path = '../data/labeled_balanced_20.csv'  # balanced 20-class set (from dataset_balancing.ipynb)
     max_len = 128
     batch_size = 16
     learning_rate = 5e-5
