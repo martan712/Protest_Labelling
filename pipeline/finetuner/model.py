@@ -75,10 +75,10 @@ def train_model(model_name, class_names, train_loader, val_loader, device,
         val_losses.append(evaluate_model(model, val_loader, device)["avg_loss"])
         print(f"Epoch {epoch}: train_loss={train_losses[-1]:.4f}, val_loss={val_losses[-1]:.4f}")
 
-        # Checkpoint every epoch so a crash doesn't lose progress; same path each
-        # time, so it doubles as the final model.
+        # Checkpoint each epoch to its own dir ({name}-epoch-i) so we can roll back
+        # to any epoch; main() also saves the final model to the base dir.
         if output_dir is not None and tokenizer is not None:
-            save_model(model, tokenizer, output_dir)
+            save_model(model, tokenizer, f"{output_dir}-epoch-{epoch}")
 
     return model, train_losses, val_losses, time.time() - start
 
