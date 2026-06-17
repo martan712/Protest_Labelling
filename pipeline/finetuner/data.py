@@ -7,6 +7,8 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
 
+from .triggers import strip_triggers
+
 TEXT_COLUMN = "clean_notes"
 CLASS_COLUMN = "class"
 # Placeholders that are not real categories; 'unknown' especially must be
@@ -57,6 +59,14 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42) -> Spl
 
     df = pd.read_csv(file_path)[[CLASS_COLUMN, TEXT_COLUMN]]
     df = df[~df[CLASS_COLUMN].isin(DROP_CLASSES)]
+
+    # strip the labeler's trigger keywords from the training text so the model
+    # can't keyword-match. Drop rows left empty (they had no signal beyond the keyword).
+    df = df.dropna(subset=[TEXT_COLUMN]).copy()
+    before = len(df)
+    df[TEXT_COLUMN] = df[TEXT_COLUMN].map(strip_triggers)
+    df = df[df[TEXT_COLUMN].str.strip() != ""]
+    print(f"Stripped trigger words; dropped {before - len(df)} now-empty rows ({len(df)} remain)")
 
     class_names = sorted(df[CLASS_COLUMN].unique())
     class_to_label = {name: i for i, name in enumerate(class_names)}
