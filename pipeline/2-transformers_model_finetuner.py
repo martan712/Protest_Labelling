@@ -17,6 +17,7 @@ from finetuner import (
 )
 
 DATA_FILE = "../data/labeled_balanced_20.csv"  # balanced 20-class set (from dataset_balancing.ipynb)
+MODELS_DIR = "../models"  # top-level models dir (shared with the labeling notebook)
 MAX_LEN = 128
 BATCH_SIZE = 16
 LEARNING_RATE = 5e-5
@@ -48,7 +49,7 @@ def main():
     name = input(f"Name for saving model and report (default: {DEFAULT_NAME}): ").strip() or DEFAULT_NAME
     epochs = prompt_positive_int("Number of training epochs (e.g. 3): ")
 
-    output_dir = f"models/{name}"
+    output_dir = f"{MODELS_DIR}/{name}"
     os.makedirs(output_dir, exist_ok=True)
 
     splits = load_data(DATA_FILE, train_split=TRAIN_SPLIT, val_split=VAL_SPLIT)
