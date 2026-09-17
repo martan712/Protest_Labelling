@@ -1,5 +1,9 @@
 # evaluation
 
+The frozen evaluation boundary is in `manifests/`: the legacy 200 reviewed events are dev
+data, while `test_manifest.csv` contains 1,000 fresh events from the fixed snapshot. The
+test annotation queue is intentionally separate from all training candidates.
+
 Two notebooks that check predicted topic labels against the 200 manually labeled random
 `unknown` events in `data/manual_labelled_data/random_unknown_labeled.csv`. Each one scores
 the labels, reviews every error by hand, and explains the real errors with checks on all

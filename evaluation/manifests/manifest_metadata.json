@@ -1,0 +1,12 @@
+{
+  "snapshot": "data/filtered_events.csv",
+  "snapshot_sha256": "49dfb282bbfd7ef37700296fd6412ad4e4ee74386e272249fc9838dc1decbec0",
+  "legacy_dev": "data/manual_labelled_data/random_unknown_labeled.csv",
+  "legacy_dev_sha256": "79518eba1b7922656e0dd75ef6959e98301fa9ab6e3e53ee0d127eaf0fd6996c",
+  "seed": 42,
+  "test_size_requested": 1000,
+  "dev_rows": 200,
+  "test_rows": 1000,
+  "excluded_duplicate_groups": 200,
+  "taxonomy_version": "21-class-v1"
+}
