@@ -11,7 +11,7 @@ def accepted_mass_decode(logits: torch.Tensor, class_names: list[str], gold_labe
     """Choose labels by probability mass over each label's direct accepted pair."""
     probabilities = logits.float().softmax(dim=-1)
     outputs = []
-    for row, golds in zip(probabilities, gold_labels):
+    for row in probabilities:
         scores = []
         for candidate in class_names:
             compatible = [name for name in class_names if name == candidate or frozenset((name, candidate)) in ACCEPTED_PAIRS]
