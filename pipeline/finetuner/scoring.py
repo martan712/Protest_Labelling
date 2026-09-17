@@ -9,7 +9,7 @@ from evaluation.taxonomy import ACCEPTED_PAIRS, accepted
 
 def accepted_mass_decode(logits: torch.Tensor, class_names: list[str], gold_labels: list[set[str]]) -> list[str]:
     """Choose labels by probability mass over direct accepted pairs for dev experiments."""
-    probabilities = logits.softmax(dim=-1)
+    probabilities = logits.float().softmax(dim=-1)
     outputs = []
     for row, golds in zip(probabilities, gold_labels):
         scores = []
