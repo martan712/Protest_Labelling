@@ -35,9 +35,12 @@ def _load_model(model_name, class_names):
     id2label = {i: name for i, name in enumerate(class_names)}
     label2id = {name: i for i, name in id2label.items()}
     try:
-        return AutoModelForSequenceClassification.from_pretrained(
+        model = AutoModelForSequenceClassification.from_pretrained(
             model_name, num_labels=len(class_names), id2label=id2label, label2id=label2id
         )
+        if model.config.num_labels != len(class_names):
+            raise ValueError(f"Checkpoint has {model.config.num_labels} labels but release requires {len(class_names)}")
+        return model
     except Exception as e:
         raise ValueError(
             f"Could not load model '{model_name}' for sequence classification. Error: {e}"

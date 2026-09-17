@@ -25,3 +25,15 @@ Run from this folder with the project venv:
 ../.venv/bin/python -m nbconvert --to notebook --execute --inplace verify_students.ipynb
 ../.venv/bin/python -m nbconvert --to notebook --execute --inplace verify_ours.ipynb
 ```
+
+Run the frozen baseline scorer with:
+
+```bash
+../.venv/bin/python score_predictions.py \
+  --predictions ../data/filtered_events_class_with_predicted.csv \
+  --run-name legacy-baseline
+```
+
+Reports include strict and direct accepted-pair accuracy with Wilson 95% intervals and
+per-topic errors. Optional accepted-pair probability decoding is implemented separately for
+development experiments and does not change the locked test labels.

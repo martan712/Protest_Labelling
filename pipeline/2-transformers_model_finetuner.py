@@ -53,6 +53,8 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     splits = load_data(DATA_FILE, train_split=TRAIN_SPLIT, val_split=VAL_SPLIT)
+    if len(splits.class_names) != 21 or "other" not in splits.class_names:
+        raise ValueError(f"Expected all 21 release labels including other; got {splits.class_names}")
     device, device_name = get_device()
     print(f"Using device: {device_name}")
 
