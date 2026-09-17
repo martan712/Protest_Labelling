@@ -13,7 +13,8 @@ dependencies = [
     "scikit-learn>=1.4",
     "xgboost>=2.0",
     # Deep learning / transformers
-    "torch>=2.2",
+    "torch==2.9.1",
+    "pytorch-triton-rocm==3.5.1; sys_platform == 'linux'",  # ROCm runtime for torch, see [tool.uv.sources]
     "transformers>=4.40",
     "datasets>=2.19",
     "accelerate>=0.30",
@@ -37,3 +38,14 @@ dependencies = [
 [tool.uv]
 # Notebook-driven research project; no installable package to build.
 package = false
+
+# The AMD Radeon 840M (ROCm) needs the ROCm build of torch; PyPI only ships CUDA builds.
+# torch 2.9.1+rocm6.4 is the build verified on this machine.
+[[tool.uv.index]]
+name = "pytorch-rocm"
+url = "https://download.pytorch.org/whl/rocm6.4"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-rocm" }
+pytorch-triton-rocm = { index = "pytorch-rocm" }
