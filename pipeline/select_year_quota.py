@@ -76,14 +76,23 @@ def main() -> None:
         quotas = quotas_for_class(pool, args.budget)
         for year, requested in quotas.items():
             cell = pool[pool.year.eq(year)]
-            n = min(requested, len(cell))
+            # Reviewed rows are guaranteed a place before weak-only rows are sampled.
+            reviewed = cell[cell.review_status.ne("unreviewed")]
+            weak = cell[cell.review_status.eq("unreviewed")]
+            reviewed = reviewed.drop_duplicates("duplicate_group_id")
+            weak = weak[~weak.duplicate_group_id.isin(set(reviewed.duplicate_group_id))].drop_duplicates("duplicate_group_id")
+            n = min(requested, len(reviewed) + len(weak))
             if n:
-                chosen = cell.iloc[rng.choice(len(cell), size=n, replace=False)]
+                take_reviewed = min(n, len(reviewed))
+                chosen_reviewed = reviewed.iloc[:take_reviewed]
+                take_weak = n - take_reviewed
+                chosen_weak = weak.iloc[rng.choice(len(weak), size=take_weak, replace=False)] if take_weak else weak.head(0)
+                chosen = pd.concat([chosen_reviewed, chosen_weak])
                 selected.append(chosen)
-            coverage.append({"class": label, "year": year, "available": len(cell), "requested": requested, "selected": n, "human_reviewed": int((cell.review_status == "adjudicated").sum())})
+            coverage.append({"class": label, "year": year, "available": len(cell), "requested": requested, "selected": n, "human_reviewed": int(cell.review_status.ne("unreviewed").sum())})
     if not selected:
         raise ValueError("No eligible labeled candidates")
-    release = pd.concat(selected, ignore_index=True).drop_duplicates("event_id_cnty")
+    release = pd.concat(selected, ignore_index=True).drop_duplicates("duplicate_group_id")
     release.to_csv(args.out / "labeled_balanced_21.csv", index=False)
     coverage_df = pd.DataFrame(coverage)
     coverage_df["quota_gap"] = coverage_df.requested - coverage_df.selected
