@@ -11,6 +11,12 @@ from .triggers import strip_triggers
 
 TEXT_COLUMN = "clean_notes"
 CLASS_COLUMN = "class"
+CLASS_NAMES = [
+    "animal welfare", "blm", "climate", "culture", "discrimination", "education",
+    "environment", "farmers", "health care", "housing", "immigration", "labor rights",
+    "lgbtq", "other", "palestine-israel conflict", "pandemic", "policies & politics",
+    "public services", "ukraine-russia war", "unjust law enforcement", "women rights",
+]
 # Placeholders that are not real categories; 'unknown' especially must be
 # dropped so the model never learns to emit it (it exists to be replaced).
 DROP_CLASSES = ("NoN", "unknown")
@@ -48,8 +54,20 @@ class TextDataset(Dataset):
         return item
 
 
+def build_input(row, include_year=True, include_country=True):
+    """Build the one structured input used by training and inference."""
+    note = row.get("notes", row.get(TEXT_COLUMN, ""))
+    parts = []
+    if include_year and pd.notna(row.get("year")):
+        parts.append(f"Event year: {int(row['year'])}")
+    if include_country and pd.notna(row.get("country")):
+        parts.append(f"Country: {row['country']}")
+    parts.append(f"Note: {str(note)}")
+    return "\n".join(parts)
+
+
 def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
-              strip_trigger_words=False) -> Splits:
+              strip_trigger_words=False, include_year=True, include_country=True) -> Splits:
     """Load the labeled CSV and split it into train/val/test.
 
     Labels are 0-based indices into a sorted list of class names; inference must
@@ -58,7 +76,12 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"The file {file_path} does not exist.")
 
-    df = pd.read_csv(file_path)[[CLASS_COLUMN, TEXT_COLUMN]]
+    df = pd.read_csv(file_path)
+    if CLASS_COLUMN not in df and "final_label" in df:
+        df = df.rename(columns={"final_label": CLASS_COLUMN})
+    if "notes" not in df:
+        df["notes"] = df[TEXT_COLUMN]
+    df[TEXT_COLUMN] = df.apply(lambda row: build_input(row, include_year, include_country), axis=1)
     df = df[~df[CLASS_COLUMN].isin(DROP_CLASSES)]
 
     df = df.dropna(subset=[TEXT_COLUMN]).copy()
@@ -72,7 +95,7 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
         df = df[df[TEXT_COLUMN].str.strip() != ""]
         print(f"Stripped trigger words; dropped {before - len(df)} now-empty rows ({len(df)} remain)")
 
-    class_names = sorted(df[CLASS_COLUMN].unique())
+    class_names = [name for name in CLASS_NAMES if name in set(df[CLASS_COLUMN])]
     class_to_label = {name: i for i, name in enumerate(class_names)}
     df["label"] = df[CLASS_COLUMN].map(class_to_label).astype(int)
 
@@ -80,7 +103,16 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
     train_size = int(train_split * total)
     val_size = int(val_split * total)
 
-    train_df = df.sample(n=train_size, random_state=random_state)
+    # Keep duplicate note groups together whenever provenance is available.
+    if "duplicate_group_id" in df:
+        groups = df[["duplicate_group_id"]].drop_duplicates().sample(frac=1, random_state=random_state)
+        n_train_groups = max(1, round(len(groups) * train_split))
+        train_groups = set(groups.head(n_train_groups).duplicate_group_id)
+        train_df = df[df.duplicate_group_id.isin(train_groups)]
+        if len(train_df) > train_size:
+            train_df = train_df.sample(n=train_size, random_state=random_state)
+    else:
+        train_df = df.sample(n=train_size, random_state=random_state)
     remaining = df.drop(train_df.index)
     val_df = remaining.sample(n=val_size, random_state=random_state)
     test_df = remaining.drop(val_df.index)

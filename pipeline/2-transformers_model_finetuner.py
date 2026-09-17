@@ -16,7 +16,7 @@ from finetuner import (
     generate_report_pdf, get_ollama_review,
 )
 
-DATA_FILE = "../data/labeled_balanced_20.csv"  # balanced 20-class set (from dataset_balancing.ipynb)
+DATA_FILE = "../data/release/labeled_balanced_21.csv"
 MODELS_DIR = "../models"  # top-level models dir (shared with the labeling notebook)
 MAX_LEN = 128
 BATCH_SIZE = 16
