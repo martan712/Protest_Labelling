@@ -36,10 +36,13 @@ def _load_model(model_name, class_names):
     label2id = {name: i for i, name in id2label.items()}
     try:
         model = AutoModelForSequenceClassification.from_pretrained(
-            model_name, num_labels=len(class_names), id2label=id2label, label2id=label2id
+            model_name, num_labels=len(class_names), id2label=id2label, label2id=label2id,
+            ignore_mismatched_sizes=True,
         )
         if model.config.num_labels != len(class_names):
             raise ValueError(f"Checkpoint has {model.config.num_labels} labels but release requires {len(class_names)}")
+        model.config.id2label = id2label
+        model.config.label2id = label2id
         return model
     except Exception as e:
         raise ValueError(
@@ -54,8 +57,11 @@ def _autocast(device):
 
 
 def train_model(model_name, class_names, train_loader, val_loader, device,
-                learning_rate, epochs, output_dir=None, tokenizer=None):
+                learning_rate, epochs, output_dir=None, tokenizer=None, freeze_encoder=False):
     model = _load_model(model_name, class_names).to(device)
+    if freeze_encoder:
+        for name, parameter in model.named_parameters():
+            parameter.requires_grad = "classification_head" in name
     optimizer = AdamW(model.parameters(), lr=learning_rate)
 
     train_losses, val_losses = [], []
