@@ -58,7 +58,7 @@ def _autocast(device):
 
 def train_model(model_name, class_names, train_loader, val_loader, device,
                 learning_rate, epochs, output_dir=None, tokenizer=None, freeze_encoder=False,
-                early_stopping_patience=None, min_delta=0.0):
+                early_stopping_patience=None, min_delta=0.0, selection_fn=None):
     model = _load_model(model_name, class_names).to(device)
     if freeze_encoder:
         for name, parameter in model.named_parameters():
@@ -67,6 +67,10 @@ def train_model(model_name, class_names, train_loader, val_loader, device,
 
     train_losses, val_losses = [], []
     best_val_loss = float("inf")
+    best_selection = float("-inf")
+    best_state = None
+    best_epoch = 0
+    selection_history = []
     epochs_without_improvement = 0
     start = time.time()
 
@@ -87,24 +91,41 @@ def train_model(model_name, class_names, train_loader, val_loader, device,
         val_losses.append(evaluate_model(model, val_loader, device)["avg_loss"])
         print(f"Epoch {epoch}: train_loss={train_losses[-1]:.4f}, val_loss={val_losses[-1]:.4f}")
 
+        selection = selection_fn(model) if selection_fn is not None else None
+        if selection is not None:
+            selection_history.append(selection)
+            print(f"Epoch {epoch}: dev_strict={selection['strict']:.4f}, dev_accepted={selection['accepted']:.4f}")
+
         # Checkpoint each epoch to its own dir ({name}-epoch-i) so we can roll back
         # to any epoch; main() also saves the final model to the base dir.
         if output_dir is not None and tokenizer is not None:
             save_model(model, tokenizer, f"{output_dir}-epoch-{epoch}")
 
-        if val_losses[-1] < best_val_loss - min_delta:
+        improved = (
+            selection["accepted"] > best_selection + min_delta
+            if selection is not None else val_losses[-1] < best_val_loss - min_delta
+        )
+        if improved:
             best_val_loss = val_losses[-1]
+            if selection is not None:
+                best_selection = selection["accepted"]
+            best_epoch = epoch
+            best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
             epochs_without_improvement = 0
         else:
             epochs_without_improvement += 1
             if (early_stopping_patience is not None
                     and epochs_without_improvement >= early_stopping_patience):
                 print(
-                    f"Early stopping after epoch {epoch}: validation loss did not improve "
+                    f"Early stopping after epoch {epoch}: checkpoint selection metric did not improve "
                     f"by at least {min_delta} for {early_stopping_patience} epochs"
                 )
                 break
 
+    if best_state is not None:
+        model.load_state_dict(best_state)
+    model.best_epoch = best_epoch
+    model.selection_history = selection_history
     return model, train_losses, val_losses, time.time() - start
 
 

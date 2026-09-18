@@ -105,17 +105,21 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
 
     # Keep duplicate note groups together whenever provenance is available.
     if "duplicate_group_id" in df:
-        groups = df[["duplicate_group_id"]].drop_duplicates().sample(frac=1, random_state=random_state)
-        n_train_groups = max(1, round(len(groups) * train_split))
-        train_groups = set(groups.head(n_train_groups).duplicate_group_id)
+        groups = df.groupby("duplicate_group_id").size().rename("rows").reset_index()
+        groups = groups.sample(frac=1, random_state=random_state).reset_index(drop=True)
+        train_cut = int((groups.rows.cumsum() < train_size).sum()) + 1
+        train_groups = set(groups.head(train_cut).duplicate_group_id)
         train_df = df[df.duplicate_group_id.isin(train_groups)]
-        if len(train_df) > train_size:
-            train_df = train_df.sample(n=train_size, random_state=random_state)
+        remaining_groups = groups[~groups.duplicate_group_id.isin(train_groups)].copy()
+        val_cut = int((remaining_groups.rows.cumsum() < val_size).sum()) + 1 if len(remaining_groups) else 0
+        val_groups = set(remaining_groups.head(val_cut).duplicate_group_id)
+        val_df = df[df.duplicate_group_id.isin(val_groups)]
+        test_df = df[~df.duplicate_group_id.isin(train_groups | val_groups)]
     else:
         train_df = df.sample(n=train_size, random_state=random_state)
-    remaining = df.drop(train_df.index)
-    val_df = remaining.sample(n=val_size, random_state=random_state)
-    test_df = remaining.drop(val_df.index)
+        remaining = df.drop(train_df.index)
+        val_df = remaining.sample(n=val_size, random_state=random_state)
+        test_df = remaining.drop(val_df.index)
 
     print(f"Classes ({len(class_names)}): {class_names}")
     print(f"Dataset loaded: Train={len(train_df)}, Val={len(val_df)}, Test={len(test_df)}")
