@@ -57,7 +57,8 @@ def _autocast(device):
 
 
 def train_model(model_name, class_names, train_loader, val_loader, device,
-                learning_rate, epochs, output_dir=None, tokenizer=None, freeze_encoder=False):
+                learning_rate, epochs, output_dir=None, tokenizer=None, freeze_encoder=False,
+                early_stopping_patience=None, min_delta=0.0):
     model = _load_model(model_name, class_names).to(device)
     if freeze_encoder:
         for name, parameter in model.named_parameters():
@@ -65,6 +66,8 @@ def train_model(model_name, class_names, train_loader, val_loader, device,
     optimizer = AdamW(model.parameters(), lr=learning_rate)
 
     train_losses, val_losses = [], []
+    best_val_loss = float("inf")
+    epochs_without_improvement = 0
     start = time.time()
 
     print("\nStarting training...")
@@ -88,6 +91,19 @@ def train_model(model_name, class_names, train_loader, val_loader, device,
         # to any epoch; main() also saves the final model to the base dir.
         if output_dir is not None and tokenizer is not None:
             save_model(model, tokenizer, f"{output_dir}-epoch-{epoch}")
+
+        if val_losses[-1] < best_val_loss - min_delta:
+            best_val_loss = val_losses[-1]
+            epochs_without_improvement = 0
+        else:
+            epochs_without_improvement += 1
+            if (early_stopping_patience is not None
+                    and epochs_without_improvement >= early_stopping_patience):
+                print(
+                    f"Early stopping after epoch {epoch}: validation loss did not improve "
+                    f"by at least {min_delta} for {early_stopping_patience} epochs"
+                )
+                break
 
     return model, train_losses, val_losses, time.time() - start
 

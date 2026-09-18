@@ -24,6 +24,8 @@ def main() -> None:
     parser.add_argument("--max-len", type=int, default=128)
     parser.add_argument("--max-rows", type=int, default=None)
     parser.add_argument("--freeze-encoder", action="store_true")
+    parser.add_argument("--patience", type=int, default=None)
+    parser.add_argument("--min-delta", type=float, default=0.0)
     args = parser.parse_args()
     data_path = Path(args.data)
     if args.max_rows:
@@ -53,12 +55,15 @@ def main() -> None:
         args.model, splits.class_names, loaders[0], loaders[1], device,
         learning_rate=5e-5, epochs=args.epochs, output_dir=args.output, tokenizer=tokenizer,
         freeze_encoder=args.freeze_encoder,
+        early_stopping_patience=args.patience, min_delta=args.min_delta,
     )
     save_model(model, tokenizer, args.output)
     metrics = {
         "model": args.model, "output": args.output, "device": device_name,
         "epochs": args.epochs, "batch_size": args.batch_size, "max_len": args.max_len,
         "freeze_encoder": args.freeze_encoder,
+        "early_stopping_patience": args.patience, "min_delta": args.min_delta,
+        "epochs_completed": len(train_losses),
         "training_rows": len(splits.train), "validation_rows": len(splits.val), "test_rows": len(splits.test),
         "class_names": splits.class_names, "train_losses": train_losses, "val_losses": val_losses,
         "training_time_seconds": training_time,
