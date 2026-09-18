@@ -4,29 +4,29 @@ from __future__ import annotations
 
 import re
 
-RULE_VERSION = "rules-v2"
+RULE_VERSION = "rules-v3"
 
 CLASSES_DIC = {
     "blm": ["black lives matter", "black lives", "anti-black"],
-    "lgbtq": ["lgb", "lesbian", "gay", "homosexual", "transsexual", "queer", "homophobia", "transphobia", "biphobia", "trans rights", "lgbtq"],
+    "lgbtq": ["lgbt", "lgbtq", "lesbian", "gay", "homosexual", "transsexual", "queer", "homophobia", "transphobia", "biphobia", "trans rights"],
     "women rights": ["women's rights", "feminism", "feminist", "against women", "women protested", "abortion", "sexual violence", "sexual assault", "sexual harassment", "sexual abuse"],
-    "immigration": ["migrants", "immigration", "against migration", "deportation detention", "deportation", "asylum seeker"],
+    "immigration": ["migrant", "migrants", "migration", "immigration", "against migration", "deportation detention", "deportation", "asylum seeker", "asylum seekers"],
     "unjust law enforcement": ["police brutality", "criminalize protests", "criminalize demonstrations", "police misconduct", "police repression", "police violence", "police abuse"],
     "discrimination": ["discrimination", "racism", "racial discrimination"],
     "climate": ["climate change", "fossil fuels", "greenwashing", "climate agenda", "global warming", "climate crisis", "climate protection", "emissions"],
     "palestine-israel conflict": ["gaza", "palestine", "israel", "hamas", "palestinian"],
     "animal welfare": ["species extinction", "animal welfare", "animal rights", "animal protection", "bullfighting", "animals locked", "wildlife", "cruelty to animals"],
     "farmers": ["farmers", "agriculture", "agricultural", "intensive farming"],
-    "labor rights": ["labor agreement", "labour agreement", "wages", "wage increase", "pay rise", "pay increase", "rights of workers", "labor rights", "labour rights", "higher salaries", "working conditions", "labor conditions", "labour conditions", "commission fees", "pension", "salary equalization", "unfairly dismissed", "unfair dismissal", "dismissed workers", "contract workers", "employment contract", "factory closure", "workload", "working hours", "suspension of workers"],
+    "labor rights": ["labor agreement", "labour agreement", "wages", "wage increase", "pay rise", "pay increase", "rights of workers", "labor rights", "labour rights", "higher salaries", "working conditions", "labor conditions", "labour conditions", "commission fees", "pension", "pensions", "salary equalization", "unfairly dismissed", "unfair dismissal", "dismissed workers", "contract workers", "employment contract", "factory closure", "workload", "working hours", "suspension of workers"],
     "health care": ["healthcare", "health care", "hospital", "hospitals", "emergency clinics", "emergency care", "medical care"],
     "environment": ["environmental", "the environment", "pfas", "nitrogen", "planned felling", "biodiversity", "park project", "pollution", "deforestation"],
     "public services": ["collapse of a concrete canopy", "canopy collapse", "bus", "traffic accidents", "railway station", "train station", "bike lanes", "road connection", "public service", "pedestrianization", "child-safe intersections", "bike street", "play street", "reasonable mobility", "cycling conditions", "urban development", "free transport"],
-    "ukraine-russia war": ["russia", "ukrain", "ukraine", "war in ukraine", "peace in ukraine"],
+    "ukraine-russia war": ["russia", "russian", "russians", "ukraine", "ukrainian", "ukrainians", "war in ukraine", "peace in ukraine"],
     "housing": ["residential complex", "dignified housing", "evict", "eviction", "rent increase", "social housing"],
     "culture": ["tourism", "tourists", "cultural sector", "cultural workers"],
     "policies & politics": ["social welfare", "social services", "social assistance", "economic justice", "economic sovereignty", "economic independence", "adoption of the euro", "euro adoption", "council's plan", "nightlife noise", "municipality", "regional government", "political criticism", "political opposition", "against the pm", "resignation of the president", "political rights", "political prisoners", "anti-eu", "pro-eu", "democratic", "referendums", "urgent elections", "distinct autonomy"],
     "pandemic": ["pandemic", "covid", "coronavirus"],
-    "education": ["education", "teacher", "academic", "professor", "university", "student loan", "school closure"],
+    "education": ["education", "teacher", "academic", "professor", "university", "student loan", "school closure", "nursery closure", "nurseries closure"],
 }
 
 

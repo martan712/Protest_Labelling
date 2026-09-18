@@ -1,4 +1,4 @@
-"""Select a year-balanced, duplicate-safe training proposal from candidates."""
+"""Select the year-balanced, duplicate-safe experimental training set."""
 
 from __future__ import annotations
 
@@ -7,6 +7,17 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+REVIEWED_STATUSES = {"independent_review", "human_review", "adjudicated"}
+
+
+def sample_spread(frame: pd.DataFrame, n: int, rng: np.random.Generator) -> pd.DataFrame:
+    """Sample without replacement while round-robining countries."""
+    if n <= 0:
+        return frame.head(0)
+    shuffled = frame.iloc[rng.permutation(len(frame))].copy()
+    shuffled["_country_rank"] = shuffled.groupby("country", dropna=False).cumcount()
+    return shuffled.sort_values(["_country_rank", "country"], kind="stable").head(n).drop(columns="_country_rank")
 
 
 def quotas_for_class(frame: pd.DataFrame, budget: int) -> dict[int, int]:
@@ -51,7 +62,7 @@ def quotas_for_class(frame: pd.DataFrame, budget: int) -> dict[int, int]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--candidates", type=Path, default=Path("data/release/training_candidates.csv"))
-    parser.add_argument("--heldout", type=Path, default=Path("evaluation/manifests/heldout_manifest.csv"))
+    parser.add_argument("--heldout", type=Path, default=Path("data/run/heldout_manifest.csv"))
     parser.add_argument("--out", type=Path, default=Path("data/release"))
     parser.add_argument("--budget", type=int, default=3000)
     parser.add_argument("--seed", type=int, default=42)
@@ -67,7 +78,7 @@ def main() -> None:
         candidates.final_label.notna()
         & ~candidates.event_id_cnty.isin(held_ids)
         & ~candidates.duplicate_group_id.isin(held_groups)
-    ].copy()
+    ].drop_duplicates("duplicate_group_id").copy()
     rng = np.random.default_rng(args.seed)
     selected = []
     coverage = []
@@ -77,28 +88,35 @@ def main() -> None:
         for year, requested in quotas.items():
             cell = pool[pool.year.eq(year)]
             # Reviewed rows are guaranteed a place before weak-only rows are sampled.
-            reviewed = cell[cell.review_status.ne("unreviewed")]
-            weak = cell[cell.review_status.eq("unreviewed")]
-            reviewed = reviewed.drop_duplicates("duplicate_group_id")
-            weak = weak[~weak.duplicate_group_id.isin(set(reviewed.duplicate_group_id))].drop_duplicates("duplicate_group_id")
+            reviewed = cell[cell.review_status.isin(REVIEWED_STATUSES)]
+            weak = cell[~cell.review_status.isin(REVIEWED_STATUSES)]
             n = min(requested, len(reviewed) + len(weak))
             if n:
                 take_reviewed = min(n, len(reviewed))
-                chosen_reviewed = reviewed.iloc[:take_reviewed]
+                chosen_reviewed = sample_spread(reviewed, take_reviewed, rng)
                 take_weak = n - take_reviewed
-                chosen_weak = weak.iloc[rng.choice(len(weak), size=take_weak, replace=False)] if take_weak else weak.head(0)
+                chosen_weak = sample_spread(weak, take_weak, rng)
                 chosen = pd.concat([chosen_reviewed, chosen_weak])
                 selected.append(chosen)
-            coverage.append({"class": label, "year": year, "available": len(cell), "requested": requested, "selected": n, "human_reviewed": int(cell.review_status.ne("unreviewed").sum())})
+            coverage.append({"class": label, "year": year, "available": len(cell), "requested": requested, "selected": n, "human_reviewed": int(cell.review_status.isin(REVIEWED_STATUSES).sum())})
     if not selected:
         raise ValueError("No eligible labeled candidates")
-    release = pd.concat(selected, ignore_index=True).drop_duplicates("duplicate_group_id")
+    release = pd.concat(selected, ignore_index=True)
+    if release.duplicate_group_id.duplicated().any():
+        raise AssertionError("Selection contains duplicate groups")
     release.to_csv(args.out / "labeled_balanced_21.csv", index=False)
     coverage_df = pd.DataFrame(coverage)
     coverage_df["quota_gap"] = coverage_df.requested - coverage_df.selected
     coverage_df.to_csv(args.out / "year_coverage.csv", index=False)
-    release[["event_id_cnty"]].to_csv(args.out / "selected_training_ids.csv", index=False)
-    print(f"selected {len(release):,} rows across {release.final_label.nunique()} classes")
+    release[["event_id_cnty", "duplicate_group_id", "final_label", "year", "country"]].to_csv(
+        args.out / "selected_training_ids.csv", index=False
+    )
+    country = release.groupby(["final_label", "year", "country"], dropna=False).size().rename("selected").reset_index()
+    totals = country.groupby(["final_label", "year"]).selected.transform("sum")
+    country["country_share"] = country.selected / totals
+    country.to_csv(args.out / "country_coverage.csv", index=False)
+
+    print(f"selected {len(release):,} rows; {int(release.review_status.isin(REVIEWED_STATUSES).sum()):,} independently reviewed")
     print(coverage_df[coverage_df.quota_gap.ne(0)].to_string(index=False))
 
 
