@@ -14,7 +14,7 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from finetuner.data import load_data, build_dataloaders
+from finetuner.data import CLASS_NAMES, load_data, build_dataloaders
 from finetuner.model import get_device, load_tokenizer, train_model, evaluate_model, save_model
 from finetuner.data import build_input
 from evaluation.taxonomy import accepted
@@ -89,6 +89,9 @@ def main() -> None:
     parser.add_argument("--dev-gold", default="data/run/dev_gold.csv")
     parser.add_argument("--dev-manifest", default="data/run/dev_manifest.csv")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--learning-rate", type=float, default=5e-5)
+    parser.add_argument("--training-mode", choices=["full", "reviewed", "mixed"], default="full")
+    parser.add_argument("--reviewed-fraction", type=float, default=0.5)
     args = parser.parse_args()
     data_path = Path(args.data)
     validate_training_data(data_path, Path(args.heldout_manifest))
@@ -97,6 +100,25 @@ def main() -> None:
     torch.manual_seed(args.seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(args.seed)
+    full = pd.read_csv(data_path, low_memory=False)
+    reviewed_mask = full.review_status.isin(["independent_review", "human_review", "adjudicated"])
+    if args.training_mode == "reviewed":
+        prepared = full[reviewed_mask].copy()
+    elif args.training_mode == "mixed":
+        if not 0 < args.reviewed_fraction < 1:
+            raise ValueError("--reviewed-fraction must be between 0 and 1")
+        n_reviewed = round(len(full) * args.reviewed_fraction)
+        n_weak = len(full) - n_reviewed
+        prepared = pd.concat([
+            full[reviewed_mask].sample(n=n_reviewed, replace=True, random_state=args.seed),
+            full[~reviewed_mask].sample(n=n_weak, replace=n_weak > (~reviewed_mask).sum(), random_state=args.seed),
+        ]).sample(frac=1, random_state=args.seed)
+    else:
+        prepared = full
+    if args.training_mode != "full":
+        data_path = Path("data/run") / f"_{args.training_mode}_training.csv"
+        data_path.parent.mkdir(parents=True, exist_ok=True)
+        prepared.to_csv(data_path, index=False)
     if args.max_rows:
         full = pd.read_csv(data_path)
         labels = full["final_label"]
@@ -114,7 +136,10 @@ def main() -> None:
         subset = data_path.parent / "_training_subset_21.csv"
         sampled.to_csv(subset, index=False)
         data_path = subset
-    splits = load_data(data_path, train_split=0.8, val_split=0.1, random_state=42)
+    splits = load_data(
+        data_path, train_split=0.8, val_split=0.1, random_state=args.seed,
+        class_names=CLASS_NAMES,
+    )
     if len(splits.class_names) != 21 or "other" not in splits.class_names:
         raise ValueError(f"Expected 21 labels including other, got {splits.class_names}")
     device, device_name = get_device()
@@ -126,7 +151,7 @@ def main() -> None:
     )
     model, train_losses, val_losses, training_time = train_model(
         args.model, splits.class_names, loaders[0], loaders[1], device,
-        learning_rate=5e-5, epochs=args.epochs, output_dir=args.output, tokenizer=tokenizer,
+        learning_rate=args.learning_rate, epochs=args.epochs, output_dir=args.output, tokenizer=tokenizer,
         freeze_encoder=args.freeze_encoder,
         early_stopping_patience=args.patience, min_delta=args.min_delta,
         selection_fn=dev_selector,
@@ -136,7 +161,9 @@ def main() -> None:
         "model": args.model, "output": args.output, "device": device_name,
         "epochs": args.epochs, "batch_size": args.batch_size, "max_len": args.max_len,
         "freeze_encoder": args.freeze_encoder,
-        "seed": args.seed,
+        "seed": args.seed, "learning_rate": args.learning_rate,
+        "training_mode": args.training_mode, "reviewed_fraction": args.reviewed_fraction,
+        "source_reviewed_rows": int(reviewed_mask.sum()),
         "early_stopping_patience": args.patience, "min_delta": args.min_delta,
         "epochs_completed": len(train_losses),
         "best_epoch": model.best_epoch, "dev_selection_history": model.selection_history,

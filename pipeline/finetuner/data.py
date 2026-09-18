@@ -67,7 +67,8 @@ def build_input(row, include_year=True, include_country=True):
 
 
 def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
-              strip_trigger_words=False, include_year=True, include_country=True) -> Splits:
+              strip_trigger_words=False, include_year=True, include_country=True,
+              class_names=None) -> Splits:
     """Load the labeled CSV and split it into train/val/test.
 
     Labels are 0-based indices into a sorted list of class names; inference must
@@ -95,7 +96,12 @@ def load_data(file_path, train_split=0.8, val_split=0.1, random_state=42,
         df = df[df[TEXT_COLUMN].str.strip() != ""]
         print(f"Stripped trigger words; dropped {before - len(df)} now-empty rows ({len(df)} remain)")
 
-    class_names = [name for name in CLASS_NAMES if name in set(df[CLASS_COLUMN])]
+    class_names = list(class_names) if class_names is not None else [
+        name for name in CLASS_NAMES if name in set(df[CLASS_COLUMN])
+    ]
+    unknown = set(df[CLASS_COLUMN]) - set(class_names)
+    if unknown:
+        raise ValueError(f"Data contains labels outside the requested mapping: {sorted(unknown)}")
     class_to_label = {name: i for i, name in enumerate(class_names)}
     df["label"] = df[CLASS_COLUMN].map(class_to_label).astype(int)
 
