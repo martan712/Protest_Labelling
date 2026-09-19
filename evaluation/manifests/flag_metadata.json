@@ -1,0 +1,23 @@
+{
+  "cutoff": "2025-05-23",
+  "model_cutoffs": {
+    "students": "2025-05-23",
+    "release21": "2026-06-01"
+  },
+  "manifest_rows": 1000,
+  "in_window_rows": 862,
+  "scorable_rows": 840,
+  "strata": {
+    "keyword": {
+      "n": 514,
+      "in_students_train": 217,
+      "in_release21_train": 9
+    },
+    "unknown": {
+      "n": 326,
+      "in_students_train": 0,
+      "in_release21_train": 0
+    }
+  },
+  "gold_annotated": 0
+}

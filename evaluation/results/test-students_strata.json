@@ -1,0 +1,126 @@
+{
+  "run": "test-students",
+  "taxonomy_version": "21-class-v1",
+  "accepted_pairs": [
+    [
+      "blm",
+      "discrimination"
+    ],
+    [
+      "blm",
+      "unjust law enforcement"
+    ],
+    [
+      "climate",
+      "environment"
+    ],
+    [
+      "discrimination",
+      "lgbtq"
+    ],
+    [
+      "discrimination",
+      "women rights"
+    ],
+    [
+      "education",
+      "public services"
+    ],
+    [
+      "health care",
+      "public services"
+    ],
+    [
+      "housing",
+      "public services"
+    ]
+  ],
+  "manifest_sha256": "6e3a9fc70b7f370c9d93af63f83c45cbcdb8411cb91d40675b8cdd5a51fe7ab3",
+  "gold_sha256": "22303d1b56482f86cb6fe70927b390eacc62aa531e31eee59f10d0b46c93cae5",
+  "n_total": 840,
+  "n_disputed": 12,
+  "keyword_clean_not_in_training": {
+    "n": 297,
+    "strict": 0.8282828282828283,
+    "strict_95ci": [
+      0.7812680970765206,
+      0.8669135373782889
+    ],
+    "strict_correct": 246,
+    "accepted": 0.8720538720538721,
+    "accepted_95ci": [
+      0.8292589866958799,
+      0.9053468656862376
+    ],
+    "accepted_correct": 259
+  },
+  "keyword_in_training": {
+    "n": 217,
+    "strict": 0.7465437788018433,
+    "strict_95ci": [
+      0.6847237010904873,
+      0.7997864636610813
+    ],
+    "strict_correct": 162,
+    "accepted": 0.783410138248848,
+    "accepted_95ci": [
+      0.7239282200522906,
+      0.8330320627929705
+    ],
+    "accepted_correct": 170
+  },
+  "unknown": {
+    "n": 326,
+    "strict": 0.5552147239263804,
+    "strict_95ci": [
+      0.5009376393530081,
+      0.6082056585208806
+    ],
+    "strict_correct": 181,
+    "accepted": 0.5736196319018405,
+    "accepted_95ci": [
+      0.5193832522351143,
+      0.6261411449300704
+    ],
+    "accepted_correct": 187
+  },
+  "combined_clean_weighted": {
+    "weights": {
+      "keyword": 0.612,
+      "unknown": 0.388
+    },
+    "n_keyword_clean": 297,
+    "n_unknown": 326,
+    "strict": 0.7223324037925265,
+    "strict_95ci": [
+      0.6887594030708448,
+      0.7559054045142082
+    ],
+    "accepted": 0.7562613868748838,
+    "accepted_95ci": [
+      0.7250455093955152,
+      0.7874772643542524
+    ]
+  },
+  "all_rows_unweighted": {
+    "n": 840,
+    "strict": 0.7011904761904761,
+    "strict_95ci": [
+      0.6693764574412999,
+      0.7311726503533382
+    ],
+    "strict_correct": 589,
+    "accepted": 0.7333333333333333,
+    "accepted_95ci": [
+      0.7024147974312042,
+      0.7621273630880211
+    ],
+    "accepted_correct": 616
+  },
+  "keyword_clean_classes_with_zero_rows": [
+    "animal welfare",
+    "blm",
+    "culture",
+    "lgbtq"
+  ]
+}

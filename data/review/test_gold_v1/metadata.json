@@ -1,0 +1,15 @@
+{
+  "queue_version": "test-gold-v1",
+  "taxonomy_version": "21-class-v1",
+  "source_manifest": "evaluation/manifests/test_manifest_flagged.csv",
+  "source_manifest_sha256": "d350a957e004342a47810769d47045d15b1d5a70dd5994ee1d2159028951439f",
+  "seed": 42,
+  "rows": 840,
+  "strata": {
+    "keyword": 514,
+    "unknown": 326
+  },
+  "chunk_size": 60,
+  "chunk_count": 14,
+  "generated_utc": "2026-09-19T21:29:34.256400+00:00"
+}

@@ -1,0 +1,99 @@
+{
+  "pass1_source": "data/review/test_gold_v1/annotated/chunk_*.csv",
+  "pass2_source": "data/review/test_gold_v1/adjudication/second_pass_chunk_*.csv",
+  "sample_size": 150,
+  "overall": {
+    "n": 150,
+    "agreement": 0.92,
+    "agreement_95ci": [
+      0.8653774250568131,
+      0.9536468180607831
+    ],
+    "disagreement": 0.07999999999999996,
+    "cohen_kappa": 0.9115652942910484
+  },
+  "by_stratum": {
+    "keyword": {
+      "n": 92,
+      "agreement": 0.9347826086956522,
+      "agreement_95ci": [
+        0.8649403972069417,
+        0.9697702086260162
+      ],
+      "disagreement": 0.06521739130434778,
+      "cohen_kappa": 0.9278337037521245
+    },
+    "unknown": {
+      "n": 58,
+      "agreement": 0.896551724137931,
+      "agreement_95ci": [
+        0.7921166146899103,
+        0.9517192498414084
+      ],
+      "disagreement": 0.10344827586206895,
+      "cohen_kappa": 0.8803301237964237
+    }
+  },
+  "confusion_of_disagreements": [
+    {
+      "pass1": "policies & politics",
+      "pass2": "other",
+      "n": 3
+    },
+    {
+      "pass1": "environment",
+      "pass2": "public services",
+      "n": 1
+    },
+    {
+      "pass1": "other",
+      "pass2": "health care",
+      "n": 1
+    },
+    {
+      "pass1": "other",
+      "pass2": "labor rights",
+      "n": 1
+    },
+    {
+      "pass1": "pandemic",
+      "pass2": "education",
+      "n": 1
+    },
+    {
+      "pass1": "pandemic",
+      "pass2": "culture",
+      "n": 1
+    },
+    {
+      "pass1": "policies & politics",
+      "pass2": "labor rights",
+      "n": 1
+    },
+    {
+      "pass1": "policies & politics",
+      "pass2": "pandemic",
+      "n": 1
+    },
+    {
+      "pass1": "policies & politics",
+      "pass2": "public services",
+      "n": 1
+    },
+    {
+      "pass1": "public services",
+      "pass2": "policies & politics",
+      "n": 1
+    }
+  ],
+  "uncertainty_band": {
+    "label_disagreement_rate": 0.07999999999999996,
+    "label_disagreement_95ci": [
+      0.04635318193921689,
+      0.13462257494318686
+    ],
+    "worst_stratum_disagreement": 0.10344827586206895,
+    "worst_stratum": "unknown",
+    "interpretation": "Absolute accuracy figures below should be read with a +/- band of this size: two independent blind passes disagree on this fraction of rows, so some of any score gap is annotator noise rather than model signal."
+  }
+}

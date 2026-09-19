@@ -1,0 +1,121 @@
+{
+  "run": "test-release21",
+  "taxonomy_version": "21-class-v1",
+  "accepted_pairs": [
+    [
+      "blm",
+      "discrimination"
+    ],
+    [
+      "blm",
+      "unjust law enforcement"
+    ],
+    [
+      "climate",
+      "environment"
+    ],
+    [
+      "discrimination",
+      "lgbtq"
+    ],
+    [
+      "discrimination",
+      "women rights"
+    ],
+    [
+      "education",
+      "public services"
+    ],
+    [
+      "health care",
+      "public services"
+    ],
+    [
+      "housing",
+      "public services"
+    ]
+  ],
+  "manifest_sha256": "6e3a9fc70b7f370c9d93af63f83c45cbcdb8411cb91d40675b8cdd5a51fe7ab3",
+  "gold_sha256": "22303d1b56482f86cb6fe70927b390eacc62aa531e31eee59f10d0b46c93cae5",
+  "n_total": 840,
+  "n_disputed": 12,
+  "keyword_clean_not_in_training": {
+    "n": 505,
+    "strict": 0.7841584158415842,
+    "strict_95ci": [
+      0.7462022309065469,
+      0.8178239807868367
+    ],
+    "strict_correct": 396,
+    "accepted": 0.8198019801980198,
+    "accepted_95ci": [
+      0.7839044245372667,
+      0.8508707196333355
+    ],
+    "accepted_correct": 414
+  },
+  "keyword_in_training": {
+    "n": 9,
+    "strict": 1.0,
+    "strict_95ci": [
+      0.7008472464490407,
+      1.0
+    ],
+    "strict_correct": 9,
+    "accepted": 1.0,
+    "accepted_95ci": [
+      0.7008472464490407,
+      1.0
+    ],
+    "accepted_correct": 9
+  },
+  "unknown": {
+    "n": 326,
+    "strict": 0.5674846625766872,
+    "strict_95ci": [
+      0.5132264763537586,
+      0.6201708877143275
+    ],
+    "strict_correct": 185,
+    "accepted": 0.5920245398773006,
+    "accepted_95ci": [
+      0.5379035422907026,
+      0.6440019541657784
+    ],
+    "accepted_correct": 193
+  },
+  "combined_clean_weighted": {
+    "weights": {
+      "keyword": 0.612,
+      "unknown": 0.388
+    },
+    "n_keyword_clean": 505,
+    "n_unknown": 326,
+    "strict": 0.7000889995748041,
+    "strict_95ci": [
+      0.6697960217712232,
+      0.730381977378385
+    ],
+    "accepted": 0.7314243333535807,
+    "accepted_95ci": [
+      0.7022801277562896,
+      0.7605685389508718
+    ]
+  },
+  "all_rows_unweighted": {
+    "n": 840,
+    "strict": 0.7023809523809523,
+    "strict_95ci": [
+      0.6705967670312278,
+      0.7323224538272839
+    ],
+    "strict_correct": 590,
+    "accepted": 0.7333333333333333,
+    "accepted_95ci": [
+      0.7024147974312042,
+      0.7621273630880211
+    ],
+    "accepted_correct": 616
+  },
+  "keyword_clean_classes_with_zero_rows": []
+}
