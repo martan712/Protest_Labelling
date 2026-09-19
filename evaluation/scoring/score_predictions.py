@@ -10,7 +10,7 @@ import sys
 
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from taxonomy import accepted, ACCEPTED_PAIRS, TAXONOMY_VERSION, validate_label
 
 

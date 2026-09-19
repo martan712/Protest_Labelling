@@ -10,8 +10,10 @@ import pandas as pd
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "pipeline"))
-from finetuner.data import build_input
+# The finetuner package lives in the repository-root pipeline/ directory,
+# which is three levels up from evaluation/scoring/.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "pipeline"))
+from finetuner.data import build_input  # noqa: E402
 
 
 def main() -> None:
