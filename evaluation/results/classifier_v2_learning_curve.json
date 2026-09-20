@@ -1,0 +1,105 @@
+{
+  "curve": [
+    {
+      "size": 800,
+      "seed42": {
+        "strict_accuracy": 0.6096579476861167,
+        "macro_f1": 0.3648479963563706
+      },
+      "seeds": {
+        "17": {
+          "strict_accuracy": 0.6881287726358148,
+          "macro_f1": 0.48045910543624176
+        },
+        "42": {
+          "strict_accuracy": 0.6096579476861167,
+          "macro_f1": 0.3648479963563706
+        },
+        "83": {
+          "strict_accuracy": 0.6498993963782697,
+          "macro_f1": 0.3885032771246986
+        }
+      },
+      "mean_strict_accuracy": 0.6492287055667337,
+      "mean_macro_f1": 0.4112701263057703,
+      "n_seeds": 3
+    },
+    {
+      "size": 1500,
+      "seed42": {
+        "strict_accuracy": 0.6861167002012073,
+        "macro_f1": 0.5673230161829926
+      },
+      "seeds": {
+        "42": {
+          "strict_accuracy": 0.6861167002012073,
+          "macro_f1": 0.5673230161829926
+        }
+      },
+      "mean_strict_accuracy": 0.6861167002012073,
+      "mean_macro_f1": 0.5673230161829926,
+      "n_seeds": 1
+    },
+    {
+      "size": 3000,
+      "seed42": {
+        "strict_accuracy": 0.7505030181086519,
+        "macro_f1": 0.6123366065752341
+      },
+      "seeds": {
+        "42": {
+          "strict_accuracy": 0.7505030181086519,
+          "macro_f1": 0.6123366065752341
+        }
+      },
+      "mean_strict_accuracy": 0.7505030181086519,
+      "mean_macro_f1": 0.6123366065752341,
+      "n_seeds": 1
+    },
+    {
+      "size": 6000,
+      "seed42": {
+        "strict_accuracy": 0.7686116700201208,
+        "macro_f1": 0.6576338778201828
+      },
+      "seeds": {
+        "17": {
+          "strict_accuracy": 0.7505030181086519,
+          "macro_f1": 0.6224958788046768
+        },
+        "42": {
+          "strict_accuracy": 0.7686116700201208,
+          "macro_f1": 0.6576338778201828
+        },
+        "83": {
+          "strict_accuracy": 0.7505030181086519,
+          "macro_f1": 0.6232270438689825
+        }
+      },
+      "mean_strict_accuracy": 0.7565392354124749,
+      "mean_macro_f1": 0.6344522668312808,
+      "n_seeds": 3
+    }
+  ],
+  "stop_rule": {
+    "seed42_gains": [
+      {
+        "from": 800,
+        "to": 1500,
+        "strict_gain": 0.0764587525150906
+      },
+      {
+        "from": 1500,
+        "to": 3000,
+        "strict_gain": 0.06438631790744465
+      },
+      {
+        "from": 3000,
+        "to": 6000,
+        "strict_gain": 0.01810865191146882
+      }
+    ],
+    "recommended_release": 6000,
+    "rationale": "Stop at the largest release: doubling still improved development strict accuracy by more than one point at the final step, so 6,000 was justified; the next doubling is expected to fall below the one-point threshold."
+  }
+}
