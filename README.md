@@ -1,108 +1,78 @@
-# Gaining New Insights into Protests Using AI
+# Protest event theme classifier
 
-This project, conducted in collaboration with the Clingendael Institute, leverages artificial intelligence to gain deeper insights into the causes and dynamics of protests across Europe. Using a filtered version of the ACLED dataset, we developed models to categorize protest topics and predict the likelihood of violent escalation.
+A single-label semantic classifier for European protest-event notes. It assigns
+exactly one of 21 themes using only the original `notes` text. There are no
+keyword features, metadata features, rule pretraining, or fallback models.
 
----
+The implementation is intentionally split into:
 
-## Directory Structure
+- `src/protest_classifier/`: reusable, path-independent library code;
+- `scripts/`: thin runnable workflows with project paths and CLI arguments;
+- `configs/annotation_prompt.md`: the exact annotation contract;
+- `data/manifests/`: frozen, nested train selections plus separate development
+  and locked-test selections;
+- `notebooks/evaluate_classifier.ipynb`: evaluation tables, learning curves,
+  per-class scores, confusion matrix, and examples.
+
+See `docs/architecture.md` for module responsibilities and
+`docs/data_provenance.md` for the input-data history. The original assignment is
+kept at `Tweedejaarsproject-1.pdf`. Previous data and model artifacts are under
+`archive/legacy_2026-09-20/`; superseded code remains available through Git.
+
+## Setup
+
+```bash
+uv sync
 ```
-TweedeJaarsProject/                 # Root of the GitHub repository
-├── data/                           # Folder for datasets or raw data files
-└── TweedeJaarsProject/             # Main project folder
-    └── supervised_transformer_labeling/  # Supervised transformer-based labeling models
-``` 
 
-Note: The `data/` folder is excluded from GitHub due to large file sizes.
+On this machine, prefix GPU training and inference commands with
+`HSA_OVERRIDE_GFX_VERSION=11.0.0` for the Radeon 840M ROCm workaround.
 
----
+## Workflow
 
-## Requirements
-### Required python packages
-- **General packages**  
-  - Pandas
-  - numpy
-  - matplotlib
-  - nltk
-  - sklearn/ scikit-learn
+```bash
+# 1. Recreate the preserved, label-free split manifests.
+.venv/bin/python scripts/build_manifests.py
 
-- **Supervised labeling models**  
-  - torch
-  - transformers
-  - tqdm
-  - reportlab
-  - requests
+# 2. Create blank annotation batches for the 6,000-row training pool.
+.venv/bin/python scripts/create_annotation_chunks.py \
+  --manifest data/manifests/train_6000.csv \
+  --output data/annotations/train_chunks
 
-- **Non-supervised labeling models**  
-  - sentence_transformers
-  - bertopic
+# 3. After annotation, assemble all complete nested training releases.
+.venv/bin/python scripts/prepare_training_releases.py
 
-- **Violence prediction models**  
-  - xgboost
+# Assemble development labels separately. Do the same for the locked test only
+# after its labels have been collected independently.
+.venv/bin/python scripts/assemble_annotations.py \
+  --manifest data/manifests/dev.csv \
+  --labels dev_labels.csv \
+  --output data/annotations/dev.csv
 
-### Runtime requirements
-Below are the hardware/runtime requirements for training specific models. Anything besides the below mentioned topics, should be a able to run on a low-end cpu or gpu.
-- **Supervised note labeling**  
-  For the supervised note labeling models, we recommend using a gpu. Running on a CUDA this takes around 1.5h and with an Apple M4 it takes around 2.5h.
+# 4. Train a release. Development macro-F1 selects the best epoch.
+HSA_OVERRIDE_GFX_VERSION=11.0.0 .venv/bin/python scripts/train_classifier.py \
+  --release 6000 --seeds 17 42 83
 
-- **Semi-supervised note labeling**  
-  A GPU is recommended. ESS takes up to 30 minutes running on a geforce rtx 3070, while ZSC takes around two hours to classify 77,496 notes.
+# 5. Evaluate development results and plot the learning curve.
+HSA_OVERRIDE_GFX_VERSION=11.0.0 .venv/bin/python scripts/evaluate_classifier.py \
+  --split dev --run run-0800 run-1500 run-3000 run-6000
+.venv/bin/python scripts/plot_learning_curve.py
 
-- **Unsupervised note labeling**
-Neither is recommended.
+# 6. Evaluate the locked test once, after model selection is finished.
+HSA_OVERRIDE_GFX_VERSION=11.0.0 .venv/bin/python scripts/evaluate_classifier.py \
+  --split test --run run-6000
 
-- **Binary violence prediction**  
-  We recommend the binary violence prediction models to be run on google colab or a low-end gpu/ cpu. On google colab, running the four different binary prediction models will take around 10 to 15 minutes.
+# 7. Label the full event corpus in bounded-memory chunks.
+HSA_OVERRIDE_GFX_VERSION=11.0.0 .venv/bin/python scripts/predict_events.py \
+  --model models/new_classifier/run-6000/seed-42/best
+```
 
-- **Probability violence prediction**  
-  XXX
+Training code can read training and development annotations but has no route to
+the locked test labels. `evaluation/test_data.py` is the sole library loader for
+test gold.
 
-## File Overview
+## Verification
 
-### Data Preparation
-- **DataCleaning.py**  
-  Preprocessing script for cleaning and filtering raw ACLED events. Generates `filtered_events_country_code.csv` in the `data/` folder.
-
-### Embedding-Based Labeling
-- **EmbeddingSimilaritySearch.ipynb**  
-  Applies Embedding Similarity Search (ESS) to label event notes by comparing against predefined topic descriptions.
-
-### Violence Prediction Models
-- **violence_model_binary.ipynb**  
-  Implements and evaluates scikit-learn models for binary violence prediction (violent vs. non-violent protests). Also includes the generation of the data needed and the
-  factors most influencing violence according to the logistic regression model.
-- **violence_orientation_binary.ipynb**  
-  Explores feature engineering and orientation analysis for the binary violence prediction model (and violence prediction in general)
-- **violence_probability.ipynb**  
-  Trains a logistic regression model to predict violence probability by actor and country. Usage:
-  ```python
-  print(predict_violence('country_code', 'actor_name'))
-  ```
-
-### Trigger-Word Labeling
-- **labeling_triggerwords.ipynb**  
-  Labels protests using a dictionary of trigger words. Customize classes and keywords in `Classes_dic` as needed.
-
-### Unsupervised Topic Modeling
-- **Unsupervised_LDA.ipynb**  
-  Applies Latent Dirichlet Allocation (LDA) for unsupervised topic labeling.
-- **Unsupervised_BERTopic.ipynb**  
-  Uses BERTopic for unsupervised topic modeling of protest notes.
-
-### Zero-Shot Classification
-- **Zero-ShotClassification.ipynb**  
-  Semi-supervised labeling using Zero-Shot classification with DeBERTa v3.
-- **Zero-ShotClassificationTop3.ipynb**  
-  Retrieves the top three most likely topics via Zero-Shot DeBERTa v3.
-
----
-
-## Map: `supervised_transformer_labeling`
-
-- **dataset_balancing.ipynb**  
-  Addresses class imbalance by grouping smaller topic classes into broader categories.
-- **transformers_model_finetuner.py**  
-  Script to train and evaluate a Hugging Face Transformer for text classification, with automated report generation (PDF) and Ollama-based model review.
-- **labeling_by_transformer_model.ipynb**  
-  An script to label the dataset with an pretrained transformer model
-
----
+```bash
+.venv/bin/python -m unittest discover -v
+```

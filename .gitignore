@@ -1,14 +1,25 @@
-test.csv
-Full catolog.png
-Categoryt count.png
 .DS_Store
-train.csv
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+.venv-old-cuda/
 
+# Large source, annotations, predictions, and trained weights are local.
+data/raw/
+data/predictions/
+data/annotations/*.csv
+data/annotations/train_chunks/
 models/
-data/
 
-__pycache__
+# Dated legacy binaries/data stay local; their metadata is tracked.
+archive/legacy_*/data/**
+!archive/legacy_*/data/ARCHIVE_METADATA.md
+archive/legacy_*/models/
 
-*.pyc
-
-plan.md
+# Evaluation output is reproducible from checkpoints and annotations.
+reports/*.json
+reports/*.csv
+reports/*.png
