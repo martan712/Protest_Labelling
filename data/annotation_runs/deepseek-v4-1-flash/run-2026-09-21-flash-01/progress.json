@@ -1,0 +1,45 @@
+{
+  "run_id": "run-2026-09-21-flash-01",
+  "annotator": "deepseek-v4.1-flash-run-2026-09-21-flash-01",
+  "taxonomy_version": "2026-09-21-v3",
+  "prompt_sha256": "19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250",
+  "prompt_hash_match": true,
+  "status": "COMPLETE",
+  "pilot": {
+    "rows": 100,
+    "composition": "75 reproducible random (seed 20260921) + 25 ambiguous-boundary",
+    "file": "pilot/train_pilot_100_output.csv",
+    "validation": "PASS",
+    "other_rows_reviewed": 11,
+    "other_rows_accepted": 11,
+    "pilot_rows_reused_in_train_chunks": 100
+  },
+  "chunks": {
+    "train_chunks": {"count": 120, "size": 50, "annotated": 120, "validated": 120},
+    "dev_chunks": {"count": 10, "size": 50, "annotated": 10, "validated": 10},
+    "test_chunks": {"count": 17, "size": 50, "annotated": 17, "validated": 17}
+  },
+  "assembled": {
+    "train_0800": {"rows": 800, "path": "assembled/train_0800.csv"},
+    "train_1500": {"rows": 1500, "path": "assembled/train_1500.csv"},
+    "train_3000": {"rows": 3000, "path": "assembled/train_3000.csv"},
+    "train_6000": {"rows": 6000, "path": "assembled/train_6000.csv"},
+    "dev": {"rows": 497, "path": "assembled/dev.csv"},
+    "test_locked": {"rows": 840, "path": "assembled/test_locked.csv"}
+  },
+  "validation": {
+    "schema": "PASS on all 147 chunks and all 6 assembled files",
+    "text_preserved_vs_manifest": true,
+    "annotator_uniform": true,
+    "labels_valid": true,
+    "other_reason_contract": "PASS (outside_taxonomy=564, insufficient_information=41)",
+    "unit_tests": "Ran 11 tests ... OK"
+  },
+  "review_counts": {
+    "total_rows_schema_validated": 7337,
+    "other_rows_contract_checked": 605,
+    "pilot_other_rows_semantically_reviewed": 11,
+    "alternatives_recorded": 814
+  },
+  "unresolved_cases": "See review/unresolved_cases.md (categories flagged by batch subagents; none changed post hoc)."
+}

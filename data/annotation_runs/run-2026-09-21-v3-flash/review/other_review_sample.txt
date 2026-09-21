@@ -1,0 +1,1336 @@
+[train] BGR1857 | outside_taxonomy
+  NOTE: On 30 May 2021, residents of the Gorublyane district in Sofia organized a protest and demanded compensation for forced expropriation.
+  EV: demanded compensation for forced expropriation
+
+[train] HUN800 | outside_taxonomy
+  NOTE: On 8 February 2023, DK members, including a DK local councilor, protested outside a building where the Orban government held a session in Sopron against the sale of local government property.
+  EV: protest against the sale of local government property
+
+[train] ITA24456 | outside_taxonomy
+  NOTE: On 12 May 2023, at the call of Agerola Forum, people protested during the Giro d'Italia in Ravello (Salerno, Campania) to ask for more safety and road maintenance work. Some weeks before, a 29-year-old boy Nicola Fusco f
+  EV: ask for more safety and road maintenance work after a bus fell into an embankment
+
+[train] DEU6617 | outside_taxonomy
+  NOTE: On 8 May 2021, around 19 members of The Right protested in Einbeck with the slogan 'Against a Guilt Cult - Investigation Instead of Repentance' against Germany's 'guilt culture' with respect to its role in the Second Wor
+  EV: far-right group protest against Germany's 'guilt culture'
+
+[train] ESP19679 | outside_taxonomy
+  NOTE: On 29 January 2025, dozens of taxi drivers, called by Taxi National Association (Antaxi-Asociacion Nacional del Taxi), held a protest outside the Government Sub-delegation in Oviedo (Asturias) against skyrocketing insura
+  EV: against skyrocketing taxi insurance costs and demanding a cap on policy hikes
+
+[train] POL7946 | outside_taxonomy
+  NOTE: On 15 December 2024, residents of Gaj blocked a local road by slow walking, protesting against the proposed construction of a new railway in their neighborhood.
+  EV: protesting against the proposed construction of a new railway in their neighborhood
+
+[train] DNK2023 | outside_taxonomy
+  NOTE: On 15 May 2023, hauliers obstructed traffic in Vallensbaek, Hovedstaden, to oppose the road tax on diesel large goods vehicles that was proposed by the government.
+  EV: oppose the proposed road tax on diesel large goods vehicles
+
+[train] NOR1453 | outside_taxonomy
+  NOTE: On 13 November 2023, around 120 people held a torchlight procession in Fana, Bergen, to oppose the closure of a motorway in the area, claiming that it could affect local residents.
+  EV: oppose the closure of a motorway that could affect local residents
+
+[train] DEU2098 | outside_taxonomy
+  NOTE: On 7 June 2020, several hundred motor bikers protested in Dresden against an impending driving ban.
+  EV: protest against an impending driving ban
+
+[train] SVN290 | outside_taxonomy
+  NOTE: On 4 February 2022, activists gathered for a rally in Slovenj Gradec, criticizing the government and protesting against some of its controversial actions, including a planned purchase of expensive military equipment.
+  EV: protest against a planned purchase of expensive military equipment
+
+[train] CYP2122 | outside_taxonomy
+  NOTE: On 26 January 2025, a couple of hundred Turkish Cypriot residents of Dipkarpaz rallied blocking the road linking the village to the Apostolos Andreas monastery, a popular tourist destination, and demanded the road be com
+  EV: demand that the road linking the village to a monastery be completely rebuilt
+
+[train] MLT177 | outside_taxonomy
+  NOTE: Around 4 July 2022 (as reported), people gathered outside Parliament in Valletta (South Eastern) at the call of Beltin Residents (Residenti Beltin) to protest against a legal notice allowing them to play music until 1am 
+  EV: protest against a legal notice allowing music until 1am in several residential streets
+
+[train] BGR1856 | outside_taxonomy
+  NOTE: On 28 May 2021, more than 500 residents of the Samoranovo village protested in front of the Municipal building in Dupnitsa, Bulgaria, complaining about the lack of water in the settlement and calling for the resignation 
+  EV: complain about the lack of water in the settlement and call for the mayor's resignation
+
+[train] GBR8717 | outside_taxonomy
+  NOTE: On 8 July 2025, hundreds of protesters marched on the Royal Courts of Justice in London - Westminster (England) to oppose the All England Club's GBP200 million expansion plan for the Wimbledon tennis grounds. The demonst
+  EV: oppose the All England Club's expansion plan for the Wimbledon tennis grounds
+
+[train] ESP8292 | outside_taxonomy
+  NOTE: On 21 January 2022, around 70 vehicles marched from Espiel (Cordoba) until Azuaga (Badajoz), demanding the construction of a highway connecting Badajoz with Cordoba and Granada.
+  EV: demanding the construction of a highway connecting Badajoz with Cordoba and Granada
+
+[train] CYP525 | outside_taxonomy
+  NOTE: On 11 October 2020, tens of Turkish Cypriots rallied in Northern Cyprus at the Deryneia crossing point holding Turkish flags as a response to the Greek Cypriot riots on the other side of the crossing point. There was str
+  EV: Turkish Cypriots rallied in response to the Greek Cypriot riots on the other side of the crossing point
+
+[train] SRB5748 | outside_taxonomy
+  NOTE: On 23 August 2025, SNS supporters gathered in Loznica to express support for the government and oppose student-led protests and blockades.
+  EV: express support for the government and oppose student-led protests and blockades
+
+[train] ITA23916 | outside_taxonomy
+  NOTE: On 23 September 2024, about 200 people, including residents and representatives of local committees, took to the streets in Chiaiano (Campania) to protest against the closure of the local police station. MP Francesco Emi
+  EV: protest against the closure of the local police station; service closure with no covered domain
+
+[train] ESP4919 | outside_taxonomy
+  NOTE: On 12 April 2021, citizens protested in Cartagena (Murcia) against the railway route project of the high-speed train to Cartagena.
+  EV: protest against the railway route project of the high-speed train to Cartagena
+
+[train] FRA7812 | insufficient_information
+  NOTE: On 3 April 2021, at night, around 40 young persons threw mortar fireworks and Molotov cocktails at around 20 police officers in Evreux. They also set trash bins on fire following a message on social media calling for the
+  EV: the reason for the riot was not specified
+
+[train] ESP19695 | outside_taxonomy
+  NOTE: On 29 January 2025, taxi drivers, including the mayor of Jaen (PP), called by Taxi National Association (Antaxi-Asociacion Nacional del Taxi) and locally by Andalusian Taxi Freelancers (FAAT-Andaluza de Autanomos del Tax
+  EV: taxi drivers protesting skyrocketing insurance costs and seeking to ensure the sector's survival
+
+[train] MNE83 | outside_taxonomy
+  NOTE: On 1 November 2018, 2018 in Montenegrin capital Podgorica hunters protested against the general conditions for hunters in this country, asking the authorities to regulate the legislature concerned with this topic.
+  EV: Hunters protesting the general conditions for hunters and asking for hunting legislation to be regulated
+
+[train] ESP10243 | outside_taxonomy
+  NOTE: On 6 May 2022, neighbors and members of CGT invaded the Valencia-Utiel line in Utuel (Valencia) for a few minutes to make visible the protest against the closure of the railway section to Cuenca.
+  EV: Protest against the closure of the railway section to Cuenca; transport service closure, no covered domain
+
+[train] FRA33092 | outside_taxonomy
+  NOTE: On 29 April 2024, around 100 people staged a demonstration in Beauvais (Hauts-de-France), to protest against increased traffic at Beauvais-Tille airport. The participants used whistles, pots and pans, and sirens.
+  EV: Protest against increased traffic at Beauvais-Tille airport; no covered domain stated
+
+[train] SRB6271 | outside_taxonomy
+  NOTE: On 28 September 2025, SNS supporters gathered in Pecinci to express support for the government and oppose student-led protests and blockades.
+  EV: SNS supporters expressing support for the government and opposing student protests; no covered substantive iss
+
+[train] GBR8203 | outside_taxonomy
+  NOTE: On 1 February 2025, in the afternoon, thousands of supporters of the 'Stop the Isolation' movement marched from Waterloo Station to Parliament Square in London - Westminster (England) in support of far-right activist Tom
+  EV: March in support of far-right activist Tommy Robinson; pro-far-right rally with no covered central demand
+
+[train] ITA27052 | outside_taxonomy
+  NOTE: On 11 June 2025, people, including the mayor (PD) and other local elected officials, gathered at the Campanara motorway exit near Pesaro (Marche) to denounce long-standing delays in five compensatory road projects tied t
+  EV: Denouncing delays in compensatory road projects tied to the A14 expansion; local infrastructure
+
+[train] SRB812 | outside_taxonomy
+  NOTE: On 29 March 2019, in Pancevo, Serbia, members of the '1 of 5 Million' protest group held a peaceful anti-government protest . The protest is a part of anti-government protest happening throughout the country since the en
+  EV: Anti-government protest motivated by an attack on an opposition leader; no covered substantive issue
+
+[train] CYP438 | insufficient_information
+  NOTE: On 3 July 2020, members of KTAMS rallied in Northern Nicosia outside the headquarters of a bank to protest against its practices.
+  EV: KTAMS members protesting a bank's unspecified practices; no clear grievance reported
+
+[train] POL2455 | outside_taxonomy
+  NOTE: On 1 May 2021, about 100 nationalist activists, including members of the ONR movement, gathered for a rally in Bialystok, protesting against liberalism and wild capitalism. Law enforcers and a representative of a local m
+  EV: nationalist activists protesting against liberalism and wild capitalism
+
+[train] POL382 | outside_taxonomy
+  NOTE: On 9 July 2020, activists affiliated to the movement Democratic Action gathered in Warsaw, protesting against the current president and presidential candidate.
+  EV: protesting against the current president and presidential candidate without a covered substantive issue
+
+[train] BEL3409 | outside_taxonomy
+  NOTE: On 23 May 2024, an unknown number of Flemish Interest members organized a protest action in Itterbeek (Vlaanderen) to denounce the urban development of Dilbeek.
+  EV: Flemish Interest members denounced the urban development of Dilbeek, an unspecified local planning issue
+
+[train] BGR4118 | outside_taxonomy
+  NOTE: On 19 March 2025, the owners and employees of the restaurant industry from Velingrad joined the national protest of the restaurant industry to express their dissatisfaction with the return of the 20 percent VAT in the se
+  EV: restaurant industry protested the return of the 20 percent VAT, claiming it undercuts profits
+
+[train] SRB375 | outside_taxonomy
+  NOTE: On 8 February 2019, in Topola, Serbia, citizens held an anti-government protest, part of a series of protests held throughout the country for several consecutive weeks.
+  EV: anti-government protest with no covered substantive issue stated
+
+[train] ESP18532 | outside_taxonomy
+  NOTE: On 20 October 2024, around 6,500 people protested in Santa Cruz de Tenerife (Canarias) against the mass tourism model.
+  EV: protested against the mass tourism model, no covered substantive issue stated
+
+[train] DNK93 | outside_taxonomy
+  NOTE: On 9 March 2020, Stram Kurs members demonstrated against Islam and burned a Quran in Varberg Park, Haderslev, after incidents of vandalism and burning of cars had occurred in the area. The group was met with a counter pr
+  EV: far-right Stram Kurs demonstrated against Islam and burned a Quran; counter-protest against racism followed
+
+[train] ITA27068 | outside_taxonomy
+  NOTE: On 25 June 2025, Cosenza Football Club supporters gathered in Piazzetta Carratelli in Cosenza (Calabria) to express dissatisfaction with the club's current ownership and to call for a decisive change in leadership.
+  EV: football supporters expressed dissatisfaction with the club's ownership and called for a leadership change
+
+[train] CYP2540 | outside_taxonomy
+  NOTE: On 10 March 2026, taxi drivers from all districts of the Republic gathered in Nicosia and drove a convoy to key government buildings, ending the motorcade at the ministry of transport. They protested issues of their sect
+  EV: taxi drivers protested 'pirate taxis', unfair competition and rising sector costs
+
+[train] MLT190 | outside_taxonomy
+  NOTE: On 7 September 2022, over 80 students, lecturers, members of NGOs and other people gathered at the University of Malta in Msida (Central) to protest against the construction of an 11-storey hotel outside the University.
+  EV: protested construction of an 11-storey hotel outside the University, a local development dispute
+
+[train] ALB586 | outside_taxonomy
+  NOTE: On 3 November 2019, residents of the Astir area, supported by the Democratic Party, protested in Tirana against the New Ring Road in the presence of police, marking their one year anniversary of protests.
+  EV: residents protested the New Ring Road project with no covered substantive issue stated
+
+[train] FRA9714 | outside_taxonomy
+  NOTE: On 25 March 2021, 9 persons, including members of Action Francaise and elected politicians, entered the building of the Regional Council of Occitanie in Toulouse during a plenary session. They carried messaging reading '
+  EV: Action Francaise members entered the Regional Council with 'Islamo-leftists' and 'Traitors to France' messagin
+
+[train] ESP15613 | outside_taxonomy
+  NOTE: On 4 February 2024, at the call of the Association of Vehicles Affected by Environmental Restrictions (Asociacion Vehiculos Afectados por Restricciones Medioambientales, AVARM), people held a protest in front of the Las 
+  EV: against the prohibitions and restrictions of the Madrid 360 project and the mobility ordinance, which impacted
+
+[train] CZE655 | outside_taxonomy
+  NOTE: On 1 May 2022, the Communist party organized a gathering in Prague, criticizing the current capitalist system. About a dozen of counter-protesters gathered nearby, pointing to the crimes of the previous communist regime.
+  EV: first-described mobilization: Communist party gathering criticizing the capitalist system; no covered domain s
+
+[train] ITA9841 | outside_taxonomy
+  NOTE: On 2 July 2021, CPI activists gathered in Diaz square in Milano - Municipio 1 (Milano, Lombardia) to protest against the conditions of the transfer of shares in the Autostrade per l'Italia from Atlantia to the Italian st
+  EV: protest against the conditions of the transfer of shares in Autostrade per l'Italia, deemed too costly
+
+[train] DEU20523 | outside_taxonomy
+  NOTE: On 28 February 2024, around 300 people staged a protest outside a buidling where the Greens were holding an annual general meeting in Hirschaid (Bayern), condemning the Greens' policies.
+  EV: protest outside a Greens meeting condemning the Greens' policies
+
+[train] ITA15675 | outside_taxonomy
+  NOTE: On 21 April 2022, around 100 people gathered in Pescara (Pescara, Abruzzo) to protest against the project to double the Pescara-Rome high-speed railway.
+  EV: protest against the project to double the Pescara-Rome high-speed railway
+
+[train] ESP14346 | outside_taxonomy
+  NOTE: On 27 September 2023, around 100 people held a protest in Sevilla (Andalucia) on the occasion of International Tourism Day to denounce the negative consequences of mass tourism, the overcrowding of the city and the worse
+  EV: denounce the negative consequences of mass tourism and the overcrowding of the city
+
+[train] LVA12 | outside_taxonomy
+  NOTE: On 5 March 2020, approximately 70 protesters, mainly farmers and rural people organized by the Green Party, conducted a mobile heavy-machinery based protest, driving from Eleja to Jelgava to protest plans to redistrict L
+  EV: protest plans to redistrict Latvia's provinces
+
+[train] FRA2642 | outside_taxonomy
+  NOTE: On 4 July 2020, in the morning, nearly 300 persons gathered in Beynac-et-Cazenac. They protested in support to a project of road deviation that would improve tourism.
+  EV: protested in support of a project of road deviation that would improve tourism
+
+[train] SWE5741 | outside_taxonomy
+  NOTE: On 25 May 2024, activists from the Nordic Resistance Movement demonstrated in various locations of Leksand, Dalarna, to promote the movement's national socialist values and oppose multiculturalism and migration.
+  EV: promote the movement's national socialist values and oppose multiculturalism and migration
+
+[train] POR1209 | outside_taxonomy
+  NOTE: On 2 July 2022, around 20 people from the Aterra movement, some in pajamas as requested by the organization, participated in a protest at the Santa Apolonia train station, in Lisbon (Lisboa), to demand the return of trai
+  EV: demand the return of train connections to Madrid and Hendaye
+
+[train] ESP5855 | outside_taxonomy
+  NOTE: On 5 June 2021, over 100 citizens called by the Platform in defense of the Train protested in Valle de Carranza (Bizkaia) railway station demanding to resume the train services suspended due to the outbreak of the corona
+  EV: demanding to resume train services suspended during the pandemic; a specific transport-service issue
+
+[train] ITA16686 | outside_taxonomy
+  NOTE: On 26 August 2022, at the call of a regional councilor (Mixed group), people rallied in front of the prefecture in Foggia (Foggia, Puglia) to demand that the allocated budget for the highway 16 be used to increase safety
+  EV: demand over the highway 16 budget; also drought countermeasures for the agricultural sector
+
+[train] FRA30885 | outside_taxonomy
+  NOTE: On 27 January 2024, around 350 people gathered at the train station in La Souterraine (Nouvelle-Aquitaine) to demand better quality of service on the POLT (Paris Orleans Limoges Toulouse) rail line.
+  EV: demand for better service quality on a specific rail line
+
+[train] FRA31720 | insufficient_information
+  NOTE: On 9 March 2024, people, including an LFI MP, the mayors of Brionne (PCF) and Serquigny (unspecified affiliation), and other elected representatives, gathered in Bernay (Normandie) to defend public services.
+  EV: gathered to defend public services with no specific covered domain identified
+
+[train] SVK556 | outside_taxonomy
+  NOTE: On 2 December 2023, representatives of Slovakian labor unions of truck drivers continued their blockade of the border crossing point with Ukraine in Vysne Nemecke, declaring solidarity with their Polish counterparts. The
+  EV: truck drivers blockade the Ukraine border over allegedly unfair economic competition
+
+[train] ROU62 | outside_taxonomy
+  NOTE: On 12 May 2018, a protest was held in Craiova against the policies conducted by the Social-Democratic government.
+  EV: protest against the policies of the Social-Democratic government; no covered substantive issue
+
+[train] DEU25403 | outside_taxonomy
+  NOTE: On 6 July 2025, at the call of the ADFC, around 400 cyclists staged a protest ride from Heidelberg and Schwetzingen to Mannheim (Baden-Wurttemberg) to demand safer cycling infrastructure. The demonstration followed a dea
+  EV: demand for safer cycling infrastructure after a deadly accident; no covered domain
+
+[train] NOR1936 | outside_taxonomy
+  NOTE: On 3 December 2024, people held a torchlight procession at a mountain peak in Vindafjord Municipality (coded to Olen) to oppose the possible wind power development in the area.
+  EV: oppose possible wind power development with no reason stated
+
+[train] BEL1415 | outside_taxonomy
+  NOTE: On 7 September 2021, an unknown number of activists of the Groen and Vooruit parties staged a protest action in Lint against the imminent cancellation of two De Lijn bus lines in the neighborhood.
+  EV: protest the imminent cancellation of two local bus lines; a specific local decision
+
+[train] ITA28447 | outside_taxonomy
+  NOTE: On 19 November 2025, at 9:30 am, around 600 students, teachers, parents, residents, and elected administrators took to the streets in Lecce (Puglia) to demand respect for children's rights and peace for Ukraine and Pales
+  EV: demand children's rights and peace for Ukraine and Palestine on Children's Rights Day
+
+[train] ALB1485 | outside_taxonomy
+  NOTE: On 6 May 2026, residents of Arapaj held a protest after two local minors died in a traffic accident in Durres. Protesters said repeated speeding, risky vehicle maneuvers and verbal and physical conflicts endangered local
+  EV: residents protested road safety after two minors died; local safety issue with no covered domain
+
+[train] ALB898 | outside_taxonomy
+  NOTE: On 21 April 2021, PD supporters, as well as some PD MPs, held a rally in Selenice, denouncing the Rama government, promising reforms, and calling on people to vote.
+  EV: party rally denouncing the Rama government with no covered substantive issue
+
+[train] AUT1175 | outside_taxonomy
+  NOTE: On 5 September 2022, members of the opposition (FPOE, NEOS, and 'Citizen's list Ternitz') demonstrated in Pottschach to denounce the lack of road safety due to the lack of a protective route along the new underpass in fr
+  EV: demonstrated over lack of road safety near a school; local infrastructure issue
+
+[train] AUT592 | outside_taxonomy
+  NOTE: On 16 April 2021, football fans protested outside the Generali Arena stadium in Vienna - Favoriten against the management of the football club Austria and its dire financial situation.
+  EV: football fans protested against club management and its dire finances
+
+[train] BEL1412 | outside_taxonomy
+  NOTE: On 27 August 2021, hundreds of people staged a bike protest in Antwerpen to demand more traffic security for bikers in the city, following the death of two children in traffic earlier that month.
+  EV: bike protest for traffic security after two children died; local road-safety issue
+
+[train] BEL2313 | outside_taxonomy
+  NOTE: On 20 February 2023, around 50 residents staged a protest in Deinze to denounce plans of the local authorities to prolong the Zwarte Baan road in their neighborhood.
+  EV: residents denounced plans to prolong a road in their neighborhood
+
+[train] BEL2807 | outside_taxonomy
+  NOTE: On 12 October 2023, an unknown number of workers assembled at the Mediacite in Liege (Wallonie) to denounce the high parking cost for going to work at the shopping center.
+  EV: workers denounced the high parking cost at the shopping center
+
+[train] BEL3563 | outside_taxonomy
+  NOTE: On 3 September 2024, about 80 residents protested in Kapelle-op-den-Bos (Vlaanderen) against plans to build a small water treatment plant on nearby plots of land, denouncing the way in which the plan was established by a
+  EV: residents opposed a water treatment plant and how the plan was established
+
+[train] BEL448 | outside_taxonomy
+  NOTE: On 28 June 2020, at least 4 activists of 11.11.11 and Greenpeace staged a protest action in front of the Finance Tower in Brussels - Ville de Bruxelles to demand a more just fiscal system in Belgium, by attaching 850 pic
+  EV: demanded a more just fiscal system in Belgium
+
+[train] BEL4981 | outside_taxonomy
+  NOTE: On 15 December 2025, in the evening, more than 200 social workers, among them members of ACV-CSC and the Social Work Action Network (Sociaal Werk Actie Netwerk - SWAN), protested on the St Jansvliet in Antwerpen (Vlaande
+  EV: social workers opposed budget cuts in the social and welfare sector
+
+[train] BGR1362 | outside_taxonomy
+  NOTE: On 25 August 2020, trade and transport companies representatives from Gotse Delchev staged a protest at the border of Greece in Ilinden, demanding that the border checkpoint, which is closed until August 31, be open to t
+  EV: sought reopening of a closed border checkpoint for trucks
+
+[train] BGR1728 | outside_taxonomy
+  NOTE: On 19 January 2021, residents protested in Rakitovo against the closure of the local bank and the lack of public transportation in the village.
+  EV: protested a bank closure and lack of public transportation
+
+[train] BGR2100 | outside_taxonomy
+  NOTE: On 22 October 2021, supporters of the nuclear power plant protested in Belene demanding its construction be completed soon in light of rising energy prices.
+  EV: demanded completion of the nuclear power plant amid rising energy prices
+
+[train] BGR2465 | outside_taxonomy
+  NOTE: On 20 June 2022, protesters gathered in front of the water department in Kardzhali to protest against the 10-day water cuts in their area. The cuts are apparently due to a leak the local authorities cannot localize.
+  EV: protested 10-day water cuts in their area
+
+[train] BGR2832 | outside_taxonomy
+  NOTE: On 8 January 2023, residents of Plovdiv protested against a businessman being granted significant shares in the Plovdiv International Fair, which is an important platform for local businesses to promote their work and pr
+  EV: opposed a businessman granted shares in the Plovdiv International Fair
+
+[train] BGR3509 | outside_taxonomy
+  NOTE: On 5 March 2024, protesters gathered in Yambol to protest what they claim is the unacceptable condition of the road in their area. They say they pay taxes, vignettes and other fund that should be used to maintain the roa
+  EV: protested the bad condition of the road as a safety risk
+
+[train] BGR3825 | outside_taxonomy
+  NOTE: On 12 October 2024, residents of the villages of Rogosh protested because of the delay in the construction of the new road overpass in the area, claiming that the high volume of traffic is preventing them from having acc
+  EV: protested the delay of a road overpass restricting access to services
+
+[train] BGR4484 | outside_taxonomy
+  NOTE: On 26 June 2025, the Parents for a Shared Childhood movement protested in front of the GERB party headquarters in Sofia demanding amendments to the law on shared parenting that would carry heavier punishments for when th
+  EV: demanded amendments to the shared parenting law favoring fathers
+
+[train] BGR4831 | outside_taxonomy
+  NOTE: On 8 December 2025, protesters gathered at the Apriltsi Memorial Complex in Panagyurishte demanding the government's resignation. The civic protest included chants of 'Resignation' and a torch-light ritual symbolizing so
+  EV: demanded the government's resignation with no reason stated
+
+[train] BGR4845 | outside_taxonomy
+  NOTE: On 9 December 2025, pro-government protesters gathered in Sarnitsa to oppose the resignation of the government as demanded by opposition parties in the country. The motto of the protests was 'Love not hate,' 'Respect, do
+  EV: pro-government protesters opposed the government's resignation
+
+[train] BGR588 | outside_taxonomy
+  NOTE: On 15 July 2019, residents of Elin Pelin blocked a road in their town protesting against heavy traffic and lack of water supply.
+  EV: blocked a road over heavy traffic and lack of water supply
+
+[train] BIH102 | outside_taxonomy
+  NOTE: On 30 May 2018, 2018 in Banja Luka, Bosnia and Herzegovina, fans of the Borac soccer club held a protest walk over the club's failure to receive the licence to compete in the Bosnian Premier League because of debt.
+  EV: fans protested the club being denied a licence over debt
+
+[train] BIH574 | outside_taxonomy
+  NOTE: On 18 September 2020, local residents protested in Banja Luka, Bosnia and Herzegovina, after an old cinema building was demolished. They claim new plans for the space are not in line with building regulations.
+  EV: residents opposed the demolition of an old cinema and non-compliant plans
+
+[train] BIH970 | outside_taxonomy
+  NOTE: On 9 May 2023, persons with disabilities protested in front of the federal government in Sarajevo, voicing their dissatisfaction with their status and systemic discrimination. The protesters demanded improving the situat
+  EV: persons with disabilities protested systemic discrimination and demanded legislation
+
+[train] CYP1095 | outside_taxonomy
+  NOTE: On 9 April 2022, residents of Dipkarpaz, Turkish Cypriots, including the mayor and members of the municipality council, rallied at the entrance of the village carrying banners and flags to protest against the government'
+  EV: opposed municipality reforms closing and merging their municipality
+
+[train] CZE1582 | outside_taxonomy
+  NOTE: On 11 September 2025, several dozen residents of Horni Lapac blocked a local road by slow walking, protesting against intense traffic in the city and demanding an opening of a bypass.
+  EV: blocked a road against intense traffic, demanding a bypass
+
+[train] CZE359 | outside_taxonomy
+  NOTE: On 27 May 2021, activists affiliated with the movement Million Moments for Democracy gathered for a rally in Hostivice, demanding immediate resignation of the Minister of Justice and criticizing the government.
+  EV: demanded resignation of the Minister of Justice
+
+[train] CZE780 | outside_taxonomy
+  NOTE: On 25 August 2022, activists gathered for a rally in Usti nad Orlici, protesting against a visit of a controversial politician to the city. Another group of his supporters showed up nearby, but only verbal skirmishes occ
+  EV: protested a visit of a controversial politician with no reason stated
+
+[train] DEU12559 | outside_taxonomy
+  NOTE: On 24 May 2022, mayors and treasurers of several cities protested in the downtown area of Dusseldorf to demand the cancellation of old debt. Demonstrators reported that the cancellation of debt would allow struggling cit
+  EV: mayors demanded cancellation of municipal old debt
+
+[train] DEU12709 | outside_taxonomy
+  NOTE: Around 19 June 2022 (as reported), people demonstrated in Mannheim at the call of ADFC against the danger of cycling in the square city. People created a bike path for the demonstration.
+  EV: ADFC demonstrated against the danger of cycling in the city
+
+[train] DEU13038 | outside_taxonomy
+  NOTE: On 27 August 2022, around 9,000 people marched throughout Berlin, from Mauerpark, passing by Friedrichshain district and ending in Kreuzberg (Berlin - Friedrichshain-Kreuzberg) for love, to celebrate diversity, and to 'l
+  EV: Techno Parade for diversity, love and social commitments
+
+[train] DEU1532 | insufficient_information
+  NOTE: On 9 May 2020, about 50 people protested in Landshut. The exact reason for the protest was not reported, but it is likely in connection with the coronavirus lockdown measures.
+  EV: The exact reason for the protest was not reported
+
+[train] DEU189 | insufficient_information
+  NOTE: Around 17 January 2020 (as reported), about 70 people protested against the previous president of the protection of the constitution, who held a speech at an event in Bergisch Gladbach.
+  EV: protested against the previous president of the protection of the constitution; no reason for the protest was 
+
+[train] DEU19243 | outside_taxonomy
+  NOTE: On 15 January 2024, people protested in Leinefelde (Eichsfeld, Thuringen) against the current politics of the federal government by blocking intersections and the town entrance from the direction of Breitenbach.
+  EV: protested ... against the current politics of the federal government by blocking intersections
+
+[train] DEU21331 | outside_taxonomy
+  NOTE: On 4 May 2024, at the call of ADFC, over 100 cyclists, including families with children, participated in the Kidical Mass bike demonstration in Bad Segeberg (Schleswig-Holstein), to protest against the poor quality of cy
+  EV: protest against the poor quality of cycling infrastructure in the city
+
+[train] DEU21994 | outside_taxonomy
+  NOTE: On 26 June 2024, around 70 members of the 'Citizens' Solar Society' (Burger-Solar-Gesellschaft) gathered outside the town hall in Rosrath (Nordrhein-Westfalen), to protest against the temporary closure of the indoor swim
+  EV: against the temporary closure of the indoor swimming pool and for compensation ... for the removal of their so
+
+[train] DEU22878 | outside_taxonomy
+  NOTE: On 24 October 2024, at the call of the 'Life Assistance Dessau' (Lebenshilfe Dessau) organization, along with other disability support groups, many hundred people gathered in Magdeburg (Sachsen-Anhalt), to protest agains
+  EV: protest against anticipated cuts to assistance for individuals with disabilities; 'No job cuts in disability s
+
+[train] DEU24651 | outside_taxonomy
+  NOTE: On 6 April 2025, dozens of people, including business owners, staged a protest in Potsdam (Brandenburg) against the city's plans to turn the street into a pedestrian zone due to concerns over the loss of parking spaces a
+  EV: against the city's plans to turn the street into a pedestrian zone due to concerns over the loss of parking sp
+
+[train] DEU3590 | outside_taxonomy
+  NOTE: On 3 October 2020, around 300 members of The Third Path gathered for a demo in Berlin - Lichtenberg with the slogan 'A Nation Wants a Future'. The demonstration was attended by the far right lawyer W. Nahrath and a membe
+  EV: members of The Third Path gathered for a demo with the slogan 'A Nation Wants a Future'; no covered subject st
+
+[train] DEU587 | outside_taxonomy
+  NOTE: On 10 February 2020, people, including the German Bicycle Club, protested in Berlin - Charlottenburg-Wilmersdorf (Berlin), in the Savignyplatz in Charlottenburg, for more safety for cyclists following several deadly traf
+  EV: German Bicycle Club ... for more safety for cyclists following several deadly traffic incidents
+
+[train] DEU7326 | outside_taxonomy
+  NOTE: On 25 June 2021, around 60 cyclists protested in Schwalmstadt with a cycle rally against closed cycle paths in the wake of the expansion of the highway A49. The protest was organized by the ADFC.
+  EV: cyclists ... against closed cycle paths in the wake of the expansion of the highway A49
+
+[train] DEU7461 | outside_taxonomy
+  NOTE: On 6 July 2021, around 50 people protested in Erding against the plans of the water management office to construct dikes and walls as flood protection.
+  EV: against the plans of the water management office to construct dikes and walls as flood protection
+
+[train] DEU922 | outside_taxonomy
+  NOTE: On 3 March 2020, hundreds of taxi drivers protested from the Olympic Stadium (Berlin - Charlottenburg-Wilmersdorf) to Tegel Airport (Berlin - Reinickendorf) with a taxi rally against Uber.
+  EV: taxi drivers protested ... with a taxi rally against Uber
+
+[train] DNK2594 | outside_taxonomy
+  NOTE: On 17 June 2024, people demonstrated outside of the town hall in Esbjerg, Syddanmark, to show their dissatisfaction with the local authorities' handling of services for children with disabilities.
+  EV: dissatisfaction with the local authorities' handling of services for children with disabilities
+
+[train] DNK3065 | outside_taxonomy
+  NOTE: On 1 December 2025, people demonstrated outside of the Town Hall in Pandrup, Nordjylland, to oppose plans for a large solar farm project near Store Vildmose area.
+  EV: oppose plans for a large solar farm project near Store Vildmose area
+
+[train] DNK753 | outside_taxonomy
+  NOTE: On 28 March 2021, car enthusiasts gathered in Viborg to show dissatisfaction with the new 'reckless driving' bill, which imposes severe penalties for a number of traffic violations. During the day, 62 fines for traffic v
+  EV: dissatisfaction with the new 'reckless driving' bill, which imposes severe penalties for a number of traffic v
+
+[train] ESP10124 | outside_taxonomy
+  NOTE: On 29 April 2022, around 30 parents held a protest and cut road traffic at El Canton avenue of Cartagena (Murcia), where the Atalaya School is located, demanding the presence of a police officer at the exit of the educat
+  EV: demanding the presence of a police officer at the exit of the educational center for further safety ... vehicl
+
+[train] ESP10560 | outside_taxonomy
+  NOTE: On 31 May 2022, 100 residents and Valles businessmen, as well as several mayors from the area, staged an act of protest on the Viladecavalls-Olesa section of the B-40 motorway near Olesa de Montserrat (Barcelona, Catalun
+  EV: failure to complete the works on the Terrassa-Abrera section
+
+[train] ESP11402 | outside_taxonomy
+  NOTE: On 24 September 2022, motorcyclists, coordinated by the International Union for the Defense of Motorcyclists (IMU), demonstrated in Barcelona (Cataluna) to demand more security and mobility measures.
+  EV: demand more security and mobility measures
+
+[train] ESP118 | outside_taxonomy
+  NOTE: On 23 January 2020, customers protested outside of the Forus gym in Badajoz against the latest changes in activities, which they say have been carried out without warning.
+  EV: against the latest changes in activities without warning
+
+[train] ESP12515 | outside_taxonomy
+  NOTE: On 3 February 2023, around 30 people, summoned by Cartagena Futuro, held a protest in front of the Regional Assembly in Cartagena (Murcia) against the deindustrialization of the municipality on the anniversary of a histo
+  EV: against the deindustrialization of the municipality
+
+[train] ESP13261 | outside_taxonomy
+  NOTE: On 23 April 2023, more than 200 people, called by a local organization, held a protest in Novelda del Guadiana (Badajoz, Extremadura) against the PP mayor.
+  EV: against the PP mayor
+
+[train] ESP13669 | outside_taxonomy
+  NOTE: On 22 May 2023, hairdressers and beauty workers, called by Believe In Us and the Business Alliance for the Lowering of VAT, held a protest in Segovia (Castilla y Leon) to demand the restitution of reduced VAT to hairdres
+  EV: demand the restitution of reduced VAT to hairdressers, beauty salons and barbershops
+
+[train] ESP14039 | outside_taxonomy
+  NOTE: On 17 July 2023, businessmen, called by the Platform for People Affected by the Naval Defaults, protested in Santiago de Compostela (A Coruna, Galicia) to demand payment for work done for large shipyards.
+  EV: demand payment for work done for large shipyards
+
+[train] ESP1566 | outside_taxonomy
+  NOTE: On 20 August 2020, bus drivers and users of bus services gathered in Aviles demanding the reopening of ticket offices at the station.
+  EV: demanding the reopening of ticket offices at the station
+
+[train] ESP16097 | outside_taxonomy
+  NOTE: On 23 February 2024, people held a protest in Seixalbo (Galicia) against the discontinuation of after-school activities for children in the local civic center.
+  EV: against the discontinuation of after-school activities for children
+
+[train] ESP17693 | outside_taxonomy
+  NOTE: On 6 July 2024, people protested in Soller (Islas Baleares) against mass tourism and overcrowding.
+  EV: against mass tourism and overcrowding
+
+[train] ESP17857 | outside_taxonomy
+  NOTE: On 15 August 2024, between 200 people (according to the police) and 600 (according to organizers) held a protest in Ares (Galicia) against the lack of water supply in the village due to the increase in population during 
+  EV: against the lack of water supply in the village
+
+[train] ESP19438 | outside_taxonomy
+  NOTE: On 16 December 2024, at the call of the Federation of Transport Companies of the Canary Islands (Federacion de Empresas del Transporte de Canarias), half a thousand (across seven locations) transport workers and taxi dri
+  EV: against the absence of the refund of the fuel tax in the draft budget
+
+[train] ESP20416 | outside_taxonomy
+  NOTE: On 26 March 2025, veterinarians and pet owners, called by the Vet Crisis Committee (Comite de Crisis Vet), held a protest at the government sub-delegation in Caceres (Extremadura) against new veterinary regulations under
+  EV: against new veterinary regulations, increased bureaucracy, and demanded a reduced VAT for vet services
+
+[train] ESP2289 | outside_taxonomy
+  NOTE: On 20 October 2020, around 350 hairdressers gathered in Cadiz calling on the government to reduce the VAT rate (from 21% to 10%) due to the coronavirus health crisis.
+  EV: calling on the government to reduce the VAT rate due to the coronavirus health crisis
+
+[train] ESP23445 | outside_taxonomy
+  NOTE: On 11 December 2025, at 10 am, at the call of Elite Taxi, striking taxi drivers participated in a motorcade through the streets of Santa Cruz de Tenerife (Canarias) to demand protections against the operation of vehicle-
+  EV: demand protections against the operation of vehicle-for-hire services
+
+[train] ESP23811 | outside_taxonomy
+  NOTE: On 19 January 2026, around 300 fishers protested at the Port of Barcelona in Barcelona - Ciutat Vella (Cataluna) against the new European Union control regulations for fishery, which require boats to report their arrival
+  EV: against the new EU control regulations for fishery requiring boats to report their arrival in port and registe
+
+[train] ESP24335 | outside_taxonomy
+  NOTE: On 28 February 2026, at the call of organizers of the performance 'Renfe entierra Sanabria por 15 minutos', around 200 people protested at the AV Sanabria station in Otero de Sanabria (Castilla y Leon) against the remova
+  EV: against the removal of high-speed train stops and demanded the restoration of the suppressed railway frequenci
+
+[train] ESP25317 | insufficient_information
+  NOTE: On 6 May 2026, HB activists protested outside the EITB broadcasting channel in Bilbao (Pais Vasco). The reasons for the protest were not specified.
+  EV: The reasons for the protest were not specified
+
+[train] ESP338 | outside_taxonomy
+  NOTE: On 28 February 2020, residents of the Francisco Albert neighbourhood in Alicante protested against the delays in public transport and demanded more government investment.
+  EV: against the delays in public transport and demanded more government investment
+
+[train] ESP3539 | outside_taxonomy
+  NOTE: On 20 January 2021, hairdressers protested in Mieres (Asturias), calling on the government to reduce the VAT rate (from 21% to 10%) due to the lack of income caused by coronavirus restrictions. The demonstration was a pa
+  EV: reduce the VAT rate due to the lack of income caused by coronavirus restrictions
+
+[train] ESP3664 | outside_taxonomy
+  NOTE: On 29 January 2021, local residents living in the Compania and San Jose squares protested in Pamplona against the establishment of bar terraces in the area during the coronavirus pandemic. They said that their daily life
+  EV: against the establishment of bar terraces in the area
+
+[train] ESP46 | outside_taxonomy
+  NOTE: On 12 January 2020, around 200 CDRs attended a counter protest against less than 50 Vox supporters in Barcelona - Ciutat Vella that were defending the national unity and demand that the Government respect the sovereignty
+  EV: counter protest against Vox supporters who were defending national unity
+
+[train] ESP4827 | outside_taxonomy
+  NOTE: On 3 April 2021, citizens from Ortigosa de Cameros drove around 50 vehicles in Logrono (La Rioja) to complain about the town's bridge poor condition and demand its reconstruction.
+  EV: complain about the town's bridge poor condition and demand its reconstruction
+
+[train] ESP56 | outside_taxonomy
+  NOTE: On 12 January 2020, more than 500 Vox supporters protested in Malaga to defend the national unity and demand that the Government respect the sovereignty of the Spanish people and the Constitution.
+  EV: to defend national unity and demand that the Government respect the sovereignty of the Spanish people and the 
+
+[train] ESP7583 | outside_taxonomy
+  NOTE: On 14 November 2021, around 50 people gathered in Sestao (Bizkaia, Basque Country) to complain about problems and conflicts created by a neighbour in Rebonza street. They demanded institutions to provide solutions.
+  EV: complain about problems and conflicts created by a neighbour
+
+[train] ESP8595 | outside_taxonomy
+  NOTE: On 8 February 2022, around 100 bike riders protested in Bilbao to complain about the danger of the new city bike line.
+  EV: complain about the danger of the new city bike line
+
+[train] ESP9597 | outside_taxonomy
+  NOTE: On 19 March 2022, tens of members of cycling and environmental organizations staged a protest at the train station of Pontevedra (Lugo, Galicia), demanding Renfe to be able to transport their bicycles on medium distance 
+  EV: demanding Renfe to be able to transport their bicycles on medium distance trains
+
+[train] FIN895 | outside_taxonomy
+  NOTE: On 16 January 2023, more than 100 people demonstrated in Padasjoki, Paijat-Hame to oppose the dismissal of the municipal manager.
+  EV: oppose the dismissal of the municipal manager
+
+[train] FRA10266 | outside_taxonomy
+  NOTE: On 13 July 2021, overnight rioters set refuse bins on fire and threw mortar fireworks at police and gendarme officers in Grand-Charmont. They acted on the occasion of the National day of the French republic. No injuries 
+  EV: overnight rioters set refuse bins on fire and threw fireworks at police with no grievance stated
+
+[train] FRA12857 | outside_taxonomy
+  NOTE: On 25 October 2021, dozens of residents demonstrated in front of the refuse center in Tregastel. They denounced its announced closing.
+  EV: denounced the announced closing of the refuse center
+
+[train] FRA17500 | outside_taxonomy
+  NOTE: On 28 May 2022, between 350 and 400 motorbike drivers demonstrated, slowing down traffic, in Agen. They denounced the new regulation according to which their vehicles will also be subject to compulsory periodic roadworth
+  EV: denounced the new regulation subjecting their vehicles to compulsory periodic roadworthiness tests
+
+[train] FRA17999 | outside_taxonomy
+  NOTE: On 28 June 2022, members of a far-right group demonstrated in Orleans and burnt kippa. They sang racist and antisemitic songs.
+  EV: members of a far-right group demonstrated, burnt kippa and sang racist and antisemitic songs
+
+[train] FRA18586 | outside_taxonomy
+  NOTE: Around 10 September 2022 (as reported), an unknown number of Yellow Vests gathered for a protest in Bordeaux, against the government's policies.
+  EV: Yellow Vests gathered for a protest against the government's policies
+
+[train] FRA20253 | outside_taxonomy
+  NOTE: On 16 November 2022, a dozen demonstrators organized by the CGT, LFI and the Waste 24 Coordination in Perigueux, broke into a meeting at the time of the vote on the incentive fee rates, to contest the establishment of th
+  EV: contest the establishment of the incentive fee and demand the return of the door to door
+
+[train] FRA2463 | insufficient_information
+  NOTE: On 20 June 2020, yellow vests demonstrated at the Fontvergnes roundabout in Decazeville. The reason of the protest was not specified.
+  EV: yellow vests demonstrated at a roundabout; the reason of the protest was not specified
+
+[train] FRA2521 | outside_taxonomy
+  NOTE: On 27 June 2020, dozens of persons gathered at the call of FFOC in Agen, near the police station. They demonstrated to support law enforcement officers that have been criticized for several weeks and to denounce an incre
+  EV: demonstrated to support law enforcement officers and denounce outrage and rebellion against them
+
+[train] FRA28207 | outside_taxonomy
+  NOTE: On 3 October 2023, people, including members of the In-Pact Occitanie network, gathered in front of the Hotel de Metropole in Montpellier (Occitanie) to demonstrate against the town of Castelnau's plans to locate the Cli
+  EV: demonstrate against the town's plans to locate the Clinique du Parc in the Sablassou area
+
+[train] FRA29653 | outside_taxonomy
+  NOTE: On 20 December 2023, more than 300 people, including farmers and Salmagne aerodrome employees, gathered outside the town hall in Maubeuge (Hauts-de-France) to protest against the replacement of the Salmagne aerodrome by 
+  EV: protest against the replacement of the Salmagne aerodrome by a large factory
+
+[train] FRA30748 | outside_taxonomy
+  NOTE: On 29 January 2024, taxi drivers drove at a slow pace to protest in Chateauroux (Centre-Val de Loire) to demonstrate against new contractual rules requiring taxis to provide free transportation to people in need of medic
+  EV: taxi drivers protest against new contractual rules requiring free transportation to people in need of medical 
+
+[train] FRA32898 | outside_taxonomy
+  NOTE: On 13 April 2024, at the call of FFMC, several hundred motorcyclists gathered in front of the prefecture in Ajaccio (Corse) to demonstrate against the introduction of a compulsory technical inspection of powered two-whee
+  EV: demonstrate against the introduction of a compulsory technical inspection of powered two-wheelers
+
+[train] FRA35977 | outside_taxonomy
+  NOTE: On 19 October 2024, at the call of FUB - French Federation of Bicycle Users (Federation francaise des usagers de la bicyclette), people gathered in Tulle (Nouvelle-Aquitaine) to pay tribute to a 27-year-old cyclist who w
+  EV: pay tribute to a cyclist run over and call for an end to 'motorized violence' and safer conditions for cyclist
+
+[train] FRA3644 | outside_taxonomy
+  NOTE: On 18 October 2020, around 30 persons gathered in front of the Beck farm in Le Bailleul. They demonstrated against the implementation of a methanation unit in Bailleul.
+  EV: demonstrated against the implementation of a methanation unit in Bailleul
+
+[train] FRA37723 | outside_taxonomy
+  NOTE: On 11 February 2025, at the call of APF France Handicap, several dozen people gathered in Quimper (Bretagne) to support the rights of people with disabilities and demand a large-scale 'Marshall Plan for Disability', call
+  EV: support the rights of people with disabilities and demand a large-scale 'Marshall Plan for Disability'
+
+[train] FRA38349 | outside_taxonomy
+  NOTE: On 22 February 2025, around 20 people gathered at a roundabout in La Fare les Oliviers (Provence-Alpes-Cote d'Azur) to protest against a one-way traffic system.
+  EV: protest against a one-way traffic system
+
+[train] FRA39217 | outside_taxonomy
+  NOTE: On 15 April 2025, several hundred people, including local elected officials such as Nievre Departmental President Fabien Bazin (PS), Mayor of Clermont-Ferrand Olivier Bianchi (PS), and Mayor of Nevers Denis Thuriot (RE),
+  EV: demand that the train line between Clermont-Ferrand and Paris be renovated and more state investments
+
+[train] FRA39723 | outside_taxonomy
+  NOTE: On 10 May 2025, in the afternoon, at the call of the 9 May Committee (Comite du 9 Mai), an association of far-right groups rooted in the dissolved GUD (Union Defense Group), around 1,000 far-right affiliates, including M
+  EV: marched to commemorate the death of far-right activist Sebastien Deyzieu, with antisemitic slogans and neo-Naz
+
+[train] FRA39972 | outside_taxonomy
+  NOTE: On 19 May 2025, at 9 am, around 50 taxi drivers gathered in front of the hospital and the A41 north access, then drove to the train station and the Primary Health Insurance Fund in Annecy (Auvergne-Rhone-Alpes) to demons
+  EV: against the new Assurance Maladie convention cutting medical-transport fees, and against competition with VTC 
+
+[train] FRA41080 | outside_taxonomy
+  NOTE: On 24 July 2025, in the morning, approximately 70 elected officials gathered at Saint-Nicolas square in Bastia (Corse) to condemn shortcomings in public finance services, including late payments and staff shortages, whic
+  EV: condemn shortcomings in public finance services, including late payments and staff shortages weakening local b
+
+[train] FRA43775 | insufficient_information
+  NOTE: On 5 December 2025, Armenian nationals gathered in Marseille (Provence-Alpes-Cote d'Azur) to protest the visit of the Catholicos of All Armenians in France.
+  EV: protest the visit of the Catholicos of All Armenians in France
+
+[train] FRA5148 | outside_taxonomy
+  NOTE: On 12 December 2020, police officers demonstrated at the border between France and Switzerland in Pontarlier, at the call of the National Police Alliance union. They denounced declarations of the French President in the 
+  EV: denounced declarations of the President after he acknowledged police brutality and discrimination
+
+[train] FRA5462 | outside_taxonomy
+  NOTE: On 6 January 2021, around 50 people, including teachers, protested in Brest to call for the return of a regular bus line that used to stop in front of the high school.
+  EV: call for the return of a regular bus line that used to stop in front of the high school
+
+[train] FRA7204 | outside_taxonomy
+  NOTE: On 17 March 2021, around 25 people whose property has been requisitioned demonstrated in Tours to protest the price that authorities are proposing for the purchase of their housing.
+  EV: protest the price that authorities are proposing for the purchase of their requisitioned housing
+
+[train] FRA7477 | outside_taxonomy
+  NOTE: On 20 March 2021, around 15 people protested in Saint-Julien-des-Points against the presence of people who were occupying a hotel to make it a free and supportive space.
+  EV: protest against the presence of people who were occupying a hotel to make it a free and supportive space
+
+[train] FRA7891 | outside_taxonomy
+  NOTE: On 10 April 2021, yellow vest demonstrators gathered in Daumesnil-Villiers in Paris. They called for social and fiscal justice.
+  EV: called for social and fiscal justice
+
+[train] FRA8398 | outside_taxonomy
+  NOTE: On 24 April 2021, around 50 people from all over the region protested in Pluvigner against the future installation of 5G antennas implemented by the company Orange.
+  EV: against the future installation of 5G antennas
+
+[train] FRA8562 | insufficient_information
+  NOTE: On 1 May 2021, around 70 persons demonstrated in Le Treport on the occasion of Labour Day at the call of the CGT union. They called for social justice.
+  EV: called for social justice
+
+[train] FRA8691 | insufficient_information
+  NOTE: On 1 May 2021, over 1,500 persons, including members of the SNES-FSU union, demonstrated in Rouen on the occasion of Labour Day. They called for social justice.
+  EV: called for social justice
+
+[train] GBR1161 | outside_taxonomy
+  NOTE: On 1 July 2020, several residents set up camp on Moredunvale Green in Edinburgh, staying overnight before being joined by further protesters the next morning as they demonstrated against a proposed housing development fo
+  EV: demonstrated against a proposed housing development for the spot
+
+[train] GBR3548 | outside_taxonomy
+  NOTE: On 14 September 2021, disabled residents and their supporters gathered in Millennium Square in Leeds to protest against local government plans to move a taxi rank immediately outside the station further away. Campaigners
+  EV: local government plans to move a taxi rank immediately outside the station further away, causing 'intolerable 
+
+[train] GBR8449 | outside_taxonomy
+  NOTE: On 5 April 2025, between 40-50 protesters gathered outside a Tesla Showroom on Loughborough Road in Nottingham (England) for 'Nottingham Against Elon' protest, calling for a boycott of Elon Musk's company. The event was 
+  EV: 'Nottingham Against Elon' protest calling for a boycott of Elon Musk's company and criticizing his policies in
+
+[train] GBR9372 | outside_taxonomy
+  NOTE: On 26 January 2026, dozens of residents and campaigners gathered at Hackney Town Hall in London - Hackney (England) to protest against the local authority's low traffic neighborhood (LTN) measures and 'excessive road clo
+  EV: against the local authority's low traffic neighborhood measures and 'excessive road closures'
+
+[train] GRC4867 | outside_taxonomy
+  NOTE: On 31 December 2023, members of the Golden Dawn Youth Front rallied at their former offices in Thessaloniki encouraging Golden Dawn's action, following a call on social media. Residents in the area reported to the police
+  EV: members of the Golden Dawn Youth Front rallied at their former offices encouraging Golden Dawn's action
+
+[train] HRV1312 | outside_taxonomy
+  NOTE: On 29 May 2025, a group of citizens gathered in Zagreb, demanding stopping points for residents with cars where they could drop off their family members, and supplies, or assist elderly people without slowing down the tr
+  EV: demanding stopping points for residents with cars where they could drop off their family members without slowi
+
+[train] HUN469 | outside_taxonomy
+  NOTE: On 22 July 2022, around 500 people, led by MKKP leaders, a MKKP vice-mayor of the 9th district of Budapest, a Parbeszed MP, an independent MP, a PDSZ union leader, an Evangelical group leader, as well as small entreprene
+  EV: condemning the new tax regime for small entrepreneurs
+
+[train] IRL341 | outside_taxonomy
+  NOTE: On 31 March 2021, a group of local residents gathered in Grange to protest in opposition to the Sligo County Council's decision to close a major junction in the area that residents say has been made without consultation 
+  EV: in opposition to the Sligo County Council's decision to close a major junction in the area
+
+[train] IRL920 | outside_taxonomy
+  NOTE: On 2 April 2023, residents held a demonstration in Union Hall against Cork County Council's plan to close off Keelbeg Pier due to health and safety concerns.
+  EV: against Cork County Council's plan to close off Keelbeg Pier due to health and safety concerns
+
+[train] ITA10062 | outside_taxonomy
+  NOTE: On 6 July 2021, about a dozen mayors, the leader of Libera and two PD party figures, including the Torino mayoral candidate, gathered outside the Lascaris Palace, the seat of the Piemonte Regional Council, in Torino (Tor
+  EV: protest against a new regional gambling bill that would repeal a law imposing a 500-meter distance between gam
+
+[train] ITA10197 | outside_taxonomy
+  NOTE: On 9 July 2021, residents took to the street in the Castelluccia fraction of Marino (coded as Marino, Roma, Lazio) to protest against the announced installation of a mobile phone mast in the area and denounce the alleged
+  EV: protest against the announced installation of a mobile phone mast and denounce the alleged lack of consultatio
+
+[train] ITA12666 | outside_taxonomy
+  NOTE: On 24 November 2021, cab drivers gathered in various locations across Imperia (Imperia, Liguria) to protest against the government's competition bill, citing deregulation proposals that would favor multinationals against
+  EV: protest against the government's competition bill, citing deregulation proposals that would favor multinationa
+
+[train] ITA13684 | outside_taxonomy
+  NOTE: On 23 January 2022, around 40 anarchists protested in Trento (Trento, Trentino-Alto Adige) against a drill installed a few days before. Two persons attempted to sabotage the said drill, but the police physically stopped 
+  EV: anarchists protested against a drill installed a few days before and attempted to sabotage it
+
+[train] ITA14213 | outside_taxonomy
+  NOTE: On 19 February 2022, Mayors from the Sagittario Valley gathered at the toll booth in Cocullo (L'Aquila, Abruzzo) to protest against the increased toll price and demand better security on the A24 and A25 highways.
+  EV: mayors protest increased highway toll price and demand security
+
+[train] ITA15518 | outside_taxonomy
+  NOTE: On 5 April 2022, between 10 and 100 demonstrators rioted in front of the city hall building in Torino (Torino, Piemonte) against the visit of the country's Prime Minister. Demonstrators clashed with the police, and threw
+  EV: riot against visit of the prime minister with mixed participants
+
+[train] ITA16316 | outside_taxonomy
+  NOTE: On 27 June 2022, taxi drivers continued to protest against the Competition draft bill in Piazza Duca d'Aosta in Milano - Municipio 2. They believed it would penalize their business by introducing 'unacceptable deregulati
+  EV: taxi drivers oppose Competition bill penalizing their business
+
+[train] ITA17101 | outside_taxonomy
+  NOTE: Around 23 September 2022 (as reported), 100 Sorgane residents gathered outside the headquarters of Quartiere 3 in Florence (Firenze, Toscana) to voice their dissent over the door-to-door garbage collection in the Sorgane
+  EV: residents dissent over door-to-door garbage collection
+
+[train] ITA17801 | outside_taxonomy
+  NOTE: On 13 November 2022, people gathered in Tambre (Belluno, Veneto) to protest against the possible sale of the San Marco hotel in view of the 2026 Milano-Cortina Winter Olympics. A municipal councilor and the Mountain Wild
+  EV: opposition to possible sale of San Marco hotel
+
+[train] ITA1883 | insufficient_information
+  NOTE: On 2 June 2020, a protest organized by right-wing party Lega took place in Foggia (Foggia, Apulia). An MEP was also present.
+  EV: Lega protest with no reason reported
+
+[train] ITA18918 | outside_taxonomy
+  NOTE: On 17 February 2023, CasaPound members distributed parcels with fake insects and leaflets in supermarkets in Siena (Tuscana, Siena) to protest against the European Commission's decision to authorize the food use of larva
+  EV: protest against EU authorization of insects as food
+
+[train] ITA20120 | outside_taxonomy
+  NOTE: On 3 June 2023, residents and representatives of the civic group 'Casa Comune per Mandello' staged a protest in Mandello (Brescia, Lombardia) against the ongoing interventions at the camping area and the planned work at 
+  EV: opposition to local camping and garden works as unnecessary
+
+[train] ITA20522 | outside_taxonomy
+  NOTE: Around 22 July 2023 (as reported), residents of the Cibali neighborhood in Catania (Catania, Sicilia) staged a protest and blocked the traffic in Sabato Martelli Castaldi street to demand electricity and water be restore
+  EV: demand restoration of electricity and water after blackouts
+
+[train] ITA22206 | outside_taxonomy
+  NOTE: On 10 February 2024, at the call of the 'Unsustainable Olympics Committee' (Comitato Olimpiadi Insostenibili), people marched from Lodi Square to Corvetto Square in Milano - Municipio 4 (Lombardia) to demonstrate against
+  EV: opposition to 2026 Winter Olympics plan
+
+[train] ITA23568 | outside_taxonomy
+  NOTE: On 24 July 2024, at the call of opposition council groups, hundreds of people gathered in Campo Santa Margherita in Venezia (Veneto) to ask for the resignation of the mayor after the arrest of a councilor on 16 July. Tra
+  EV: demand mayor resignation after councilor arrest
+
+[train] ITA24667 | outside_taxonomy
+  NOTE: Around 24 July 2024 (week of), street artists and performers, including professional ones, gathered outside the town hall in Genova (Liguria) to protest against plans by the municipality to introduce an online app to boo
+  EV: street artists oppose municipal booking app restricting performances
+
+[train] ITA24856 | outside_taxonomy
+  NOTE: On 21 May 2022, people gathered in Palazzolo sull'Oglio (Lombardia) to protest against the municipality's decision to approve the new General Urban Traffic Plan and make some streets one-way only. Councilors and represen
+  EV: protest against new traffic plan making streets one-way
+
+[train] ITA25255 | outside_taxonomy
+  NOTE: On 30 November 2024, the Corsican Nationalist Movement Core In Fronte demonstrated outside the offices of Moby Lines in the port of Santa Teresa Gallura (Sardegna) and held a protest press conference against the deterior
+  EV: protest against deterioration of maritime connections between Corsica and Sardinia
+
+[train] ITA25893 | outside_taxonomy
+  NOTE: On 25 February 2025, family members of people suffering from disabilities staged a demonstration outside the Campania Regional Council seat in Napoli (Campania) to protest a delay in the allotting of state funds aimed at
+  EV: disability caretaker funding delay protest
+
+[train] ITA261 | outside_taxonomy
+  NOTE: On 23 January 2020, a group of shop owners blocked the work for the new cycle path in Terni. They claim that there will be less car parks due to the bike path construction.
+  EV: shop owners oppose cycle path over loss of car parks
+
+[train] ITA26511 | outside_taxonomy
+  NOTE: On 12 April 2025, around 30 people gathered on the steps of the municipality of Marino (Lazio) to demand the resignation of the mayor due to his perceived failure to address the town's declining conditions and neglect of
+  EV: to demand the resignation of the mayor due to his perceived failure to address the town's declining conditions
+
+[train] ITA29094 | outside_taxonomy
+  NOTE: On 23 February 2026, residents gathered in Piadena Drizzona (Lombardia) to demonstrate against trains being left idling overnight at the local train station.
+  EV: to demonstrate against trains being left idling overnight at the local train station
+
+[train] ITA2976 | outside_taxonomy
+  NOTE: On 19 July 2020, over fifty people working in a Cagliari local market gathered to protest against the transfer of the market to another location. The demonstration was supported by the USB Labour Union.
+  EV: to protest against the transfer of the market to another location
+
+[train] ITA3903 | outside_taxonomy
+  NOTE: On 9 October 2020, the High School Students' Network staged a protest in the Basilicata region (coded to Potenza, Potenza, Basilicata) to demonstrate against severe problems concerning the region's urban and extra-urban 
+  EV: against severe problems concerning the region's urban and extra-urban public transport
+
+[train] ITA4147 | outside_taxonomy
+  NOTE: On 22 October 2020, a group of high school students from the Luigi di Savoia Institute took part in a sit-in in Mazzini square in Rieti to protest against the lack of transport routes to the city and the consequent crowd
+  EV: against the lack of transport routes to the city and the consequent crowds in public transports... traffic jam
+
+[train] ITA477 | outside_taxonomy
+  NOTE: On 3 February 2020, a group of New Force activists took part in a flash mob in the centre of Busto Arsizio to protest against Chinese products in the wake of the COVID-19 outbreak and promote 'Made in Italy' instead. Pro
+  EV: to protest against Chinese products... and promote 'Made in Italy' instead
+
+[train] ITA5235 | outside_taxonomy
+  NOTE: On 27 November 2020, a group of Tricolor Masks activists staged a flash mob in the center of Siracusa (Siracusa, Sicilia) to protest against buying goods on Amazon on Black Friday and promote buying 'Made in Italy' produ
+  EV: to protest against buying goods on Amazon on Black Friday and promote buying 'Made in Italy' products
+
+[train] ITA6647 | outside_taxonomy
+  NOTE: On 18 February 2021, about 100 people, among them Power To The People and S.I. COBAS affiliates as well as self-managed social center activists, took part in a sit-in outside the Confindustria offices of Napoli (Napoli, 
+  EV: against the new government... denounce the pro-business stance of the new prime minister
+
+[train] ITA9271 | outside_taxonomy
+  NOTE: On 23 May 2021, people gathered in monte Faito street in Pescara to clean the surrounding lawns. They did so in protest against the Municipality's inaction in taking care of the lawns.
+  EV: to clean the surrounding lawns... in protest against the Municipality's inaction in taking care of the lawns
+
+[train] MDA1197 | outside_taxonomy
+  NOTE: On 16 April 2022, SOR members and supporters protested in Singerei, condemning the performance of the PAS government and demanding for more social welfare support.
+  EV: demanding more social welfare support from the government
+
+[train] MDA1607 | outside_taxonomy
+  NOTE: On 17 July 2023, hundreds of small retailers protested outside the parliament building in Chisinau - Buiucani, condemning the legal obligation to have a billing machine.
+  EV: against the legal obligation to have a billing machine
+
+[train] MDA243 | insufficient_information
+  NOTE: On 14 February 2019, members of the OccupyGuguta community held an informative protest in Orhei. Three members were detained by the police for several hours for attempting to hang a banner on the City Council building.
+  EV: informative protest with no reason reported
+
+[train] MDA5 | outside_taxonomy
+  NOTE: On 17 January 2018, locals of Puhoi village protested in front of the Moldovan Government building in Chisinau to demand better bus services.
+  EV: locals demand better bus services
+
+[train] MDA781 | outside_taxonomy
+  NOTE: On 12 January 2021, locals of two villages protested in Comrat, complaining over little budget redistribution for investment in their villages.
+  EV: complaining over little budget redistribution for their villages
+
+[train] MKD1281 | outside_taxonomy
+  NOTE: On 17 December 2024, parents of students from the Ljuben Lape Elementary School and residents of the Aerodrom neighborhood in Skopje held a peaceful protest in front of the school this morning, demanding that the problem
+  EV: demand resolution of an unsafe intersection
+
+[train] MKD332 | outside_taxonomy
+  NOTE: On 28 April 2020, truck drivers held a protest procession with their vehicles in the center of Skopje against the increased tax on fuel and called for government support for the transport sector, which was among the most
+  EV: against the increased fuel tax and for government support to transport
+
+[train] MKD797 | outside_taxonomy
+  NOTE: On 27 June 2022, residents of Bogdanci protested against the state of disrepair they are continuously confronted with on the road from Bogdanci to Gevgelija, the main southern border crossing in the country.
+  EV: against the state of disrepair they are continuously confronted with on the road
+
+[train] MLT332 | outside_taxonomy
+  NOTE: On 22 September 2024, people, including residents and representatives of Moviment Graffitti and FAA, took to the streets of Valletta (South Eastern) to protest against businesses taking over public spaces and demand acti
+  EV: against businesses taking over public spaces ... encroachment of public spaces
+
+[train] MNE164 | outside_taxonomy
+  NOTE: On 22 April 2019, mothers of three and more children organized a protest in Montenegrin capital Podgorica for reinstating benefits they had under the old law .
+  EV: for reinstating benefits they had under the old law
+
+[train] MNE900 | outside_taxonomy
+  NOTE: On 24 February 2022, people gathered for a protest and road-blocking organized by the Democratic Front in Pluzine to voice their opposition to the minority government formation proposal and prevent the alleged 'betrayal'
+  EV: opposition to the minority government formation proposal
+
+[train] NLD4772 | outside_taxonomy
+  NOTE: On 3 May 2025, in the afternoon, at the call of local boat owners, over thirty boats longer than 12 meters and many smaller vessels gathered on the Lakes of Vinkeveen in Vinkeveen (Utrecht), sounding horns during a two-h
+  EV: to protest new restrictions on boat sizes and permanent mooring
+
+[train] NOR2456 | outside_taxonomy
+  NOTE: On 11 December 2025, people marched in Oslo to protest the newly adopted municipal budget, opposing major cuts to local welfare services, citing potential negative impact on children, older people, and low-income communi
+  EV: opposing major cuts to local welfare services
+
+[train] POL3151 | outside_taxonomy
+  NOTE: On 13 October 2021, representatives of local self-governing municipalities gathered for a rally in Warsaw, protesting against the proposed tax reform, stripping them of some of their incomes.
+  EV: protesting against the proposed tax reform, stripping them of some of their incomes
+
+[train] POL4688 | outside_taxonomy
+  NOTE: On 4 July 2022, residents of local villages gathered for a rally in Koszalin, protesting against proposed administrative reform of their municipalities.
+  EV: protesting against proposed administrative reform of their municipalities
+
+[train] POL47 | outside_taxonomy
+  NOTE: On 25 January 2020, fishers demonstratively blocked several ports, including Hel, demanding governmental compensation of legal limitation of fishing.
+  EV: demanding governmental compensation of legal limitation of fishing
+
+[train] POL5357 | outside_taxonomy
+  NOTE: On 12 March 2023, several hundred Catholic activists gathered for a rally in Torun, protesting against recent accusations against the late Polish pope Karol Wojtyla (John Paul II) of deliberate covering-up sexual and oth
+  EV: protesting against recent accusations against the late Polish pope ... of deliberate covering-up sexual and ot
+
+[train] POL5437 | outside_taxonomy
+  NOTE: On 2 April 2023, Catholic activists gathered for a march in Opole, protesting against a recent accusation of the 'Polish pope' John Paul II (Karol Wojtyla) regarding alleged deliberate covering-up of sexual scandals in t
+  EV: protesting against a recent accusation of the 'Polish pope' ... covering-up of sexual scandals
+
+[train] POL5812 | outside_taxonomy
+  NOTE: On 15 September 2023, employees of transport services blocked a road in Ostroleka, protesting against restrictions of the movement of trucks within the city.
+  EV: protesting against restrictions of the movement of trucks within the city
+
+[train] POL6099 | outside_taxonomy
+  NOTE: On 13 December 2023, unionized truck drivers for the 37th day blocked with their vehicles the border crossing point with Ukraine in Hrebenne. They were condemning allegedly unfair conditions for Ukrainian transport and t
+  EV: condemning allegedly unfair conditions for Ukrainian transport and trade companies and demanded stronger state
+
+[train] POL7316 | outside_taxonomy
+  NOTE: On 10 May 2024, people with intellectual disabilities, their guardians and representatives of institutional support organizations gathered for a march in Jaroslaw, demanding higher solidarity and care.
+  EV: demanding higher solidarity and care
+
+[train] POL8767 | outside_taxonomy
+  NOTE: On 20 November 2025, activists, mostly minor businessmen, gathered for a rally in Warsaw, protesting against delayed financial compensations for climate-related restrictions.
+  EV: protesting against delayed financial compensations for climate-related restrictions
+
+[train] POR207 | outside_taxonomy
+  NOTE: On 9 September 2020, users of the transportation company Transportes Sul do Tejo (TST) protested in Almada (Setubal) demanding better transportation services. Protesters said that the situation has worsened during the CO
+  EV: users demanding better transportation services
+
+[train] POR349 | outside_taxonomy
+  NOTE: On 11 December 2020, hundreds of football fans of Sporting Clube de Portugal protested in front of the Alvalade Stadium located in Lisbon against the refereeing of the match with Famalicao Football Club.
+  EV: against the refereeing of the match with Famalicao Football Club
+
+[train] ROU141 | outside_taxonomy
+  NOTE: On 12 July 2018, members of the Oradea Civica association protested in Oradea, demanding the resignation of the current Romanian government.
+  EV: demanding the resignation of the current Romanian government
+
+[train] ROU176 | outside_taxonomy
+  NOTE: On 11 August 2018, around 300 people protested in Timisoara, demanding the resignation of the Romanian government.
+  EV: demanding the resignation of the Romanian government
+
+[train] ROU2228 | outside_taxonomy
+  NOTE: On 20 June 2023, around 200 taxi drivers drove their vehicles in Botosani, protesting against the lax rules for the ride-sharing apps.
+  EV: against the lax rules for the ride-sharing apps
+
+[train] ROU393 | outside_taxonomy
+  NOTE: On 21 March 2019, a protest of 100 unionised workers of the Bucharest metro took place outside Romania's Transportation Ministry. The protesters wanted to raise awareness about the dire state of 13 metro trains.
+  EV: raise awareness about the dire state of 13 metro trains
+
+[train] ROU938 | outside_taxonomy
+  NOTE: On 24 March 2019, approximately 20 people protested outside the PSD regional office in Sibiu against the PSD-ALDE government.
+  EV: against the PSD-ALDE government
+
+[train] SRB1089 | outside_taxonomy
+  NOTE: On 28 June 2019, a protest organized by '1 of 5 Million' was held in Negotin, Serbia.
+  EV: a protest organized by the '1 of 5 Million' group
+
+[train] SRB1149 | outside_taxonomy
+  NOTE: On 24 August 2019, another '1 of 5 Million' protest was held in Belgrade, Serbia, against the current ruling party SNS.
+  EV: against the current ruling party SNS
+
+[train] SRB1223 | outside_taxonomy
+  NOTE: On 15 October 2019, taxi drivers protested in Belgrade, Serbia, against a transport app. After the protest an agreement was reached with President Vucic and the protests stopped after 12 days.
+  EV: taxi drivers protested against a transport app
+
+[train] SRB1499 | outside_taxonomy
+  NOTE: On 4 May 2020, citizens protested from their balconies in Belgrade, Serbia, against the government. The protest was initiated by Don't Let Belgrade D(r)own, in response to what they say is a 'dictatorship, laid bare by t
+  EV: against the government, which they say is a dictatorship laid bare by the COVID-19
+
+[train] SRB2329 | outside_taxonomy
+  NOTE: On 19 July 2022, residents of Pakovrac blocked the concrete production company 'Cemprom' with their bodies in Preljina, not allowing their workers to continue the construction of the Preljina-Pozega highway. The proteste
+  EV: claiming the parcel has been illegally occupied since the lease expired
+
+[train] SRB308 | outside_taxonomy
+  NOTE: On 1 February 2019, in Leskovac, Serbia citizens held a protest against the regime of Aleksandar Vucic. This protest was a part of a series of protests happening throughout the country for several weeks.
+  EV: against the regime of Aleksandar Vucic
+
+[train] SRB427 | outside_taxonomy
+  NOTE: On 15 February 2019, in Uzice, Serbia, citizens held an anti-government protest, part of a series of protests happening throughout the country for several consecutive weeks.
+  EV: held an anti-government protest
+
+[train] SRB4845 | outside_taxonomy
+  NOTE: On 8 April 2025, citizens gathered in Indija to protest against the initiated pro-regime march. The protesters gathered on their marching route to condemn their actions. Another group of pro-regime and SNS supporters gat
+  EV: protest against the initiated pro-regime march
+
+[train] SRB566 | outside_taxonomy
+  NOTE: On 2 March 2019, in Kula, Serbia citizens held a protest against the regime of Aleksandar Vucic. This protest was a part of a series of protests happening throughout the country for several weeks.
+  EV: against the regime of Aleksandar Vucic
+
+[train] SRB5784 | outside_taxonomy
+  NOTE: On 24 August 2025, SNS supporters gathered in front of their local offices in Subotica to express support for the government and oppose student-led protests and blockades. Around 30 citizens also gathered at the city's s
+  EV: express support for the government and oppose student-led protests and blockades
+
+[train] SRB5859 | outside_taxonomy
+  NOTE: On 31 August 2025, SNS supporters gathered in Paracin to express support for the government and oppose student-led protests and blockades.
+  EV: express support for the government and oppose student-led protests and blockades
+
+[train] SRB6006 | outside_taxonomy
+  NOTE: On 7 September 2025, SNS supporters gathered in Novi Sad to express support for the government and oppose student-led protests and blockades.
+  EV: express support for the government and oppose student-led protests and blockades
+
+[train] SRB6160 | outside_taxonomy
+  NOTE: On 28 September 2025, SNS supporters gathered in Bajina Basta to express support for the government and oppose student-led protests and blockades.
+  EV: express support for the government and oppose student-led protests and blockades
+
+[train] SRB6234 | outside_taxonomy
+  NOTE: On 28 September 2025, SNS supporters gathered in Arilje to express support for the government and oppose student-led protests and blockades.
+  EV: express support for the government and oppose student-led protests and blockades
+
+[train] SRB6468 | outside_taxonomy
+  NOTE: On 29 October 2025, around 60 Kosovo Serbs began their march from Rudnica to Novi Sad to show support for the Serbian President and reached Usce where they spent a night. In Usce, they were greeted by over 600 people wit
+  EV: show support for the Serbian President and join the pro-government gathering protesting against students' bloc
+
+[train] SRB6833 | outside_taxonomy
+  NOTE: On 28 January 2026, truck drivers from Serbia maintained a freight terminal blockade at the Batrovci border crossing with Croatia in Sid municipality for the third consecutive day. As a coordinated regional action, prote
+  EV: demanding a revision of the ETIAS regulation, arguing it threatens their competitiveness and livelihoods
+
+[train] SRB6905 | outside_taxonomy
+  NOTE: On 4 February 2026, local residents protested in Belgrade - Savski Venac, against construction of a six-storey building. There was almost a confrontation between the protesters and the private security hired by the const
+  EV: against construction of a six-storey building
+
+[train] SRB789 | outside_taxonomy
+  NOTE: On 28 March 2019, in Trstenik, members of the '1 of 5 Million' protest group held a peaceful anti-government protest . The protest is a part of anti-government protest happening throughout the country since the end of No
+  EV: held a peaceful anti-government protest motivated by an attack on an opposition leader
+
+[train] SRB839 | outside_taxonomy
+  NOTE: On 30 March 2019, in Pozega, Serbia, members of the '1 of 5 Million' protest group held a peaceful anti-government protest . The protest is a part of anti-government protest happening throughout the country since the end
+  EV: held a peaceful anti-government protest motivated by an attack on an opposition leader
+
+[train] SVK668 | outside_taxonomy
+  NOTE: On 19 February 2024, about 20 farmers and minor agricultural entrepreneurs gathered for a rally with their vehicles in Trencin, complaining about excessive bureaucracy and other burdens.
+  EV: complaining about excessive bureaucracy and other burdens
+
+[train] SVN623 | outside_taxonomy
+  NOTE: On 6 May 2025, people with disabilities and their unionized professional assistants gathered with pickets in Ljubljana, demanding higher legal and social support.
+  EV: people with disabilities demanding higher legal and social support
+
+[train] SWE1895 | outside_taxonomy
+  NOTE: On 2 October 2021, Nordic Resistance Movement activists gathered in Vellinge (Skane) to promote national socialist values and to oppose multiculturalism.
+  EV: promote national socialist values and to oppose multiculturalism
+
+[train] SWE2610 | outside_taxonomy
+  NOTE: On 1 May 2022, the Hard Line (Stram Kurs) activists, including the party leader, held an anti-Islamic demonstration in Norra Bantorget, Stockholm. Police forces personnel were present to ensure the security of the event.
+  EV: held an anti-Islamic demonstration
+
+[train] SWE2665 | outside_taxonomy
+  NOTE: On 14 May 2022, a riot broke out in Uppsala following the anti-Islamic demonstration staged by the Hard Line (Stram Kurs) activists. Later, police forces used pepper spray on rioters after they started throwing objects a
+  EV: a riot broke out following the anti-Islamic demonstration staged by the Hard Line activists
+
+[train] SWE304 | outside_taxonomy
+  NOTE: On 6 May 2020, about 600 preschool children marched backwards in Boras, demonstrating for their right to be allowed to drive backwards in a car for safety reasons. Protest marches coincided with Child Safety Day.
+  EV: demonstrating for their right to be allowed to drive backwards in a car for safety reasons
+
+[train] SWE570 | outside_taxonomy
+  NOTE: On 12 September 2020, more than three protesters demonstrated peacefully in Lulea (Norrbottens-Sweden) against new regulations on market fairs.
+  EV: against new regulations on market fairs
+
+[train] SWE6351 | outside_taxonomy
+  NOTE: On 30 May 2020, activists from the Nordic Resistance Movement demonstrated in Kinna, Vastra Gotaland, to promote the movement's national socialist values, to oppose multiculturalism and migration.
+  EV: promote the movement's national socialist values, to oppose multiculturalism and migration
+
+[train] XKX785 | outside_taxonomy
+  NOTE: On 13 April 2023, residents of roadside locations on the main Kosovo highway protested in Pristina in front of the government building against the expansion of this highway and the expropriation of their property, claimi
+  EV: against the expansion of this highway and the expropriation of their property
+
+[dev] CYP474 | outside_taxonomy
+  NOTE: On 13 August 2020, business owners based on a main road in Limassol protested against road works in their area and particularly the construction of a road dividing island holding spades and driving tractors.
+  EV: business owners... against road works; stated issue is inconvenience to their businesses
+
+[dev] DEU6165 | outside_taxonomy
+  NOTE: On 18 April 2021, around 70 members of the NPD protested in Dresden for an Antifa ban. People gathered for a counterprotest.
+  EV: NPD protest for an Antifa ban; far-right demand with no covered subject
+
+[dev] DEU6470 | insufficient_information
+  NOTE: On 1 May 2021, around 150 to 200 people, including one SPD member, protested in Oberhausen on the occasion of May Day (Labor Day). The protest was organized by the IB. The exact reason for the protest was not reported.
+  EV: exact reason for the protest was not reported
+
+[dev] ESP5993 | outside_taxonomy
+  NOTE: On 17 June 2021, local residents of Hispanidad and La Floresta neighborhood protested in Zaragoza, demanding a solution for the prolongation of Hayedo street. They complained about the blockage of the project due to a di
+  EV: demanding a solution for the prolongation of Hayedo street; local road project blocked by institutions
+
+[dev] ESP7468 | outside_taxonomy
+  NOTE: On 8 November 2021, hairdressers protested in Aranda del Duero (Burgos, Castilla y Leon), calling on the government to reduce the VAT rate (from 21% to 10%) applied to their labour sector.
+  EV: hairdressers calling to reduce the VAT rate applied to their labour sector; business tax grievance
+
+[dev] SVN294 | outside_taxonomy
+  NOTE: On 18 February 2022, three activists gathered with a protest in Izola against a planned purchase of local docks by the military.
+  EV: against a planned purchase of local docks by the military; domestic military acquisition outside taxonomy
+
+[dev] BGR2383 | outside_taxonomy
+  NOTE: On 11 May 2022, residents of Sredets protested due to the bad state of the roads in the area, in particular two of the main bridges on the road leading to Yambol which have remained damaged over a long period of time and
+  EV: bad state of the roads... bridges... close to collapsing; local road infrastructure
+
+[dev] BGR2725 | outside_taxonomy
+  NOTE: On 4 November 2022, residents of the village of Glogovo protested in Teteven against what they claim are unacceptable water rationing measures. For 25 years, they have had water supplied for only one hour per day, and th
+  EV: unacceptable water rationing measures... water supplied for only one hour per day; utility supply issue
+
+[dev] FRA29080 | outside_taxonomy
+  NOTE: On 25 November 2023, at the call of FFMC, around 600 motorcyclists took to the streets of Pau (Nouvelle-Aquitaine) to demonstrate against the introduction of a compulsory technical inspection of two-wheel vehicles.
+  EV: against the introduction of a compulsory technical inspection of two-wheel vehicles; transport regulation
+
+[dev] FRA31561 | outside_taxonomy
+  NOTE: On 4 March 2024, at the call of FNAT - National Federation of Taxi Craftsmen, taxi drivers drove at a slow pace to demonstrate on the bypass road in Rennes (Bretagne) to protest against new regulations on the transport o
+  EV: protest against new regulations on the transport of people in need of medical assistance; business regulation
+
+[dev] ESP20312 | outside_taxonomy
+  NOTE: On 18 March 2025, more than 100 residents, including business owners held a protest in Redondela (Galicia) to denounce the removal of parking spaces due to street redevelopments, impacting commerce and resident's life.
+  EV: removal of parking spaces due to street redevelopments, impacting commerce
+
+[dev] BGR4268 | outside_taxonomy
+  NOTE: On 23 April 2025, a year after the introduction of the new traffic rule around the National Palace of Culture in Sofia, residents the area protested again and demanded the return of the previous traffic organization, cla
+  EV: demanded the return of the previous traffic organization... new traffic rules have make navigating the area in
+
+[dev] SRB23 | outside_taxonomy
+  NOTE: On 14 March 2018, 2018 in Vranje, Serbia, soccer players of 'Dinamo' soccer club, together with their coach and the club president held a protest walk asking for funds from the local government for club's operational fun
+  EV: soccer club asking for funds from the local government for club's operational functioning; sports funding
+
+[dev] ROU960 | outside_taxonomy
+  NOTE: On 3 May 2019, approximately 20 people protested outside the PSD regional office in Sibiu against the PSD-ALDE government.
+  EV: against the PSD-ALDE government; general opposition to government without a covered issue
+
+[dev] BEL630 | outside_taxonomy
+  NOTE: On 30 September 2020, an unknown number of activists of Vlaams Belang staged a protest action in Mol against the newly formed Belgian federal government, by inviting bypassing cars to sound their horn.
+  EV: against the newly formed Belgian federal government; general opposition to government
+
+[dev] ITA1899 | outside_taxonomy
+  NOTE: On 2 June 2020, around 1000 people gathered in Duomo square in Milano - Municipio 1 (Milano, Lombardia) on the occasion of a demonstration organized by right and center-right wing parties Lega, Forward Italy and Brothers
+  EV: protest against the current Italian coalition government; general opposition to government
+
+[dev] SRB1406 | outside_taxonomy
+  NOTE: On 15 February 2020, protesters marched through Belgrade, Serbia, against the current government. The protests are now organized by an informal group of citizens who split from '1 of 5 Million' movement.
+  EV: against the current government; general opposition to government without a covered substantive issue
+
+[dev] DNK697 | outside_taxonomy
+  NOTE: On 9 March 2021, Hard Line (Stram Kurs) party activists, including the party leader, staged an anti-Islamic demonstration in Norrebro district of Copenhagen (Kobenhavn). Police personnel were present at the venue.
+  EV: Hard Line (Stram Kurs) party activists staged an anti-Islamic demonstration; far-right rally with no covered s
+
+[dev] FRA7145 | outside_taxonomy
+  NOTE: On 16 March 2021, more than 200 people, including CGT union members and elected officials, protested in Pontivy to call for the resumption of the train line connecting the cities of Saint-Brieuc and Auray.
+  EV: call for the resumption of the train line connecting Saint-Brieuc and Auray; local rail service
+
+[dev] MDA788 | outside_taxonomy
+  NOTE: On 21 January 2021, a protest took place outside the presidency building and outside the football federation in Chisinau - Buiucani, demanding the resignation of the leadership of the national football federation. A PDM 
+  EV: demanding the resignation of the leadership of the national football federation; sports governance
+
+[dev] SRB1985 | outside_taxonomy
+  NOTE: On 9 October 2021, local residents and members of SDS protested in Belgrade - Vracar, Serbia, after a building collapsed due to construction of another building next to it. They demanded the resignation of the city gover
+  EV: a building collapsed due to construction; demanded the resignation of the city government responsible for issu
+
+[dev] ESP5159 | outside_taxonomy
+  NOTE: On 28 April 2021, citizens protested in Santiago de Compostela against the establishment of an Institute of Legal Medicine of Galicia (Imelga) in the Fontinas neighborhood.
+  EV: against the establishment of an Institute of Legal Medicine of Galicia in the Fontinas neighborhood
+
+[dev] FRA18716 | outside_taxonomy
+  NOTE: On 6 September 2022, an unknown number of people, including elected officials of Armentieres gathered for a rally in Armentieres, against the SNCF's lack of accommodation for people with disabilities.
+  EV: against the SNCF's lack of accommodation for people with disabilities
+
+[dev] ITA13867 | outside_taxonomy
+  NOTE: On 8 February 2022, in the morning, EV party representatives staged a protest near Corleone Bridge in Palermo (Palermo, Sicilia) to ask regional authorities to consider the bridge as a freeway artery.
+  EV: ask regional authorities to consider the bridge as a freeway artery
+
+[dev] NOR1041 | outside_taxonomy
+  NOTE: On 29 October 2022, around 30 to 40 activists from the Nordic Resistance Movement activists marched in Oslo to promote national socialist values and oppose multiculturalism. Later, the activists were detained by the poli
+  EV: Nordic Resistance Movement activists marched in Oslo to promote national socialist values; far-right rally wit
+
+[dev] ESP10170 | outside_taxonomy
+  NOTE: On 3 May 2022, associations of people with disabilities protested in Alicante (Valencia) forming queues to stage the waiting list they must endure to have their disability assessed. The protest was called by the NGO COCE
+  EV: waiting list they must endure to have their disability assessed; disability services outside taxonomy
+
+[dev] SWE2475 | outside_taxonomy
+  NOTE: On 30 March 2022, for a seventh consecutive day, five people continued the collective hunger strike at Sergels Torg Square in Stockholm to oppose the child removal cases into the custody of state authorities under the Ca
+  EV: oppose the child removal cases into the custody of state authorities under the Care of Young Persons Act (LVU)
+
+[dev] AUT1998 | outside_taxonomy
+  NOTE: On 14 November 2024, Pellendorf residents, supported by Mayor Ernst Wendl (SPOE) and Vice Mayor Richard Payer (SPOE), gathered for a protest at the intersection of Schwechaterstrasse/Lanzendorferstrasse in Pellendorf (Ni
+  EV: demand the immediate construction of the delayed B233 bypass to reduce traffic; local road infrastructure
+
+[dev] DEU21148 | outside_taxonomy
+  NOTE: On 19 April 2024, around 30 people protested at the B 87 in Taucha (Sachsen), demanding the relocation of the federal highway and the establishment of a safe pedestrian and cyclist crossing.
+  EV: demanding the relocation of the federal highway and the establishment of a safe pedestrian and cyclist crossin
+
+[dev] POL7179 | outside_taxonomy
+  NOTE: On 26 March 2024, residents of Nowa Wies near Torun gathered for a rally and blocked a local road, protesting against a proposed construction of a new bridge in their neighbourhood, fearing increase of cargo traffic.
+  EV: proposed construction of a new bridge in their neighbourhood, fearing increase of cargo traffic
+
+[dev] ESP16845 | outside_taxonomy
+  NOTE: On 24 April 2024, CUP members protested in Barcelona - Sants-Montjuic (Cataluna) to denounce the poor functioning of public transport companies Renfe and Rodalies and to demand improved public transport.
+  EV: poor functioning of public transport companies Renfe and Rodalies and to demand improved public transport
+
+[dev] ESP18037 | outside_taxonomy
+  NOTE: On 13 September 2024, more than 1,000 cyclists held a protest in Zaragoza (La Rioja) against mandatory liability insurance to be able to cycle on the streets of Zaragoza.
+  EV: against mandatory liability insurance to be able to cycle on the streets of Zaragoza
+
+[dev] GBR7050 | outside_taxonomy
+  NOTE: On 9 January 2024, hundreds of taxi drivers across West Northamptonshire held a protest in Northampton (England) against the new policy proposed by the council.
+  EV: taxi drivers against the new policy proposed by the council; taxi regulation
+
+[dev] BGR4014 | outside_taxonomy
+  NOTE: On 16 January 2025, protesters gathered under the slogan 'Let's regain access to Vitosha' in front of the presidential institution building in Sofia, demanding the improvement and modernization of transportation to the m
+  EV: demanding the improvement and modernization of transportation to the mountain, as well as the lifts
+
+[dev] FRA41858 | outside_taxonomy
+  NOTE: On 18 September 2025, in the afternoon, at the call of CGT, around 100 child protection workers demonstrated in Avignon (Provence-Alpes-Cote d'Azur) against the announced closure of two prevention services of the Departm
+  EV: against the announced closure of two prevention services of the Departmental Center for Childhood and Family (
+
+[dev] DEU25929 | outside_taxonomy
+  NOTE: On 21 September 2025, at the call of the Kidical Mass alliance, around 900 cyclists, including families and children, gathered from over 20 neighborhoods and staged a demonstration in Koln (Nordrhein-Westfalen) to demand
+  EV: to demand safer roads for children; road safety
+
+[dev] ITA28627 | outside_taxonomy
+  NOTE: On 8 December 2025, about 1,000 residents and No TAV activists gathered in Venaus (Piemonte) and marched toward Susa (Piemonte) to protest the Turin-Lyon High-Speed Railway Project (TAV). The march, held yearly to protes
+  EV: to protest the Turin-Lyon High-Speed Railway Project (TAV)
+
+[dev] SVK1170 | outside_taxonomy
+  NOTE: On 19 November 2025, hundreds of students gathered for a rally in Zilina and demonstratively wrote numerous anti-government slogans at the local central square, condemning the recent critical remarks of the sitting PM ag
+  EV: condemning the recent critical remarks of the sitting PM against the students and young people
+
+[dev] SWE6724 | outside_taxonomy
+  NOTE: On 9 March 2025, activists from the Nordic Resistance Movement demonstrated at a bridge crossing in Skelleftea, Vasterbotten, to promote the movement's national socialist values and oppose multiculturalism.
+  EV: Nordic Resistance Movement demonstrated to promote the movement's national socialist values; far-right rally w
+
+[test] DEU3205 | outside_taxonomy
+  NOTE: On 12 September 2020, people protested near Rolofshagen against the expansion of wind energy plants. The protest was organized by an AfD politician.
+  EV: protested against the expansion of wind energy plants; local siting dispute with no covered domain
+
+[test] ROU1180 | outside_taxonomy
+  NOTE: On 19 January 2020, around 200 people protested in Arad, demanding the closing of the city's north-west belt road.
+  EV: demanding the closing of the city's north-west belt road; local road decision
+
+[test] BEL627 | outside_taxonomy
+  NOTE: On 28 September 2020, an unknown number of people staged a protest in front of the Elia headquarters in Ecaussinnes to denounce the construction of a high voltage line in their neighborhood.
+  EV: denounce the construction of a high voltage line in their neighborhood; local siting dispute
+
+[test] ROU115 | outside_taxonomy
+  NOTE: On 26 June 2018, more than one hundred people protested in Cluj-Napoca demanding the resignation of PM Viorica Dancila and PSD leader Liviu Dragnea.
+  EV: demanding the resignation of the PM and PSD leader; no covered substantive issue
+
+[test] DEU2714 | outside_taxonomy
+  NOTE: On 26 July 2020, around 1,500 motorbikers protested in Freiburg im Breisgau against a planned driving ban for motorbikes to reduce traffic noise.
+  EV: motorbikers protested against a planned driving ban for motorbikes to reduce traffic noise
+
+[test] SRB542 | outside_taxonomy
+  NOTE: On 1 March 2019, in Rekovac, Serbia citizens held a protest against the regime of Aleksandar Vucic. This protest was a part of a series of protests happening throughout the country for several weeks.
+  EV: protest against the regime of Aleksandar Vucic with no covered substantive issue
+
+[test] ESP12934 | outside_taxonomy
+  NOTE: On 28 March 2023, over 50 La Vaguada residents held a protest in Zamora (Castilla y Leon) against the car parking that is being built in the area to accommodate some 80 vehicles.
+  EV: residents protested against the car parking being built in the area to accommodate some 80 vehicles
+
+[test] ALB1160 | outside_taxonomy
+  NOTE: On 18 November 2022, residents of Divjake protested against plans by the municipality to install a toll booth at the entrance of the Divjake-Karavasta national park. They claim the toll booth will make it more expensive 
+  EV: toll booth will make it more expensive for residents and reduce income for small businesses in the park
+
+[test] ITA24105 | outside_taxonomy
+  NOTE: On 5 October 2024, more than 200 people gathered in Brindisi (Puglia) to commemorate a 20-year-old who died in a road accident and call for safe roads and stricter speed limits. Mayor Giuseppe Marchionna (Civic List), Co
+  EV: commemorating a road accident victim and calling for safe roads and stricter speed limits
+
+[test] DNK2748 | outside_taxonomy
+  NOTE: On 20 November 2024, people demonstrated outside the Parliament of Denmark in Copenhagen protesting the frequent removal of Greenlandic children from their families and their disproportionately high placement in Denmark 
+  EV: protesting the frequent removal of Greenlandic children from their families, a child welfare issue not covered
+
+[test] BGR735 | outside_taxonomy
+  NOTE: On 8 November 2019, parents led by the Parents United for Children Association held a protest in Sandanski against the new social services law, which they fear would enable social services to take their children away wit
+  EV: protest against the new social services law fearing children could be taken without consent, a family policy i
+
+[test] ITA13367 | outside_taxonomy
+  NOTE: On 7 January 2022, several far-right affiliates gathered in Acca Larentia street in Rome - Tuscolano (Roma, Lazio) to commemorate the victims of the 1978 Acca Larentia killings and denounce the role of the far left in th
+  EV: far-right affiliates commemorated the 1978 Acca Larentia killings and denounced the far left; a far-right rall
+
+[test] SWE1513 | outside_taxonomy
+  NOTE: On 6 June 2021, local residents gathered in Sodermalm district of Stockholm to demonstrate for preservation of Liljeholmsbadet floating swimming pool that is planned to be closed.
+  EV: demonstrate for the preservation of a floating swimming pool that is planned to be closed
+
+[test] BIH1077 | outside_taxonomy
+  NOTE: On 5 January 2024, parents of children with disabilities protested in front of the city council in Banja Luka, demanding urgent payment of social contributions. The protesters voiced that they were left for five months w
+  EV: parents of children with disabilities demanded urgent payment of social contributions, left without financial 
+
+[test] DNK221 | outside_taxonomy
+  NOTE: On 16 June 2020, Stram Kurs held an anti-Islamic demonstration in Korsor. Over 100 police officers were present to protect the party's leader. On the same day, the leader announced he would reduce the number of demonstra
+  EV: Stram Kurs held an anti-Islamic demonstration, a far-right rally with no covered substantive issue
+
+[test] DNK1470 | outside_taxonomy
+  NOTE: On 11 February 2022, Identitarian Movement gathered in front of Aalborg Theatre to oppose the ongoing performance that they believe puts their movement in a negative light.
+  EV: Identitarian Movement gathered to oppose a performance that puts their movement in a negative light
+
+[test] HRV1048 | outside_taxonomy
+  NOTE: On 29 May 2024, citizens gathered in Dugo Selo, demanding that the local authorities improve the streets' signalization and overall infrastructure contributing to citizens' safety. The protest is triggered by the tragic 
+  EV: demanding improved street signalization and infrastructure contributing to citizens' safety
+
+[test] BEL2523 | outside_taxonomy
+  NOTE: On 17 May 2023, about 130 young people protested in Kruibeke, to demand 'space to be young', party venues in the town, and tolerance towards young people.
+  EV: demand space to be young, party venues in the town, and tolerance towards young people
+
+[test] SRB1526 | outside_taxonomy
+  NOTE: On 9 May 2020, citizens protested from their balconies in Mali Zvornik, Serbia, against the government. The protest was initiated by Don't Let Belgrade D(r)own, in response to what they say is a 'dictatorship, laid bare 
+  EV: citizens protested against the government, calling it a dictatorship, with no covered substantive issue
+
+[test] FRA491 | insufficient_information
+  NOTE: On 20 January 2020, a dozen of lawyers and around fifty CGT activists protested in front of the AstraZeneca pharmaceutical factory in Dunkerque, that the French President was visiting. Police officers intervened and two 
+  EV: lawyers and CGT activists protested at the AstraZeneca factory the President was visiting, but the grievance w
+
+[test] ESP15259 | outside_taxonomy
+  NOTE: On 24 December 2023, around 130 people gathered before the PSOE headquarters in Madrid - Moncloa-Aravaca (Madrid) as part of an ongoing protest against the deal that Spain's PSOE Prime Minister, Pedro Sanchez, sealed wit
+  EV: ongoing protest against the deal that includes an amnesty pact with JuntsXCat and ERC
+
+[test] ITA15594 | outside_taxonomy
+  NOTE: On 15 April 2022, private transport drivers working in the tourism sector rallied in Matera (Matera, Basilicata) to protest the municipal administration's decision to change the rules of access and vehicular circulation 
+  EV: protest the municipal decision to change the rules of access and vehicular circulation in Murgia Timone
+
+[test] ESP2004 | outside_taxonomy
+  NOTE: On 30 September 2020, around 60 members of the Platform for People Affected by Mortgages (PAH) gathered in Manresa (Barcelona) to complain about the bureaucratic obstacles for registering at the local municipality.
+  EV: complain about the bureaucratic obstacles for registering at the local municipality
+
+[test] SRB1131 | outside_taxonomy
+  NOTE: On 25 July 2019, a group of war veterans protested in the Serbian city Nis, demanding their social security and health insurance issues be resolved.
+  EV: war veterans demanded their social security and health insurance issues be resolved
+
+[test] DEU2094 | outside_taxonomy
+  NOTE: On 7 June 2020, around 150 people protested in Frankfurt am Main against a railroad crossing at which a girl died a month earlier.
+  EV: protested against a railroad crossing at which a girl died a month earlier
+
+[test] NLD155 | outside_taxonomy
+  NOTE: On 14 May 2020, around 70 people staged a protest at the Van der Valk Hotel in Vught against the municipal plans to restructure the N65 highway that runs through Vught.
+  EV: protest against the municipal plans to restructure the N65 highway that runs through Vught
+
+[test] SVN136 | insufficient_information
+  NOTE: On 1 January 2021, a protest against the government was held in Ljubljana, Slovenia.
+  EV: a protest against the government with no reason reported
+
+[test] ROU241 | outside_taxonomy
+  NOTE: On 22 December 2018, passengers of a train blocked the railway in Bucharest's Gara de Nord, protesting the overcrowded railcars.
+  EV: passengers block the railway over overcrowded railcars
+
+[test] NOR138 | outside_taxonomy
+  NOTE: On 4 July 2020, Stop Islamisation of Norway protested outside the Storting Parliament in Oslo. They were met by a group of counter-protesters. Two people were arrested and two people expelled from the protest due to 'min
+  EV: Stop Islamisation of Norway rally with no covered substantive issue stated
+
+[test] ITA17706 | insufficient_information
+  NOTE: On 20 October 2022, inmates in the prison house in Velletri (Roma, Lazio) barricaded themselves in the common areas from 9 a.m. to 5 p.m. because they did not want to return to their prison cells for unreported reasons. 
+  EV: inmates barricaded themselves for unreported reasons
+
+[test] DEU2651 | outside_taxonomy
+  NOTE: Around 19 July 2020, (as reported) around 400 people protested in Rottenburg am Neckar for the preservation of a slaughterhouse at its current location.
+  EV: preservation of a slaughterhouse at its current location
+
+[test] HRV668 | outside_taxonomy
+  NOTE: On 7 November 2021, approximately 100 local residents protested in Lokva Rogoznica, Croatia, after the owner of a hotel illegally blocked off car access to the coast.
+  EV: hotel owner illegally blocked off car access to the coast
+
+[test] BEL2083 | outside_taxonomy
+  NOTE: On 18 October 2022, around 100 bakers staged a protest outside the cabinet of the Wallonian Minister of Economy in Namur to demand governmental support for their rising energy costs.
+  EV: bakers demand governmental support for their rising energy costs
+
+[test] ESP7348 | outside_taxonomy
+  NOTE: On 22 October 2021, dozens of citizens protested in Salamanca (Castilla y Leon), demanding better railroad networks.
+  EV: demanding better railroad networks
+
+[test] BGR1635 | outside_taxonomy
+  NOTE: On 20 November 2020, people held a car procession in front of the Presidential residence in Sofia, demanding the resignation of the government cabinet.
+  EV: demanding the resignation of the government cabinet
+

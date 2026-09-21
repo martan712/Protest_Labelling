@@ -1,0 +1,74 @@
+{
+  "train_0800": {
+    "rows": 800,
+    "unique_ids": 800,
+    "other": 74,
+    "outside_taxonomy": 69,
+    "insufficient_information": 5,
+    "with_alternative": 80,
+    "annotators": [
+      "deepseek-v4-flash-run-2026-09-21-v3-flash"
+    ],
+    "empty_evidence": 0
+  },
+  "train_1500": {
+    "rows": 1500,
+    "unique_ids": 1500,
+    "other": 122,
+    "outside_taxonomy": 116,
+    "insufficient_information": 6,
+    "with_alternative": 199,
+    "annotators": [
+      "deepseek-v4-flash-run-2026-09-21-v3-flash"
+    ],
+    "empty_evidence": 0
+  },
+  "train_3000": {
+    "rows": 3000,
+    "unique_ids": 3000,
+    "other": 267,
+    "outside_taxonomy": 255,
+    "insufficient_information": 12,
+    "with_alternative": 358,
+    "annotators": [
+      "deepseek-v4-flash-run-2026-09-21-v3-flash"
+    ],
+    "empty_evidence": 0
+  },
+  "train_6000": {
+    "rows": 6000,
+    "unique_ids": 6000,
+    "other": 519,
+    "outside_taxonomy": 499,
+    "insufficient_information": 20,
+    "with_alternative": 747,
+    "annotators": [
+      "deepseek-v4-flash-run-2026-09-21-v3-flash"
+    ],
+    "empty_evidence": 0
+  },
+  "dev": {
+    "rows": 497,
+    "unique_ids": 497,
+    "other": 79,
+    "outside_taxonomy": 75,
+    "insufficient_information": 4,
+    "with_alternative": 38,
+    "annotators": [
+      "deepseek-v4-flash-run-2026-09-21-v3-flash"
+    ],
+    "empty_evidence": 0
+  },
+  "test_locked": {
+    "rows": 840,
+    "unique_ids": 840,
+    "other": 69,
+    "outside_taxonomy": 61,
+    "insufficient_information": 8,
+    "with_alternative": 72,
+    "annotators": [
+      "deepseek-v4-flash-run-2026-09-21-v3-flash"
+    ],
+    "empty_evidence": 0
+  }
+}
