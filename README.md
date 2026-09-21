@@ -67,6 +67,13 @@ HSA_OVERRIDE_GFX_VERSION=11.0.0 .venv/bin/python scripts/predict_events.py \
   --model models/new_classifier/run-6000/seed-42/best
 ```
 
+The defaults are tuned for this corpus and GPU: 256-token inputs, length-grouped
+training batches, activation checkpointing, a physical training batch of 4
+(effective batch 32 through accumulation), BF16 inference, batches of 16, and
+bounded 1,024-row inference chunks. Only 0.08% of the current notes exceed 256
+tokens. Use `--no-length-grouping`, `--no-gradient-checkpointing`, `--no-bf16`,
+or the corresponding batch/length arguments when comparing configurations.
+
 Training code can read training and development annotations but has no route to
 the locked test labels. `evaluation/test_data.py` is the sole library loader for
 test gold.
@@ -76,3 +83,16 @@ test gold.
 ```bash
 .venv/bin/python -m unittest discover -v
 ```
+
+## Review and correct annotations
+
+Run the local generic annotation editor when labels need manual verification:
+
+```bash
+python scripts/annotation_review_server.py
+```
+
+Open `http://127.0.0.1:8765`. It discovers assembled CSV files under
+`data/annotations` (not intermediate chunks), displays one item per row, and
+atomically writes label/evidence edits back to the selected file. See
+`docs/annotation_review.md` for using another annotation directory or port.
