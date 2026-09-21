@@ -23,3 +23,6 @@ archive/legacy_*/models/
 reports/*.json
 reports/*.csv
 reports/*.png
+
+# Annotation run chunks are local; run provenance is tracked.
+data/annotation_runs/**/*.csv
