@@ -7,9 +7,9 @@ from protest_classifier.taxonomy import BOUNDARY_RULES, CLASS_NAMES, DESCRIPTION
 
 
 class TaxonomyTests(unittest.TestCase):
-    def test_taxonomy_has_21_unique_defined_labels(self) -> None:
-        self.assertEqual(len(CLASS_NAMES), 21)
-        self.assertEqual(len(set(CLASS_NAMES)), 21)
+    def test_taxonomy_has_23_unique_defined_labels(self) -> None:
+        self.assertEqual(len(CLASS_NAMES), 23)
+        self.assertEqual(len(set(CLASS_NAMES)), 23)
         self.assertEqual(set(CLASS_NAMES), set(DESCRIPTIONS))
 
     def test_other_reason_contract(self) -> None:
