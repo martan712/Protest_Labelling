@@ -30,10 +30,12 @@ class TrainingConfig:
     learning_rate: float = 2e-5
     weight_decay: float = 0.01
     epochs: int = 10
-    batch_size: int = 8
-    gradient_accumulation: int = 4
-    max_length: int = 512
+    batch_size: int = 4
+    gradient_accumulation: int = 8
+    max_length: int = 256
     patience: int = 2
+    group_by_length: bool = True
+    gradient_checkpointing: bool = True
 
 
 def compute_metrics(eval_prediction) -> dict[str, float]:
@@ -109,6 +111,8 @@ def train(
         per_device_train_batch_size=config.batch_size,
         per_device_eval_batch_size=config.batch_size * 2,
         gradient_accumulation_steps=config.gradient_accumulation,
+        train_sampling_strategy=("group_by_length" if config.group_by_length else "random"),
+        gradient_checkpointing=config.gradient_checkpointing,
         warmup_ratio=0.1,
         eval_strategy="epoch",
         save_strategy="epoch",
@@ -147,6 +151,8 @@ def train(
         "dev_rows": len(release.dev),
         "config": asdict(config),
         "effective_batch_size": config.batch_size * config.gradient_accumulation,
+        "length_grouping": config.group_by_length,
+        "gradient_checkpointing": config.gradient_checkpointing,
         "bf16": use_bfloat16,
         "epochs_completed": trainer.state.epoch,
         "best_epoch": best.get("epoch"),

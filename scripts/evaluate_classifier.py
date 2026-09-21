@@ -35,8 +35,12 @@ def main() -> None:
     parser.add_argument("--run", nargs="+", default=[])
     parser.add_argument("--model", type=Path, action="append", default=[])
     parser.add_argument("--models-dir", type=Path, default=ROOT / "models/new_classifier")
-    parser.add_argument("--batch-size", type=int, default=8)
-    parser.add_argument("--max-length", type=int, default=512)
+    parser.add_argument("--batch-size", type=int, default=16)
+    parser.add_argument("--max-length", type=int, default=256)
+    parser.add_argument(
+        "--bf16", action=argparse.BooleanOptionalAction, default=True,
+        help="Use BF16 on supported GPUs (default: enabled).",
+    )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     model_dirs = [*args.model, *find_checkpoints(args.models_dir, args.run)]
@@ -56,6 +60,7 @@ def main() -> None:
         predictions, _ = predict_texts(
             model_dir, frame.notes.tolist(),
             batch_size=args.batch_size, max_length=args.max_length,
+            use_bfloat16=args.bf16,
         )
         run, seed = identity(model_dir)
         metrics = score(frame, predictions)
@@ -63,7 +68,7 @@ def main() -> None:
         results.append({"model": str(model_dir), "run": run, "seed": seed, **metrics})
     report = {
         "split": args.split, "split_file": source,
-        "max_length": args.max_length, "models": results,
+        "max_length": args.max_length, "bf16": args.bf16, "models": results,
     }
     if len(results) > 1:
         report["mean"] = {

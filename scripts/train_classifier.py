@@ -24,10 +24,18 @@ def main() -> None:
     parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--learning-rate", type=float, default=2e-5)
     parser.add_argument("--weight-decay", type=float, default=0.01)
-    parser.add_argument("--batch-size", type=int, default=8)
-    parser.add_argument("--grad-accum", type=int, default=4)
-    parser.add_argument("--max-length", type=int, default=512)
+    parser.add_argument("--batch-size", type=int, default=4)
+    parser.add_argument("--grad-accum", type=int, default=8)
+    parser.add_argument("--max-length", type=int, default=256)
     parser.add_argument("--patience", type=int, default=2)
+    parser.add_argument(
+        "--length-grouping", action=argparse.BooleanOptionalAction, default=True,
+        help="Group similar token lengths to avoid padding waste (default: enabled).",
+    )
+    parser.add_argument(
+        "--gradient-checkpointing", action=argparse.BooleanOptionalAction, default=True,
+        help="Recompute activations to cap training memory (default: enabled).",
+    )
     args = parser.parse_args()
     train_path = args.train_csv or ROOT / f"data/annotations/train_{args.release:04d}.csv"
     release = load_training_release(train_path, args.dev_csv)
@@ -37,6 +45,8 @@ def main() -> None:
         weight_decay=args.weight_decay, epochs=args.epochs,
         batch_size=args.batch_size, gradient_accumulation=args.grad_accum,
         max_length=args.max_length, patience=args.patience,
+        group_by_length=args.length_grouping,
+        gradient_checkpointing=args.gradient_checkpointing,
     )
     for seed in args.seeds:
         output = args.models_dir / f"run-{args.release}" / f"seed-{seed}"
