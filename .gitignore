@@ -26,3 +26,6 @@ reports/*.png
 
 # Annotation run chunks are local; run provenance is tracked.
 data/annotation_runs/**/*.csv
+data/annotation_runs/**/chunk_*.json
+data/annotation_runs/**/*.csv.json
+data/annotation_runs/**/*.py
