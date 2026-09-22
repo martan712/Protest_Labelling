@@ -33,27 +33,71 @@ already been trained, or copy the previous `best/` aside first.
 | 6 | 0.6247 | 0.7807 | 1.103 |
 | 7 | 0.6270 | 0.7847 | 1.093 |
 
-## run-6000 / seed-42 — flash v3 labels (in progress)
+## run-6000 / seed-42 — flash v3 labels
 
-- Weights: `models/new_classifier/run-6000/seed-42/`
-- Started: 22 September 2026, log `logs/train_6000_flash_seed42.log`
+- Weights: `models/new_classifier/run-6000/seed-42/best/`
+  (`model.safetensors` md5 `ba1d7b19bc0351fee06b440ce46f2dc1`)
+- Trained: 22 September 2026, 5,547s (92 min). Log
+  `logs/train_6000_flash_seed42.log`.
 - Labels: `data/annotation_runs/deepseek-v4-1-flash/run-2026-09-21-flash-01/assembled/`,
   taxonomy `2026-09-21-v3`, 23 classes, annotator
   `deepseek-v4.1-flash-run-2026-09-21-flash-01`. Passed explicitly via
   `--train-csv` and `--dev-csv`, so `data/annotations/` was not modified.
 - Config: defaults as committed in `4199615` — ModernBERT-base, 10 epochs,
-  lr 2e-5, batch 4 x accum 8, max_length 256, patience 2, length grouping and
-  gradient checkpointing on. 188 optimizer steps per epoch, ~2.3 s/step.
+  lr 2e-5, batch 4 x accum 8 (effective 32), max_length 256, patience 2, length
+  grouping and gradient checkpointing on, BF16. 188 steps per epoch.
+  6,000 train rows (5 truncated notes), 497 dev rows (0 truncated).
+- Result: **best epoch 7, dev macro-F1 0.7274, dev accuracy 0.8652.**
+  Early-stopped at epoch 9 on patience 2.
 
 | Epoch | macro-F1 | accuracy | loss |
 | --- | --- | --- | --- |
 | 1 | 0.4214 | 0.6298 | 1.235 |
+| 2 | 0.6669 | 0.8109 | 0.683 |
+| 3 | 0.6958 | 0.8330 | 0.569 |
+| 4 | 0.7062 | 0.8410 | 0.693 |
+| 5 | 0.7077 | 0.8551 | 0.703 |
+| 6 | 0.7062 | 0.8551 | 0.761 |
+| **7** | **0.7274** | **0.8652** | 0.792 |
+| 8 | 0.7224 | 0.8672 | 0.796 |
+| 9 | 0.7159 | 0.8592 | 0.815 |
 
-Epoch 1 sits 3.5 macro-F1 points below the v1 run's epoch 1 on a harder problem:
-23 classes rather than 21, including the two classes v3 split out, which the two
-annotators disagreed about most. Macro-F1 averages over class count, so the
-extra sparse classes cost accuracy at this stage by construction.
+Loss bottomed at epoch 3 and rose thereafter while macro-F1 kept improving to
+epoch 7: the model grew overconfident on common classes while still learning
+rare ones, which macro-F1 weights equally. Accuracy peaked at epoch 8 (0.8672)
+but selection is on macro-F1, so epoch 7 was saved.
 
-The two runs are not strictly comparable. They use different taxonomies and
-different dev labels, so each is scored against its own annotator's judgement
-rather than against shared ground truth.
+### Comparison with the v1-label run
+
+Same codebase, architecture, schedule and manifests; only the labels differ.
+
+| Epoch | v1 macro-F1 | flash macro-F1 |
+| --- | --- | --- |
+| 1 | 0.4562 | 0.4214 |
+| 2 | 0.5711 | 0.6669 |
+| 3 | 0.6113 | 0.6958 |
+| 4 | 0.6397 | 0.7062 |
+| 5 | **0.6592** | 0.7077 |
+| 6 | 0.6247 | 0.7062 |
+| 7 | 0.6270 | **0.7274** |
+
+Flash trails at epoch 1 and leads from epoch 2 onward, finishing **+6.8
+macro-F1 points** and **+7.7 accuracy points** above the v1 best, on a harder
+problem: 23 classes rather than 21.
+
+### Scoring caveats
+
+`palestine-israel conflict` (252 train rows) and `ukraine-russia war` (136) have
+**zero rows in the dev split**, which covers 21 of 23 classes. Both contribute a
+hard 0.000 to a macro average taken over all `CLASS_NAMES`, costing roughly 8.7
+points. Over the 21 classes present, epoch 5 measured 0.7751 rather than 0.7077.
+Report the 23-class figure as the headline and the 21-class one beside it.
+
+Lenient scoring (`accepted()`: prediction matches the primary or the recorded
+secondary) on the epoch-5 checkpoint gave accuracy 0.8773 and macro-F1 0.7301,
+gains of +2.2 points each. Only 48 of 497 dev rows carry a secondary and 11 were
+rescued by it, so the remaining 37 errors are genuine rather than ranking
+differences.
+
+Both runs are scored against their own annotator's dev labels, so each measures
+agreement with that annotator's judgement rather than shared ground truth.
