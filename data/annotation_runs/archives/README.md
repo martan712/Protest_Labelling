@@ -53,3 +53,9 @@ training data.
 Older material lives outside this directory: `data/archive/legacy_2026-09-20/`
 (classifier-v2 era, kept local by `.gitignore` with only its metadata tracked)
 and `data/archive/jun17/research/`, whose two CSVs are tracked directly.
+
+The June 17 full-corpus predictions are tracked as
+`data/archive/jun17/data/filtered_events_class_with_predicted.zip` (36 MB,
+holding a 173 MB CSV). The unpacked CSV exceeds GitHub's 100 MB file limit, so
+`.gitignore` keeps `data/archive/jun17/data/` local except for `*.zip`. Unpack
+with `unzip <archive> -d <destination>` as above.

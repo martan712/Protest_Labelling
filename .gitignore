@@ -17,7 +17,8 @@ data/annotations/train_chunks/
 data/archive/legacy_*/data/**
 !data/archive/legacy_*/data/ARCHIVE_METADATA.md
 data/archive/legacy_*/models/
-data/archive/jun17/data/
+data/archive/jun17/data/*
+!data/archive/jun17/data/*.zip
 
 # All generated output: checkpoints, evaluation reports, training logs.
 artifacts/
