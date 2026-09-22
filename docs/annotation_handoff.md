@@ -142,17 +142,17 @@ queue creation only for a fresh run, before annotations have been written; do no
 execute it again when resuming.
 
 ```bash
-.venv/bin/create-annotation-chunks --manifest data/manifests/train_6000.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --chunk-size 50
-.venv/bin/create-annotation-chunks --manifest data/manifests/dev.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --chunk-size 50
-.venv/bin/create-annotation-chunks --manifest data/manifests/test_locked.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --chunk-size 50
+uv run scripts/create_annotation_chunks.py --manifest data/manifests/train_6000.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --chunk-size 50
+uv run scripts/create_annotation_chunks.py --manifest data/manifests/dev.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --chunk-size 50
+uv run scripts/create_annotation_chunks.py --manifest data/manifests/test_locked.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --chunk-size 50
 ```
 
 Do not train a model or inspect predictions. After all chunks are complete, run:
 
 ```bash
-.venv/bin/prepare-training-releases --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled
-.venv/bin/assemble-annotations --manifest data/manifests/dev.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/dev.csv
-.venv/bin/assemble-annotations --manifest data/manifests/test_locked.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/test_locked.csv
+uv run scripts/prepare_training_releases.py --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled
+uv run scripts/assemble_annotations.py --manifest data/manifests/dev.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/dev.csv
+uv run scripts/assemble_annotations.py --manifest data/manifests/test_locked.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/test_locked.csv
 .venv/bin/python -m unittest discover -v
 ```
 

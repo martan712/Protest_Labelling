@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 from protest_classifier.evaluation.learning_curve import extract_learning_curve
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def main() -> None:

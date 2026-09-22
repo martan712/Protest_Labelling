@@ -10,7 +10,7 @@ import pandas as pd
 
 from protest_classifier.data.annotations import assemble_training_releases, read_completed_chunks
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[1]
 SIZES = (800, 1500, 3000, 6000)
 
 

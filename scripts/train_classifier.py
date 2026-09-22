@@ -10,7 +10,7 @@ from pathlib import Path
 from protest_classifier.data.training_sets import TrainingRelease, load_training_release
 from protest_classifier.modeling.training import TrainingConfig, train
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def main() -> None:

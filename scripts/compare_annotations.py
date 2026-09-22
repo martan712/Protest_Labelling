@@ -24,7 +24,7 @@ from pathlib import Path
 import pandas as pd
 from sklearn.metrics import cohen_kappa_score
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[1]
 SPLITS = ("train_0800", "train_1500", "train_3000", "train_6000", "dev", "test_locked")
 KEY = "event_id_cnty"
 

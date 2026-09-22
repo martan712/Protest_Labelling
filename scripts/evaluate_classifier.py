@@ -15,7 +15,7 @@ from protest_classifier.evaluation.test_data import load_locked_test
 from protest_classifier.modeling.checkpoints import find_checkpoints
 from protest_classifier.modeling.inference import predict_texts
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def identity(model_dir: Path) -> tuple[str | None, str | None]:

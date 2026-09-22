@@ -8,7 +8,7 @@ import pandas as pd
 from protest_classifier.evaluation.metrics import score
 
 ROOT = Path(__file__).resolve().parent.parent
-CLI = ROOT / "src" / "protest_classifier" / "cli"
+SCRIPTS = ROOT / "scripts"
 
 
 class ScoringTests(unittest.TestCase):
@@ -25,12 +25,12 @@ class ScoringTests(unittest.TestCase):
 class IsolationTests(unittest.TestCase):
     def test_training_path_does_not_reference_test_gold(self) -> None:
         for name in ("train_classifier.py", "predict_events.py"):
-            source = (CLI / name).read_text().lower()
+            source = (SCRIPTS / name).read_text().lower()
             self.assertNotIn("data/annotations/test_locked.csv", source)
             self.assertNotIn("load_locked_test", source)
 
     def test_evaluation_is_the_test_gold_entry_point(self) -> None:
-        source = (CLI / "evaluate_classifier.py").read_text()
+        source = (SCRIPTS / "evaluate_classifier.py").read_text()
         self.assertIn("load_locked_test", source)
 
 

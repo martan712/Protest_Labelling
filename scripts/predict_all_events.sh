@@ -7,10 +7,10 @@
 # chunk wastes less padding. Peak memory is dominated by the weights, not the
 # activations, so a larger batch buys nothing here.
 #
-# Override any of these from the environment, e.g. BATCH_SIZE=64 ./src/protest_classifier/cli/predict_all_events.sh
+# Override any of these from the environment, e.g. BATCH_SIZE=64 ./scripts/predict_all_events.sh
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 MODEL="${MODEL:-artifacts/models/new_classifier/run-6000/seed-42/best}"
@@ -40,7 +40,7 @@ echo "log        $LOG"
 echo
 
 START=$SECONDS
-"$PYTHON" src/protest_classifier/cli/predict_events.py \
+"$PYTHON" scripts/predict_events.py \
     --model "$MODEL" \
     --events "$EVENTS" \
     --output "$OUTPUT" \
