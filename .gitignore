@@ -12,18 +12,15 @@ data/raw/
 data/predictions/
 data/annotations/*.csv
 data/annotations/train_chunks/
-models/
 
 # Dated legacy binaries/data stay local; their metadata is tracked.
-archive/legacy_*/data/**
-!archive/legacy_*/data/ARCHIVE_METADATA.md
-archive/legacy_*/models/
-archive/jun17/data/
+data/archive/legacy_*/data/**
+!data/archive/legacy_*/data/ARCHIVE_METADATA.md
+data/archive/legacy_*/models/
+data/archive/jun17/data/
 
-# Evaluation output is reproducible from checkpoints and annotations.
-reports/*.json
-reports/*.csv
-reports/*.png
+# All generated output: checkpoints, evaluation reports, training logs.
+artifacts/
 
 # Annotation run chunks are local; run provenance is tracked.
 data/annotation_runs/**/*.csv
@@ -31,9 +28,6 @@ data/annotation_runs/**/chunk_*.json
 data/annotation_runs/**/*.csv.json
 data/annotation_runs/**/*.py
 
-# Training logs are reproducible from the run configuration.
-logs/
-
 *.pyc
-
 plan.md
+.claude/settings.local.json

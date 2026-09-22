@@ -8,7 +8,7 @@ from pathlib import Path
 
 from protest_classifier.modeling.inference import predict_csv
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def main() -> None:

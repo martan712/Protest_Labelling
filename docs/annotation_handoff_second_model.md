@@ -6,7 +6,7 @@ API model string `deepseek-v4-pro`. Do not use any other model for this run.
 It produces an independent annotation set to compare against the first
 annotator, DeepSeek-V4.1-Flash, which runs under
 `docs/annotation_handoff.md`. That run is not your job and not your directory.
-Read this file and `configs/annotation_prompt.md` completely before starting.
+Read this file and `docs/prompts/annotation_prompt.md` completely before starting.
 Follow the exact same taxonomy and classification instructions as the first run
 so the two annotation sets can be compared.
 
@@ -53,7 +53,7 @@ Set `annotator` on every row to `deepseek-v4-pro-RUN_ID`, consistently, with
 reports it, generation settings, run ID, taxonomy version, the exact prompt
 snapshot and its SHA-256 hash.
 
-Use the same frozen prompt as the first run: `configs/annotation_prompt.md`,
+Use the same frozen prompt as the first run: `docs/prompts/annotation_prompt.md`,
 taxonomy `2026-09-21-v3`, SHA-256
 `19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250`. If the hash
 differs, report the mismatch before annotating: different instructions would
@@ -118,9 +118,9 @@ Replace `RUN_ID` in every command. Run queue creation only for a fresh run,
 before annotations have been written.
 
 ```bash
-.venv/bin/python scripts/create_annotation_chunks.py --manifest data/manifests/train_6000.csv --output data/annotation_runs/deepseek-v4-pro/RUN_ID/train_chunks --chunk-size 50
-.venv/bin/python scripts/create_annotation_chunks.py --manifest data/manifests/dev.csv --output data/annotation_runs/deepseek-v4-pro/RUN_ID/dev_chunks --chunk-size 50
-.venv/bin/python scripts/create_annotation_chunks.py --manifest data/manifests/test_locked.csv --output data/annotation_runs/deepseek-v4-pro/RUN_ID/test_chunks --chunk-size 50
+.venv/bin/create-annotation-chunks --manifest data/manifests/train_6000.csv --output data/annotation_runs/deepseek-v4-pro/RUN_ID/train_chunks --chunk-size 50
+.venv/bin/create-annotation-chunks --manifest data/manifests/dev.csv --output data/annotation_runs/deepseek-v4-pro/RUN_ID/dev_chunks --chunk-size 50
+.venv/bin/create-annotation-chunks --manifest data/manifests/test_locked.csv --output data/annotation_runs/deepseek-v4-pro/RUN_ID/test_chunks --chunk-size 50
 ```
 
 Validate each batch for exact expected IDs, no missing/duplicate rows, allowed
@@ -133,9 +133,9 @@ Record review counts and unresolved cases separately from the annotation CSV.
 After all batches are saved and validated:
 
 ```bash
-.venv/bin/python scripts/prepare_training_releases.py --chunks data/annotation_runs/deepseek-v4-pro/RUN_ID/train_chunks --output data/annotation_runs/deepseek-v4-pro/RUN_ID/assembled
-.venv/bin/python scripts/assemble_annotations.py --manifest data/manifests/dev.csv --chunks data/annotation_runs/deepseek-v4-pro/RUN_ID/dev_chunks --output data/annotation_runs/deepseek-v4-pro/RUN_ID/assembled/dev.csv
-.venv/bin/python scripts/assemble_annotations.py --manifest data/manifests/test_locked.csv --chunks data/annotation_runs/deepseek-v4-pro/RUN_ID/test_chunks --output data/annotation_runs/deepseek-v4-pro/RUN_ID/assembled/test_locked.csv
+.venv/bin/prepare-training-releases --chunks data/annotation_runs/deepseek-v4-pro/RUN_ID/train_chunks --output data/annotation_runs/deepseek-v4-pro/RUN_ID/assembled
+.venv/bin/assemble-annotations --manifest data/manifests/dev.csv --chunks data/annotation_runs/deepseek-v4-pro/RUN_ID/dev_chunks --output data/annotation_runs/deepseek-v4-pro/RUN_ID/assembled/dev.csv
+.venv/bin/assemble-annotations --manifest data/manifests/test_locked.csv --chunks data/annotation_runs/deepseek-v4-pro/RUN_ID/test_chunks --output data/annotation_runs/deepseek-v4-pro/RUN_ID/assembled/test_locked.csv
 .venv/bin/python -m unittest discover -v
 ```
 

@@ -10,7 +10,7 @@ from pathlib import Path
 from protest_classifier.data.training_sets import TrainingRelease, load_training_release
 from protest_classifier.modeling.training import TrainingConfig, train
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def main() -> None:
@@ -19,7 +19,7 @@ def main() -> None:
     parser.add_argument("--seeds", type=int, nargs="+", default=[42])
     parser.add_argument("--train-csv", type=Path)
     parser.add_argument("--dev-csv", type=Path, default=ROOT / "data/annotations/dev.csv")
-    parser.add_argument("--models-dir", type=Path, default=ROOT / "models/new_classifier")
+    parser.add_argument("--models-dir", type=Path, default=ROOT / "artifacts/models/new_classifier")
     parser.add_argument("--model", default="answerdotai/ModernBERT-base")
     parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--learning-rate", type=float, default=2e-5)

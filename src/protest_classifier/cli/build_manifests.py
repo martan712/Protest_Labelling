@@ -13,7 +13,7 @@ from protest_classifier.data.manifests import (
     write_manifests,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[3]
 SIZES = (800, 1500, 3000, 6000)
 
 

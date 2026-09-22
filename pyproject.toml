@@ -17,6 +17,18 @@ dependencies = [
     "ipykernel>=6.29",
 ]
 
+[project.scripts]
+annotation-review-server = "protest_classifier.cli.annotation_review_server:main"
+assemble-annotations = "protest_classifier.cli.assemble_annotations:main"
+build-manifests = "protest_classifier.cli.build_manifests:main"
+compare-annotations = "protest_classifier.cli.compare_annotations:main"
+create-annotation-chunks = "protest_classifier.cli.create_annotation_chunks:main"
+evaluate-classifier = "protest_classifier.cli.evaluate_classifier:main"
+plot-learning-curve = "protest_classifier.cli.plot_learning_curve:main"
+predict-events = "protest_classifier.cli.predict_events:main"
+prepare-training-releases = "protest_classifier.cli.prepare_training_releases:main"
+train-classifier = "protest_classifier.cli.train_classifier:main"
+
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"

@@ -21,7 +21,7 @@ class TaxonomyTests(unittest.TestCase):
             validate_label("farmers", "outside_taxonomy")
 
     def test_annotator_prompt_contains_canonical_wording(self) -> None:
-        prompt = (Path(__file__).resolve().parent.parent / "configs" / "annotation_prompt.md").read_text()
+        prompt = (Path(__file__).resolve().parent.parent / "docs" / "prompts" / "annotation_prompt.md").read_text()
         normalized = " ".join(prompt.replace("`", "").replace("→", "->").split())
         for label, description in DESCRIPTIONS.items():
             self.assertIn(f"{label}: {' '.join(description.split())}", normalized)

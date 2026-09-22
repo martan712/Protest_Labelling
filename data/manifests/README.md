@@ -2,7 +2,7 @@
 
 Manifests contain event identity, notes, and normalized-note hashes—never
 labels. Generate them with
-`.venv/bin/python scripts/build_manifests.py`.
+`.venv/bin/build-manifests`.
 
 The committed files preserve the exact classifier-v2 event selections after
 stripping their labels. By default the script refreshes their source fields from

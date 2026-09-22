@@ -3,7 +3,7 @@
 Use the local review page to inspect and correct any active annotation CSV:
 
 ```bash
-python scripts/annotation_review_server.py
+.venv/bin/annotation-review-server
 ```
 
 Open <http://127.0.0.1:8765>. The file menu discovers assembled/final `.csv`
@@ -18,7 +18,7 @@ the primary labels already present in that file.
 For another annotation directory or port:
 
 ```bash
-python scripts/annotation_review_server.py --annotations path/to/annotations --port 8766
+.venv/bin/annotation-review-server --annotations path/to/annotations --port 8766
 ```
 
 Keep the server bound to its default loopback host unless access from another

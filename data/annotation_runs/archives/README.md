@@ -6,7 +6,7 @@ Zipped snapshots of every annotation set produced for this project. Unpack with
 ## Current runs (taxonomy `2026-09-21-v3`)
 
 Two independent runs over the frozen manifests, using the byte-identical prompt
-`configs/annotation_prompt.md` (SHA-256
+`docs/prompts/annotation_prompt.md` (SHA-256
 `19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250`) and
 differing only in the annotating model.
 
@@ -20,7 +20,7 @@ test_locked), the prompt snapshot and hash, and provenance and review notes.
 Intermediate `*_chunks/` files are excluded: the assembled CSVs are those same
 rows joined to the manifests.
 
-Agreement between them, from `scripts/compare_annotations.py`:
+Agreement between them, from `src/protest_classifier/cli/compare_annotations.py`:
 
 | Split | Strict | Lenient | Cohen's kappa |
 | --- | --- | --- | --- |
@@ -50,6 +50,6 @@ mid-run, and two subagents observed their assigned chunks being rewritten. See
 of why the current handoffs give each model its own output root; not for use as
 training data.
 
-Older material lives outside this directory: `archive/legacy_2026-09-20/`
+Older material lives outside this directory: `data/archive/legacy_2026-09-20/`
 (classifier-v2 era, kept local by `.gitignore` with only its metadata tracked)
-and `archive/jun17/research/`, whose two CSVs are tracked directly.
+and `data/archive/jun17/research/`, whose two CSVs are tracked directly.

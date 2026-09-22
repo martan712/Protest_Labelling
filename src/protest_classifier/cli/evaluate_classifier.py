@@ -15,7 +15,7 @@ from protest_classifier.evaluation.test_data import load_locked_test
 from protest_classifier.modeling.checkpoints import find_checkpoints
 from protest_classifier.modeling.inference import predict_texts
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def identity(model_dir: Path) -> tuple[str | None, str | None]:
@@ -34,7 +34,7 @@ def main() -> None:
     parser.add_argument("--split", choices=["dev", "test"], required=True)
     parser.add_argument("--run", nargs="+", default=[])
     parser.add_argument("--model", type=Path, action="append", default=[])
-    parser.add_argument("--models-dir", type=Path, default=ROOT / "models/new_classifier")
+    parser.add_argument("--models-dir", type=Path, default=ROOT / "artifacts/models/new_classifier")
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=256)
     parser.add_argument(
@@ -75,7 +75,7 @@ def main() -> None:
             key: mean_range(results, key)
             for key in ("strict_accuracy", "macro_f1", "accepted_accuracy")
         }
-    output = args.output or ROOT / f"reports/new_classifier_{args.split}.json"
+    output = args.output or ROOT / f"artifacts/reports/new_classifier_{args.split}.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2) + "\n")
     print(f"wrote {output}")

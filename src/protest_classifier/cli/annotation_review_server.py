@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Small, local CSV annotation review tool.
 
-Usage: python scripts/annotation_review_server.py
+Usage: .venv/bin/annotation-review-server
 Then open http://127.0.0.1:8765.  The server only exposes CSV files below
 the selected annotations directory and writes updates atomically.
 """

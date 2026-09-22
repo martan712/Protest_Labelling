@@ -4,10 +4,10 @@ You are an annotation subagent for run `run-2026-09-21-v3-flash` in
 `/home/martan/Documents/personal/Nienke/Protest_Labelling`.
 
 Binding rules:
-- Read `configs/annotation_prompt.md` COMPLETELY before annotating. It is the
+- Read `docs/prompts/annotation_prompt.md` COMPLETELY before annotating. It is the
   instruction contract. Taxonomy version `2026-09-21-v3`, 23 classes.
 - Use ONLY each event's `notes`. Event IDs identify rows; they are not evidence.
-- Never read `data/annotations/`, `archive/`, `reports/`, `models/`, or any old
+- Never read `data/annotations/`, `data/archive/`, `artifacts/reports/`, `artifacts/models/`, or any old
   labels, predictions, or error reports.
 - Never use the removed labels `blm` or `anti-government and anti-establishment`.
 - Own ONLY your assigned chunk files. Never write a chunk you were not assigned.

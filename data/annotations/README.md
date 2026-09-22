@@ -1,7 +1,7 @@
 # Active annotation files
 
 These files must be created from the manifests using the active taxonomy. Do
-not copy labels from `archive/legacy_2026-09-20/data`; they use an incompatible
+not copy labels from `data/archive/legacy_2026-09-20/data`; they use an incompatible
 taxonomy. Each annotation file should contain `event_id_cnty`, `notes`,
 `primary_label`, `alternative_labels`, `other_reason`, `evidence`, and
 `annotator`.

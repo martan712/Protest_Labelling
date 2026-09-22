@@ -7,13 +7,13 @@
 # chunk wastes less padding. Peak memory is dominated by the weights, not the
 # activations, so a larger batch buys nothing here.
 #
-# Override any of these from the environment, e.g. BATCH_SIZE=64 ./scripts/predict_all_events.sh
+# Override any of these from the environment, e.g. BATCH_SIZE=64 ./src/protest_classifier/cli/predict_all_events.sh
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 cd "$ROOT"
 
-MODEL="${MODEL:-models/new_classifier/run-6000/seed-42/best}"
+MODEL="${MODEL:-artifacts/models/new_classifier/run-6000/seed-42/best}"
 EVENTS="${EVENTS:-data/raw/events.csv}"
 OUTPUT="${OUTPUT:-data/predictions/all_events_predictions.csv}"
 BATCH_SIZE="${BATCH_SIZE:-32}"
@@ -29,8 +29,8 @@ for path in "$MODEL" "$EVENTS" "$PYTHON"; do
     fi
 done
 
-mkdir -p logs "$(dirname "$OUTPUT")"
-LOG="${LOG:-logs/predict_all_events_$(date +%Y%m%d_%H%M%S).log}"
+mkdir -p artifacts/logs "$(dirname "$OUTPUT")"
+LOG="${LOG:-artifacts/logs/predict_all_events_$(date +%Y%m%d_%H%M%S).log}"
 
 echo "model      $MODEL"
 echo "events     $EVENTS ($(( $(wc -l < "$EVENTS") - 1 )) rows)"
@@ -40,7 +40,7 @@ echo "log        $LOG"
 echo
 
 START=$SECONDS
-"$PYTHON" scripts/predict_events.py \
+"$PYTHON" src/protest_classifier/cli/predict_events.py \
     --model "$MODEL" \
     --events "$EVENTS" \
     --output "$OUTPUT" \

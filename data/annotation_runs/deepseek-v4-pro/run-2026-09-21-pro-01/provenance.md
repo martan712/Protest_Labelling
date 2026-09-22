@@ -12,13 +12,13 @@
 - NOT used (would duplicate the first run): `deepseek-flash`, `deepseek-v4-flash`, `deepseek-v4-flash-vision-exp`
 
 ## Prompt
-- prompt_source: `configs/annotation_prompt.md`
+- prompt_source: `docs/prompts/annotation_prompt.md`
 - prompt_snapshot: `prompt_snapshot.md` (byte-identical copy of source)
 - prompt_sha256: `19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250`
 - taxonomy_version: `2026-09-21-v3`
 
 ## Generation settings
-- instructions: unchanged `configs/annotation_prompt.md` sent verbatim as the annotation instruction for every batch
+- instructions: unchanged `docs/prompts/annotation_prompt.md` sent verbatim as the annotation instruction for every batch
 - batch_input: `event_id_cnty` + `notes` only
 - batch_size: 25-50 events (chunk-size 50)
 - temperature: fixed low (provider default)

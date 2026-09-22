@@ -14,14 +14,14 @@ import matplotlib.pyplot as plt
 
 from protest_classifier.evaluation.learning_curve import extract_learning_curve
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--report", type=Path, default=ROOT / "reports/new_classifier_dev.json")
-    parser.add_argument("--output-json", type=Path, default=ROOT / "reports/new_classifier_learning_curve.json")
-    parser.add_argument("--output-png", type=Path, default=ROOT / "reports/new_classifier_learning_curve.png")
+    parser.add_argument("--report", type=Path, default=ROOT / "artifacts/reports/new_classifier_dev.json")
+    parser.add_argument("--output-json", type=Path, default=ROOT / "artifacts/reports/new_classifier_learning_curve.json")
+    parser.add_argument("--output-png", type=Path, default=ROOT / "artifacts/reports/new_classifier_learning_curve.png")
     args = parser.parse_args()
     curve = extract_learning_curve(json.loads(args.report.read_text()))
     args.output_json.parent.mkdir(parents=True, exist_ok=True)

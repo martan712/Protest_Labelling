@@ -4,7 +4,7 @@
 - Model / annotator identifier: `deepseek-v4-flash-run-2026-09-21-v3-flash`
 - Frozen prompt: `annotation_prompt.md` (copy in this dir),
   SHA-256 `19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d92756167418af18ea8250`
-  (verified byte-identical to `configs/annotation_prompt.md` at run start).
+  (verified byte-identical to `docs/prompts/annotation_prompt.md` at run start).
 - Output location: this run directory only. `data/annotations/` was left
   untouched (it holds superseded `2026-09-20-v1` labels).
 

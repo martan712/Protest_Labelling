@@ -1,9 +1,9 @@
 # Trained model ledger
 
-Checkpoints live under `models/`, which `.gitignore` keeps local. This file is
+Checkpoints live under `artifacts/models/`, which `.gitignore` keeps local. This file is
 the tracked record of what was trained, on which labels, and what it scored.
 
-Every run writes to `models/new_classifier/run-<release>/seed-<seed>/`, which is
+Every run writes to `artifacts/models/new_classifier/run-<release>/seed-<seed>/`, which is
 derived from `--release` and `--seed` only. Two runs on different label sets
 therefore collide on the same path and the second silently replaces the first's
 `best/` and `metrics.json`. Pass `--models-dir` when training a release that has
@@ -11,7 +11,7 @@ already been trained, or copy the previous `best/` aside first.
 
 ## run-6000 / seed-42 — taxonomy v1 labels
 
-- Weights: `models/new_classifier/run-6000/seed-42-v1-labels/` (copied aside on
+- Weights: `artifacts/models/new_classifier/run-6000/seed-42-v1-labels/` (copied aside on
   22 September 2026, before the v3 run could overwrite them; `model.safetensors`
   verified md5-identical to the original)
 - Trained: 21 September 2026
@@ -35,10 +35,10 @@ already been trained, or copy the previous `best/` aside first.
 
 ## run-6000 / seed-42 — flash v3 labels
 
-- Weights: `models/new_classifier/run-6000/seed-42/best/`
+- Weights: `artifacts/models/new_classifier/run-6000/seed-42/best/`
   (`model.safetensors` md5 `ba1d7b19bc0351fee06b440ce46f2dc1`)
 - Trained: 22 September 2026, 5,547s (92 min). Log
-  `logs/train_6000_flash_seed42.log`.
+  `artifacts/logs/train_6000_flash_seed42.log`.
 - Labels: `data/annotation_runs/deepseek-v4-1-flash/run-2026-09-21-flash-01/assembled/`,
   taxonomy `2026-09-21-v3`, 23 classes, annotator
   `deepseek-v4.1-flash-run-2026-09-21-flash-01`. Passed explicitly via

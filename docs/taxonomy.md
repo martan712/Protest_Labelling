@@ -1,7 +1,7 @@
 # Active taxonomy
 
 For annotation, follow the ordered decision procedure in
-`configs/annotation_prompt.md`: international scope first, domestic boundaries,
+`docs/prompts/annotation_prompt.md`: international scope first, domestic boundaries,
 group/institution fallback, the explicit other decision, primary tie-break, then
 optional secondary. Use `docs/annotation_handoff.md` for a fresh versioned run.
 
@@ -29,6 +29,6 @@ category-specific boundary rules where domains overlap.
 
 The canonical labels, definitions, and boundary rules are implemented in
 `src/protest_classifier/taxonomy.py`. The annotator-facing version is
-`configs/annotation_prompt.md`. Keep these two files synchronized whenever the
+`docs/prompts/annotation_prompt.md`. Keep these two files synchronized whenever the
 taxonomy is revised; changing the taxonomy requires new dev and locked-test
 annotations.

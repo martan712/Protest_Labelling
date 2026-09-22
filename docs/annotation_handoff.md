@@ -8,7 +8,7 @@ directory.
 
 ## Paste this task into the annotation agent
 
-Read `configs/annotation_prompt.md` completely and follow its ordered procedure
+Read `docs/prompts/annotation_prompt.md` completely and follow its ordered procedure
 for every event. It is the instruction prompt, not optional reference material.
 Read this handoff completely before taking action. Use taxonomy `2026-09-21-v3`.
 Do not begin training. Do not change the taxonomy to accommodate difficult rows.
@@ -54,7 +54,7 @@ Set `annotator` on every row to `deepseek-v4.1-flash-RUN_ID`, consistently, with
 its SHA-256 hash, the taxonomy version, the model identifier as reported by the
 provider, generation settings and progress counts.
 
-At run start the frozen prompt is `configs/annotation_prompt.md`, taxonomy
+At run start the frozen prompt is `docs/prompts/annotation_prompt.md`, taxonomy
 `2026-09-21-v3`, SHA-256
 `19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250`. If the
 prompt's hash differs, report the mismatch before annotating: the second model
@@ -73,7 +73,7 @@ permitted group fallback. Record review counts and any unresolved cases
 separately from the annotation CSV. Reuse validated pilot annotations when
 completing the training set.
 
-For each model request, send the unchanged `configs/annotation_prompt.md` as the
+For each model request, send the unchanged `docs/prompts/annotation_prompt.md` as the
 system instruction and a user message containing the run identifier and only
 `event_id_cnty` and `notes` for that batch. JSON input is suitable; output is CSV
 under the prompt's exact schema. Do not send old gold labels, classifier errors,
@@ -83,7 +83,7 @@ or predictions. Do not use keyword rules to generate labels.
 
 Use annotation subagents for independent batches. Every subagent uses
 `deepseek-flash` — the same single model as the coordinator — and must read
-`configs/annotation_prompt.md` completely before annotating, with the same
+`docs/prompts/annotation_prompt.md` completely before annotating, with the same
 frozen prompt, taxonomy version, and run identifier.
 
 Assign exclusive batch files to each subagent; never let two agents write the
@@ -122,7 +122,7 @@ the entire dataset. Low temperature does not guarantee determinism.
 ## Files and assembly
 
 Annotate every event in the frozen manifests using the exact contract in
-`configs/annotation_prompt.md`.
+`docs/prompts/annotation_prompt.md`.
 
 Required sets:
 
@@ -130,7 +130,7 @@ Required sets:
 - `data/manifests/dev.csv`: 497 development events
 - `data/manifests/test_locked.csv`: 840 locked-test events
 
-Use only each row's `notes`. Do not inspect or reuse anything under `archive/`,
+Use only each row's `notes`. Do not inspect or reuse anything under `data/archive/`,
 old labels, predictions, keywords, model outputs, country, or date. Fill these
 fields for every row: `primary_label`, `alternative_labels`, `other_reason`,
 `evidence`, and `annotator`. Use exact label strings. Supply at most one genuine
@@ -142,17 +142,17 @@ queue creation only for a fresh run, before annotations have been written; do no
 execute it again when resuming.
 
 ```bash
-.venv/bin/python scripts/create_annotation_chunks.py --manifest data/manifests/train_6000.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --chunk-size 50
-.venv/bin/python scripts/create_annotation_chunks.py --manifest data/manifests/dev.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --chunk-size 50
-.venv/bin/python scripts/create_annotation_chunks.py --manifest data/manifests/test_locked.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --chunk-size 50
+.venv/bin/create-annotation-chunks --manifest data/manifests/train_6000.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --chunk-size 50
+.venv/bin/create-annotation-chunks --manifest data/manifests/dev.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --chunk-size 50
+.venv/bin/create-annotation-chunks --manifest data/manifests/test_locked.csv --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --chunk-size 50
 ```
 
 Do not train a model or inspect predictions. After all chunks are complete, run:
 
 ```bash
-.venv/bin/python scripts/prepare_training_releases.py --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled
-.venv/bin/python scripts/assemble_annotations.py --manifest data/manifests/dev.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/dev.csv
-.venv/bin/python scripts/assemble_annotations.py --manifest data/manifests/test_locked.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/test_locked.csv
+.venv/bin/prepare-training-releases --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/train_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled
+.venv/bin/assemble-annotations --manifest data/manifests/dev.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/dev_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/dev.csv
+.venv/bin/assemble-annotations --manifest data/manifests/test_locked.csv --chunks data/annotation_runs/deepseek-v4-1-flash/RUN_ID/test_chunks --output data/annotation_runs/deepseek-v4-1-flash/RUN_ID/assembled/test_locked.csv
 .venv/bin/python -m unittest discover -v
 ```
 
