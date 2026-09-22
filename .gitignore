@@ -29,3 +29,6 @@ data/annotation_runs/**/*.csv
 data/annotation_runs/**/chunk_*.json
 data/annotation_runs/**/*.csv.json
 data/annotation_runs/**/*.py
+
+# Training logs are reproducible from the run configuration.
+logs/
