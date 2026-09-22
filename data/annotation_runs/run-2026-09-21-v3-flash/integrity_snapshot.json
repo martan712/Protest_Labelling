@@ -1,0 +1,310 @@
+{
+  "snapshot_utc": "2026-09-21T19:06:11.090628Z",
+  "chunks": {
+    "train_chunks/chunk_001.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "02f343d4954bcfba5916e08e290ac549"
+    },
+    "train_chunks/chunk_002.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "9c7dce21abbef42adf59c403f89716c1"
+    },
+    "train_chunks/chunk_003.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "ecd0aeaf7ec917a3e42b6be76fc900fa"
+    },
+    "train_chunks/chunk_004.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "570490dfb7d697ab85bb3b67d97a9c2a"
+    },
+    "train_chunks/chunk_005.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "a4b73b523e2c69418c54821b2327387f"
+    },
+    "train_chunks/chunk_006.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "227efa233bba8ac8712c33932d4b504a"
+    },
+    "train_chunks/chunk_007.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "5f7b98196c78d61fb1cdf167bf95b935"
+    },
+    "train_chunks/chunk_008.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "d1a050d782c58e3ec9f2b6ca95ccbf74"
+    },
+    "train_chunks/chunk_009.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "5e0e9aaee77015622a82f904574afeb6"
+    },
+    "train_chunks/chunk_010.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "999824b0b2e6510d633768f996924dea"
+    },
+    "train_chunks/chunk_011.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "d625c7e138ace45f79062b8792c73f73"
+    },
+    "train_chunks/chunk_012.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "918555ab4bce5248870628545ff8599a"
+    },
+    "train_chunks/chunk_013.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "ef09fdd2359a8ccc8387e173e1a5c7a8"
+    },
+    "train_chunks/chunk_014.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "e19c464ce423a15442bd9a6f15865469"
+    },
+    "train_chunks/chunk_015.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "1c641f7023843785323edc8e7c8e34e6"
+    },
+    "train_chunks/chunk_016.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "0a2e7c04fe9808f317b34058df60b29d"
+    },
+    "train_chunks/chunk_017.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "8e5c37a9e1a55b48b3b9bfebfe3a81e0"
+    },
+    "train_chunks/chunk_018.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "30fce7a20658a2391e2cb42464b71982"
+    },
+    "train_chunks/chunk_019.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "4fff4cf2aa400b6ee3e7a933b41c3835"
+    },
+    "train_chunks/chunk_020.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "f6f6cf99b1d69f9eb8321c8c69505de4"
+    },
+    "train_chunks/chunk_021.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "422a49c91a28a350925d00fe68953c5a"
+    },
+    "train_chunks/chunk_022.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "cdead470528f507727b40c540df5aa4e"
+    },
+    "train_chunks/chunk_023.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "607ca430a886c9c17d558a3c1e6ecd66"
+    },
+    "train_chunks/chunk_024.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "c42844dab35d7aab98090decedf14fe7"
+    },
+    "train_chunks/chunk_025.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "6343ccc3a2743d31cfbcdf93fcb8c4ea"
+    },
+    "train_chunks/chunk_026.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "d5aac51c8185384f70dc16f240e1dff2"
+    },
+    "train_chunks/chunk_027.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "dbd13cf59d8c4413e2f0623e0be02dda"
+    },
+    "train_chunks/chunk_028.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "11fcd6b155e5398f70cc961d341179c4"
+    },
+    "train_chunks/chunk_029.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "3645e8a5fc99561707c41eed06c74159"
+    },
+    "train_chunks/chunk_030.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "8393a5d0f31e63ff4194edf01697e7cf"
+    },
+    "train_chunks/chunk_031.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "8471d34af0762a93b379a7a6d051eb9a"
+    },
+    "train_chunks/chunk_032.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "884d29069b1d55318531ae613de74fe9"
+    },
+    "train_chunks/chunk_033.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "76bca96666028fc1216155df6c602f13"
+    },
+    "train_chunks/chunk_034.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "1348d41f97e150043b48a7a5080fca65"
+    },
+    "train_chunks/chunk_035.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "204d4d54c25aa425a5e77ceb364417ea"
+    },
+    "train_chunks/chunk_036.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "9613c09c4894b3dfaa1cebf37f7ec482"
+    },
+    "train_chunks/chunk_037.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "a3b4a8c97cb538243652dcf9b082cc99"
+    },
+    "train_chunks/chunk_038.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "627dd993f799e58510f5693504d9afb5"
+    },
+    "train_chunks/chunk_039.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "7ca2b36bfd215fb0a64337f0531dd99b"
+    },
+    "train_chunks/chunk_040.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "9f8e6d023a1797d364baf03f47ea8137"
+    },
+    "train_chunks/chunk_041.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "50ec7ef8094aa789fb8a00a66d817a05"
+    },
+    "train_chunks/chunk_042.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "f65d07b8c07352c9fda9962c86ae01fb"
+    },
+    "train_chunks/chunk_043.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "331c59ab9a1a5e38e28988c4787aa3f3"
+    },
+    "train_chunks/chunk_044.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "1dc5de3030c25c7b65d1ff51817b94be"
+    },
+    "train_chunks/chunk_045.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "53b7c058cbd311bef26e1ebab43402fc"
+    },
+    "train_chunks/chunk_046.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "50a97f6eee5af7b7384a0fc329de9d5c"
+    },
+    "train_chunks/chunk_047.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "262f3360a6a9c3aa69711e759db524ec"
+    },
+    "train_chunks/chunk_048.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "78372ba1c6a5cc705ef5922b5f0f4e96"
+    },
+    "train_chunks/chunk_049.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "643aa4490dd6afee732c5e17b7ef7ea8"
+    },
+    "train_chunks/chunk_050.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "f312ed1706edd5667647bdd89c79b207"
+    },
+    "train_chunks/chunk_051.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "39d68cf84a4288444783054e70ff22fc"
+    },
+    "train_chunks/chunk_052.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "0011b4efd7955b42505468c888b12a77"
+    },
+    "train_chunks/chunk_053.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "1ad7c0e2f75d0cd366f99d93ad1187bf"
+    },
+    "train_chunks/chunk_054.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "dd25fdbd93955bc40cc93b55643e87e3"
+    },
+    "train_chunks/chunk_055.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "1a512ee80fdbbe281fdc28439f01cb97"
+    },
+    "train_chunks/chunk_056.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "352d03e08a62f19677a637e16f25d938"
+    },
+    "train_chunks/chunk_057.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "aa864858be80db633698b9435bc92e8b"
+    },
+    "train_chunks/chunk_058.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "f696c5f69f97b8e0079d9e092f728b44"
+    },
+    "train_chunks/chunk_059.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "36c6103c95778b58873037d07137cd40"
+    },
+    "train_chunks/chunk_060.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "902006fe49dd58fe7c43ba381dbb8714"
+    },
+    "train_chunks/chunk_071.csv": {
+      "rows": 50,
+      "filled": 50,
+      "md5": "f1d141e5f4dff1fa4940cf150d220512"
+    }
+  }
+}

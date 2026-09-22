@@ -1,0 +1,30 @@
+{
+  "run_id": "run-2026-09-21-flash-01",
+  "annotator": "deepseek-v4.1-flash-run-2026-09-21-flash-01",
+  "model_name": "DeepSeek-V4.1-Flash",
+  "api_model_string_requested": "deepseek-flash",
+  "model_identity_reported_by_runtime": "deepseek/deepseek-flash",
+  "provider_identity_probe": "No provider API probe tool is exposed in this runtime; the configured/effective model identity is recorded as reported by the agent runtime. Aliases deepseek-v4-flash and deepseek-v4-flash-vision-exp were not used.",
+  "taxonomy_version": "2026-09-21-v3",
+  "prompt_file": "prompt_snapshot.md",
+  "prompt_sha256_expected": "19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250",
+  "prompt_sha256_actual": "19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250",
+  "prompt_hash_match": true,
+  "generation_settings": {
+    "temperature": null,
+    "thinking_mode": null,
+    "note": "Generation settings are controlled by the host runtime for this run and were not independently configurable by the annotator. Recorded as null rather than guessed."
+  },
+  "output_root": "data/annotation_runs/deepseek-v4-1-flash/run-2026-09-21-flash-01",
+  "inputs": {
+    "train_6000": "data/manifests/train_6000.csv",
+    "dev": "data/manifests/dev.csv",
+    "test_locked": "data/manifests/test_locked.csv"
+  },
+  "invariants": {
+    "use_only_notes": true,
+    "no_training": true,
+    "no_taxonomy_change": true,
+    "no_publish_over_data_annotations": true
+  }
+}

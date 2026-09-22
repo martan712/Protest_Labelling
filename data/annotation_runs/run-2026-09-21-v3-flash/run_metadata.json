@@ -1,0 +1,139 @@
+{
+  "run_id": "run-2026-09-21-v3-flash",
+  "created_utc": "2026-09-21T18:49:36Z",
+  "completed_utc": "2026-09-21T21:20:00Z",
+  "status": "annotations_complete_assembled_not_published",
+  "taxonomy_version": "2026-09-21-v3",
+  "model_identifier": "deepseek/deepseek-v4-flash",
+  "annotator_identifier": "deepseek-v4-flash-run-2026-09-21-v3-flash",
+  "prompt_copy": "annotation_prompt.md",
+  "prompt_sha256": "19c2da75017c047b26cd1d88d6b8b1aa49932646d8b1d927561674af18ea8250",
+  "prompt_bytes": 17243,
+  "generation_settings": {
+    "mode": "agent/subagent annotation",
+    "temperature": "provider default (not user-configurable in this environment)",
+    "thinking_mode": "provider default",
+    "evidence_length": "short",
+    "batch_size_max": 50,
+    "input_fields": [
+      "event_id_cnty",
+      "notes"
+    ],
+    "output_schema": [
+      "event_id_cnty",
+      "primary_label",
+      "alternative_labels",
+      "other_reason",
+      "evidence",
+      "annotator"
+    ],
+    "excluded_evidence": [
+      "old labels",
+      "predictions",
+      "error reports",
+      "keywords",
+      "country",
+      "date"
+    ]
+  },
+  "requirements": {
+    "train_6000": 6000,
+    "dev": 497,
+    "test_locked": 840
+  },
+  "progress": {
+    "train_6000": 6000,
+    "dev": 497,
+    "test_locked": 840,
+    "pilot_rows": 100,
+    "pilot_seed": 42,
+    "chunks_complete": {
+      "train": 120,
+      "dev": 10,
+      "test": 17
+    },
+    "subagent_batches": "147 chunks (<=50 rows); 6 pilot/annotation batches; exclusive per-subagent ownership",
+    "validation": "all chunks independently re-validated (IDs, order, notes, labels, reasons, annotator)",
+    "review": {
+      "other_rows_total": 667,
+      "systematic_sample_reviewed": 334,
+      "sample_fraction": 0.5,
+      "invalid_reasons": 0,
+      "unresolved_cases": 18
+    }
+  },
+  "assembled_outputs": {
+    "train_6000": {
+      "rows": 6000,
+      "unique_ids": 6000,
+      "other": 519,
+      "insufficient_information": 20,
+      "labels_used": 23,
+      "alternatives_present": 747
+    },
+    "train_3000": {
+      "rows": 3000,
+      "unique_ids": 3000,
+      "other": 267,
+      "insufficient_information": 12,
+      "labels_used": 23,
+      "alternatives_present": 358
+    },
+    "train_1500": {
+      "rows": 1500,
+      "unique_ids": 1500,
+      "other": 122,
+      "insufficient_information": 6,
+      "labels_used": 23,
+      "alternatives_present": 199
+    },
+    "train_0800": {
+      "rows": 800,
+      "unique_ids": 800,
+      "other": 74,
+      "insufficient_information": 5,
+      "labels_used": 23,
+      "alternatives_present": 80
+    },
+    "dev": {
+      "rows": 497,
+      "unique_ids": 497,
+      "other": 79,
+      "insufficient_information": 4,
+      "labels_used": 21,
+      "alternatives_present": 38
+    },
+    "test_locked": {
+      "rows": 840,
+      "unique_ids": 840,
+      "other": 69,
+      "insufficient_information": 8,
+      "labels_used": 23,
+      "alternatives_present": 74
+    }
+  },
+  "validation": {
+    "schema_validate_labels": "PASS for all splits",
+    "assembly": "PASS",
+    "unittest": "11 tests OK"
+  },
+  "records": {
+    "pilot_review": "pilot/pilot_review.md",
+    "progress": "progress.md",
+    "review_cases": "review_cases.md",
+    "review_stats": "review_stats.json",
+    "integrity_snapshot": "integrity_snapshot.json",
+    "worker_instructions": "WORKER_INSTRUCTIONS.md"
+  },
+  "integrity_notes": [
+    "A separate uncoordinated process (a distinct 'claude' OS process) wrote annotations into the same run directory concurrently with this session, including chunk ranges assigned to this session's subagents.",
+    "Two subagents observed their assigned chunk files being rewritten mid-run and re-applied their own labels.",
+    "Final files are schema-valid, internally consistent, and share one annotator string, but per-row write provenance within this run cannot be guaranteed to a single exclusive writer.",
+    "The frozen prompt, taxonomy, manifests and data/annotations were not modified; this run was not published over data/annotations."
+  ],
+  "char_counts": {
+    "train_6000": 6000,
+    "dev": 497,
+    "test_locked": 840
+  }
+}
